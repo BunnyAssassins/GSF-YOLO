@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the GSF-YOLO manuscript and the Ultralytics framework when using this code."
+type: software
+title: "GSF-YOLO: Gated Semantic Fusion and High-Resolution Capacity Allocation for UAV Small-Object Detection"
+authors:
+  - family-names: Liu
+    given-names: Xuecheng
+  - family-names: Zhu
+    given-names: Jun
+  - family-names: Wang
+    given-names: Tianyu
+  - family-names: Huang
+    given-names: Liang
+  - family-names: Li
+    given-names: Zhenhuan
+  - family-names: Xie
+    given-names: Xuehui
+repository-code: "https://github.com/BunnyAssassins/GSF-YOLO"
+license: AGPL-3.0
+version: "1.0.0"
