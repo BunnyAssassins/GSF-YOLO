@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "checkpoints": "DSF + refinement",
+  "seeds": [
+    0,
+    1
+  ],
+  "metrics": [
+    "gate_mean",
+    "injection_abs",
+    "injection_to_detail"
+  ],
+  "epsilon": 1e-08,
+  "roi_mean": "channel mean followed by fractional P2-cell overlap area weighting",
+  "aggregation": "mean paired ROI difference within image, then equal image and checkpoint weights",
+  "bootstrap": {
+    "unit": "image",
+    "resamples": 2000,
+    "rng_seed": 20261017,
+    "interval": "percentile 95%",
+    "paired_across_checkpoints": true,
+    "conditional_on_fixed_checkpoints": true
+  },
+  "unique_pairs_reused_across_seeds": true,
+  "region_statistics": [
+    {
+      "metric": "gate_mean",
+      "group": "small",
+      "seed0": -0.02114895810091518,
+      "seed1": -0.03846909878487082,
+      "mean": -0.029809028442893,
+      "sample_sd": 0.01224718892873004,
+      "ci95": [
+        -0.031207284954817744,
+        -0.028456342807848735
+      ],
+      "n_images": 524,
+      "n_unique_pairs": 10328
+    },
+    {
+      "metric": "gate_mean",
+      "group": "medium",
+      "seed0": -0.00047227825222838365,
+      "seed1": 0.011111466162713766,
+      "mean": 0.005319593955242692,
+      "sample_sd": 0.00819094422733739,
+      "ci95": [
+        0.003645841848561352,
+        0.007051447957533611
+      ],
+      "n_images": 526,
+      "n_unique_pairs": 4979
+    },
+    {
+      "metric": "gate_mean",
+      "group": "large",
+      "seed0": 0.016452783998406918,
+      "seed1": 0.013280697468286369,
+      "mean": 0.014866740733346645,
+      "sample_sd": 0.002243003895958746,
+      "ci95": [
+        0.01176359813235839,
+        0.01791791733503858
+      ],
+      "n_images": 268,
+      "n_unique_pairs": 600
+    },
+    {
+      "metric": "injection_abs",
+      "group": "small",
+      "seed0": 0.13661764286470418,
+      "seed1": 0.16281750572176212,
+      "mean": 0.14971757429323315,
+      "sample_sd": 0.018526100692383224,
+      "ci95": [
+        0.1457765113047337,
+        0.15395302122835927
+      ],
+      "n_images": 524,
+      "n_unique_pairs": 10328
+    },
+    {
+      "metric": "injection_abs",
+      "group": "medium",
+      "seed0": 0.18896478395858465,
+      "seed1": 0.2134242153935807,
+      "mean": 0.2011944996760827,
+      "sample_sd": 0.01729542983165311,
+      "ci95": [
+        0.19667556244726986,
+        0.20556317978084818
+      ],
+      "n_images": 526,
+      "n_unique_pairs": 4979
+    },
+    {
+      "metric": "injection_abs",
+      "group": "large",
+      "seed0": 0.17836174354257747,
+      "seed1": 0.17977806270953306,
+      "mean": 0.17906990312605525,
+      "sample_sd": 0.0010014888872787778,
+      "ci95": [
+        0.17077090484716229,
+        0.1876658010691322
+      ],
+      "n_images": 268,
+      "n_unique_pairs": 600
+    },
+    {
+      "metric": "injection_to_detail",
+      "group": "small",
+      "seed0": 0.025863861474871148,
+      "seed1": 0.08118080961673821,
+      "mean": 0.05352233554580469,
+      "sample_sd": 0.039114989145658786,
+      "ci95": [
+        0.03554616314463124,
+        0.07177594918908513
+      ],
+      "n_images": 524,
+      "n_unique_pairs": 10328
+    },
+    {
+      "metric": "injection_to_detail",
+      "group": "medium",
+      "seed0": 0.5293783542582361,
+      "seed1": 0.5211085661493912,
+      "mean": 0.5252434602038135,
+      "sample_sd": 0.005847623250740127,
+      "ci95": [
+        0.5059328992633361,
+        0.5441937818514642
+      ],
+      "n_images": 526,
+      "n_unique_pairs": 4979
+    },
+    {
+      "metric": "injection_to_detail",
+      "group": "large",
+      "seed0": 0.7388551227292299,
+      "seed1": 0.6942982376063322,
+      "mean": 0.7165766801677811,
+      "sample_sd": 0.031506475618950945,
+      "ci95": [
+        0.6799973730334226,
+        0.7544546488125031
+      ],
+      "n_images": 268,
+      "n_unique_pairs": 600
+    }
+  ],
+  "sources": [
+    {
+      "seed": 0,
+      "checkpoint_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "objects": "source/object_gate_stats.csv",
+      "objects_sha256": "9b4e454f6175ac18c1bba6d30775c8b162081e711cd7f159e1aecc7ff711cd64",
+      "backgrounds": "source/matched_background_stats.csv",
+      "backgrounds_sha256": "a46ffdeb746682c559e40d6bfe7312b829bffdd9c86b0a127134b9a7d4a8bd75"
+    },
+    {
+      "seed": 1,
+      "checkpoint_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "objects": "source/object_gate_stats.csv",
+      "objects_sha256": "1f728a95a09c043b8b40451f06a52ac204df892115187c3c1090731e2d0aa9ff",
+      "backgrounds": "source/matched_background_stats.csv",
+      "backgrounds_sha256": "36898cb1db4385b4a04df890d9d459446fd3198495d30255830356dc0f2c0f0f"
+    }
+  ],
+  "original_figure_source_sha256": "0d66ae87859e8933cd93080decfea70dc04adaad48d53e6f0ebfdbafdc00b443",
+  "verification": {
+    "original_gate_panel_reproduced": true,
+    "prior_single_seed_estimates_reproduced": true,
+    "paired_roi_geometry_identical": true,
+    "injection_ratio_formula_verified": true
+  },
+  "figure_contract": {
+    "conclusion": "Mean gate and actual injected residual can change in opposite directions",
+    "archetype": "quantitative grid",
+    "backend": "Python/matplotlib",
+    "journal": "PAA",
+    "main_size_inches": [
+      7.2,
+      6.8
+    ],
+    "panels": {
+      "a": "detection transitions",
+      "b": "recall at FP budgets",
+      "c": "frozen-weight interventions",
+      "d": "matched gate contrast",
+      "e": "matched injection contrast"
+    },
+    "supplementary": "injection/detail ratio on the same matched regions",
+    "raster_image_manipulation": "none"
+  },
+  "script_sha256": "6a52c08bdb7de6578432014c9e4a9bc767c64ff6d52bfb316ba733f2e3122201"
+}

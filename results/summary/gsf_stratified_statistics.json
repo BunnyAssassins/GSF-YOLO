@@ -1,0 +1,1066 @@
+{
+  "status": "PASS",
+  "split": "VisDrone2019 validation",
+  "images": 548,
+  "valid_gt": 38759,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "iou": "0.50:0.05:0.95",
+    "maxDets": [
+      1,
+      10,
+      300
+    ],
+    "object_area": "original-image pixels squared",
+    "official_ignored_region_filtering": false,
+    "checkpoint_selection": "existing validation-selected checkpoints",
+    "density": "valid GT count per original-image megapixel",
+    "training_images": 6471,
+    "training_quantiles": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "quantile_method": "linear",
+    "density_cutpoints": [
+      19.03553299492386,
+      40.79042784626541
+    ],
+    "density_group_sizes": {
+      "low": 57,
+      "medium": 77,
+      "high": 414
+    },
+    "size_and_category_evaluation": "all 548 images",
+    "density_evaluation": "corresponding image subset",
+    "uncertainty": "mean +/- sample SD across three training seeds; deltas paired by seed"
+  },
+  "sources": {
+    "inventory": "source/statistics.json",
+    "inventory_sha256": "ec2489de0d60054cc7679fee04f89d1d8dac35c1689b06d9faa7ae2b75628976",
+    "gt": "source/ground_truth.json",
+    "gt_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+    "training_density": "source/training_density.csv",
+    "training_density_sha256": "d3794acd9c02c16a64d8109d05717169eeafad7d7defce6b17b395dda571f2c5"
+  },
+  "inference_run": false,
+  "training_run": false,
+  "rows": [
+    {
+      "key": "overall",
+      "section": "Overall",
+      "label": "All targets",
+      "metric": "AP",
+      "images": 548,
+      "gt": 38759,
+      "baseline": {
+        "seeds": [
+          21.3465998239853,
+          21.47338202583093,
+          21.459148178008522
+        ],
+        "mean": 21.426376675941583,
+        "sample_sd": 0.06945437485860004
+      },
+      "gsf_yolo": {
+        "seeds": [
+          24.15632685248737,
+          24.28629532572574,
+          23.896143385672573
+        ],
+        "mean": 24.11292185462856,
+        "sample_sd": 0.19866461552363746
+      },
+      "paired_delta": {
+        "seeds": [
+          2.8097270285020706,
+          2.8129132998948094,
+          2.436995207664051
+        ],
+        "mean": 2.686545178686977,
+        "sample_sd": 0.21612248635786255
+      }
+    },
+    {
+      "key": "size_small",
+      "section": "Object size",
+      "label": "Small",
+      "metric": "AP_S",
+      "images": 548,
+      "gt": 26586,
+      "baseline": {
+        "seeds": [
+          13.466981496467278,
+          13.870339067035914,
+          13.505046439496592
+        ],
+        "mean": 13.614122334333262,
+        "sample_sd": 0.2227049518074825
+      },
+      "gsf_yolo": {
+        "seeds": [
+          16.925226193623306,
+          17.18827858825408,
+          16.573137195676356
+        ],
+        "mean": 16.895547325851247,
+        "sample_sd": 0.30864277022115477
+      },
+      "paired_delta": {
+        "seeds": [
+          3.4582446971560277,
+          3.3179395212181646,
+          3.068090756179764
+        ],
+        "mean": 3.2814249915179854,
+        "sample_sd": 0.19762339834707435
+      }
+    },
+    {
+      "key": "size_medium",
+      "section": "Object size",
+      "label": "Medium",
+      "metric": "AP_M",
+      "images": 548,
+      "gt": 11105,
+      "baseline": {
+        "seeds": [
+          30.21427200039562,
+          30.34621633022569,
+          30.45280183784813
+        ],
+        "mean": 30.337763389489815,
+        "sample_sd": 0.11948937188760123
+      },
+      "gsf_yolo": {
+        "seeds": [
+          33.07490238703732,
+          32.88537972305387,
+          32.813528018466954
+        ],
+        "mean": 32.92460337618605,
+        "sample_sd": 0.13502966844425052
+      },
+      "paired_delta": {
+        "seeds": [
+          2.8606303866416987,
+          2.5391633928281827,
+          2.3607261806188227
+        ],
+        "mean": 2.586839986696235,
+        "sample_sd": 0.2533393909402659
+      }
+    },
+    {
+      "key": "size_large",
+      "section": "Object size",
+      "label": "Large",
+      "metric": "AP_L",
+      "images": 548,
+      "gt": 1068,
+      "baseline": {
+        "seeds": [
+          37.69624298983637,
+          36.116585682147885,
+          36.16991970489055
+        ],
+        "mean": 36.66091612562494,
+        "sample_sd": 0.8970158395000003
+      },
+      "gsf_yolo": {
+        "seeds": [
+          36.78494689144444,
+          35.8486503944089,
+          36.741819956328484
+        ],
+        "mean": 36.45847241406061,
+        "sample_sd": 0.5285614012318635
+      },
+      "paired_delta": {
+        "seeds": [
+          -0.9112960983919294,
+          -0.267935287738986,
+          0.5719002514379312
+        ],
+        "mean": -0.20244371156432805,
+        "sample_sd": 0.7437638825255878
+      }
+    },
+    {
+      "key": "density_low_AP",
+      "section": "Image density",
+      "label": "Low",
+      "metric": "AP",
+      "images": 57,
+      "gt": 624,
+      "baseline": {
+        "seeds": [
+          28.64124862003848,
+          27.232883582602458,
+          28.816084674902022
+        ],
+        "mean": 28.23007229251432,
+        "sample_sd": 0.868003976892862
+      },
+      "gsf_yolo": {
+        "seeds": [
+          32.098755057648816,
+          29.34677451558742,
+          29.57448617647293
+        ],
+        "mean": 30.340005249903054,
+        "sample_sd": 1.5273715379075654
+      },
+      "paired_delta": {
+        "seeds": [
+          3.4575064376103377,
+          2.113890932984962,
+          0.7584015015709085
+        ],
+        "mean": 2.109932957388736,
+        "sample_sd": 1.3495568210031832
+      }
+    },
+    {
+      "key": "density_low_AP_S",
+      "section": "Image density",
+      "label": "Low",
+      "metric": "AP_S",
+      "images": 57,
+      "gt": 216,
+      "baseline": {
+        "seeds": [
+          16.31404923589236,
+          16.90525584805896,
+          18.93956290485302
+        ],
+        "mean": 17.386289329601446,
+        "sample_sd": 1.3772710024713661
+      },
+      "gsf_yolo": {
+        "seeds": [
+          21.273417290613768,
+          21.069575654814194,
+          19.059324966136767
+        ],
+        "mean": 20.46743930385491,
+        "sample_sd": 1.2237145681027557
+      },
+      "paired_delta": {
+        "seeds": [
+          4.959368054721409,
+          4.164319806755234,
+          0.11976206128374756
+        ],
+        "mean": 3.0811499742534636,
+        "sample_sd": 2.5952628397641866
+      }
+    },
+    {
+      "key": "density_medium_AP",
+      "section": "Image density",
+      "label": "Medium",
+      "metric": "AP",
+      "images": 77,
+      "gt": 2401,
+      "baseline": {
+        "seeds": [
+          26.26845000081272,
+          26.99327398396311,
+          26.588656750664768
+        ],
+        "mean": 26.6167935784802,
+        "sample_sd": 0.36323024715342156
+      },
+      "gsf_yolo": {
+        "seeds": [
+          27.830010938882037,
+          29.283321023222094,
+          28.105765714526132
+        ],
+        "mean": 28.406365892210086,
+        "sample_sd": 0.7718794597790803
+      },
+      "paired_delta": {
+        "seeds": [
+          1.5615609380693165,
+          2.290047039258983,
+          1.5171089638613644
+        ],
+        "mean": 1.789572313729888,
+        "sample_sd": 0.43399332676069274
+      }
+    },
+    {
+      "key": "density_medium_AP_S",
+      "section": "Image density",
+      "label": "Medium",
+      "metric": "AP_S",
+      "images": 77,
+      "gt": 1180,
+      "baseline": {
+        "seeds": [
+          14.53306435445118,
+          15.778656691873916,
+          16.132789711912636
+        ],
+        "mean": 15.481503586079244,
+        "sample_sd": 0.8402412040830061
+      },
+      "gsf_yolo": {
+        "seeds": [
+          17.664982061229,
+          19.8773518594143,
+          17.794597610658947
+        ],
+        "mean": 18.445643843767417,
+        "sample_sd": 1.24158806744192
+      },
+      "paired_delta": {
+        "seeds": [
+          3.13191770677782,
+          4.098695167540384,
+          1.6618078987463107
+        ],
+        "mean": 2.9641402576881717,
+        "sample_sd": 1.227076543871625
+      }
+    },
+    {
+      "key": "density_high_AP",
+      "section": "Image density",
+      "label": "High",
+      "metric": "AP",
+      "images": 414,
+      "gt": 35734,
+      "baseline": {
+        "seeds": [
+          20.903271636899348,
+          21.006663825318075,
+          20.988163324675526
+        ],
+        "mean": 20.966032928964317,
+        "sample_sd": 0.05513439912844287
+      },
+      "gsf_yolo": {
+        "seeds": [
+          23.850822567035742,
+          23.940431675982392,
+          23.55911929789083
+        ],
+        "mean": 23.783457846969654,
+        "sample_sd": 0.19938226238471438
+      },
+      "paired_delta": {
+        "seeds": [
+          2.9475509301363942,
+          2.9337678506643172,
+          2.5709559732153053
+        ],
+        "mean": 2.817424918005339,
+        "sample_sd": 0.2135595909327602
+      }
+    },
+    {
+      "key": "density_high_AP_S",
+      "section": "Image density",
+      "label": "High",
+      "metric": "AP_S",
+      "images": 414,
+      "gt": 25190,
+      "baseline": {
+        "seeds": [
+          13.413585539265252,
+          13.804112718945301,
+          13.243803928990333
+        ],
+        "mean": 13.487167395733628,
+        "sample_sd": 0.287310289106046
+      },
+      "gsf_yolo": {
+        "seeds": [
+          16.70745894748374,
+          16.97817084184559,
+          16.471035022023987
+        ],
+        "mean": 16.718888270451107,
+        "sample_sd": 0.2537610234140607
+      },
+      "paired_delta": {
+        "seeds": [
+          3.293873408218488,
+          3.1740581229002878,
+          3.2272310930336534
+        ],
+        "mean": 3.2317208747174764,
+        "sample_sd": 0.06003369265376505
+      }
+    },
+    {
+      "key": "class_0",
+      "section": "Object category",
+      "label": "pedestrian",
+      "metric": "AP",
+      "images": 548,
+      "gt": 8844,
+      "baseline": {
+        "seeds": [
+          19.90690967454391,
+          19.980246548815064,
+          20.333798078551364
+        ],
+        "mean": 20.073651433970113,
+        "sample_sd": 0.22825814727437135
+      },
+      "gsf_yolo": {
+        "seeds": [
+          24.57372729815414,
+          24.22856246002084,
+          24.191283384076485
+        ],
+        "mean": 24.331191047417153,
+        "sample_sd": 0.21086798492654468
+      },
+      "paired_delta": {
+        "seeds": [
+          4.666817623610228,
+          4.248315911205776,
+          3.8574853055251204
+        ],
+        "mean": 4.257539613447041,
+        "sample_sd": 0.40474499105798734
+      }
+    },
+    {
+      "key": "class_1",
+      "section": "Object category",
+      "label": "people",
+      "metric": "AP",
+      "images": 548,
+      "gt": 5125,
+      "baseline": {
+        "seeds": [
+          12.553314829075704,
+          13.01444622010215,
+          12.994663337927076
+        ],
+        "mean": 12.85414146236831,
+        "sample_sd": 0.26071121586999474
+      },
+      "gsf_yolo": {
+        "seeds": [
+          16.59861519077478,
+          16.171613794965026,
+          16.19491091731981
+        ],
+        "mean": 16.321713301019873,
+        "sample_sd": 0.24008682052516506
+      },
+      "paired_delta": {
+        "seeds": [
+          4.045300361699075,
+          3.1571675748628767,
+          3.200247579392734
+        ],
+        "mean": 3.467571838651562,
+        "sample_sd": 0.5007910307249611
+      }
+    },
+    {
+      "key": "class_2",
+      "section": "Object category",
+      "label": "bicycle",
+      "metric": "AP",
+      "images": 548,
+      "gt": 1287,
+      "baseline": {
+        "seeds": [
+          5.578031728423253,
+          5.647348749259018,
+          5.1716043803992475
+        ],
+        "mean": 5.465661619360506,
+        "sample_sd": 0.2570086714169885
+      },
+      "gsf_yolo": {
+        "seeds": [
+          7.631412693392744,
+          7.850168356630527,
+          7.639402138475104
+        ],
+        "mean": 7.706994396166125,
+        "sample_sd": 0.12405662023639692
+      },
+      "paired_delta": {
+        "seeds": [
+          2.0533809649694916,
+          2.2028196073715085,
+          2.4677977580758563
+        ],
+        "mean": 2.241332776805619,
+        "sample_sd": 0.20987560069487884
+      }
+    },
+    {
+      "key": "class_3",
+      "section": "Object category",
+      "label": "car",
+      "metric": "AP",
+      "images": 548,
+      "gt": 14064,
+      "baseline": {
+        "seeds": [
+          54.48382568469816,
+          55.007697528147325,
+          55.091956366351305
+        ],
+        "mean": 54.86115985973226,
+        "sample_sd": 0.329485504522386
+      },
+      "gsf_yolo": {
+        "seeds": [
+          57.707042418027456,
+          57.83600329800721,
+          57.77348468244149
+        ],
+        "mean": 57.77217679949205,
+        "sample_sd": 0.06449038734296329
+      },
+      "paired_delta": {
+        "seeds": [
+          3.223216733329295,
+          2.828305769859888,
+          2.681528316090187
+        ],
+        "mean": 2.91101693975979,
+        "sample_sd": 0.2801560967789391
+      }
+    },
+    {
+      "key": "class_4",
+      "section": "Object category",
+      "label": "van",
+      "metric": "AP",
+      "images": 548,
+      "gt": 1975,
+      "baseline": {
+        "seeds": [
+          29.540968753626863,
+          29.801441945523493,
+          29.56187340033609
+        ],
+        "mean": 29.634761366495482,
+        "sample_sd": 0.14472754621130046
+      },
+      "gsf_yolo": {
+        "seeds": [
+          32.1614011118205,
+          33.53492355505003,
+          33.22603728251784
+        ],
+        "mean": 32.97412064979612,
+        "sample_sd": 0.7205813402352204
+      },
+      "paired_delta": {
+        "seeds": [
+          2.6204323581936393,
+          3.7334816095265353,
+          3.6641638821817466
+        ],
+        "mean": 3.3393592833006402,
+        "sample_sd": 0.6235729143924689
+      }
+    },
+    {
+      "key": "class_5",
+      "section": "Object category",
+      "label": "truck",
+      "metric": "AP",
+      "images": 548,
+      "gt": 750,
+      "baseline": {
+        "seeds": [
+          18.202993415334788,
+          16.7987434211536,
+          17.511976865487753
+        ],
+        "mean": 17.504571233992046,
+        "sample_sd": 0.7021542879402326
+      },
+      "gsf_yolo": {
+        "seeds": [
+          20.457009114612614,
+          21.332793735539838,
+          19.928637071643685
+        ],
+        "mean": 20.572813307265378,
+        "sample_sd": 0.7092051483653812
+      },
+      "paired_delta": {
+        "seeds": [
+          2.2540156992778257,
+          4.5340503143862385,
+          2.4166602061559317
+        ],
+        "mean": 3.068242073273332,
+        "sample_sd": 1.2720293466309218
+      }
+    },
+    {
+      "key": "class_6",
+      "section": "Object category",
+      "label": "tricycle",
+      "metric": "AP",
+      "images": 548,
+      "gt": 1045,
+      "baseline": {
+        "seeds": [
+          12.941826240658589,
+          12.994097227481172,
+          12.753289708952845
+        ],
+        "mean": 12.896404392364202,
+        "sample_sd": 0.12666658387989024
+      },
+      "gsf_yolo": {
+        "seeds": [
+          13.888117018563257,
+          12.82409782044896,
+          13.106061645079958
+        ],
+        "mean": 13.272758828030724,
+        "sample_sd": 0.5512487429389195
+      },
+      "paired_delta": {
+        "seeds": [
+          0.9462907779046681,
+          -0.16999940703221128,
+          0.35277193612711244
+        ],
+        "mean": 0.3763544356665231,
+        "sample_sd": 0.5585186164847129
+      }
+    },
+    {
+      "key": "class_7",
+      "section": "Object category",
+      "label": "awning-tricycle",
+      "metric": "AP",
+      "images": 548,
+      "gt": 532,
+      "baseline": {
+        "seeds": [
+          7.206631986942667,
+          7.793641964552774,
+          8.325935307218048
+        ],
+        "mean": 7.775403086237829,
+        "sample_sd": 0.559874515589443
+      },
+      "gsf_yolo": {
+        "seeds": [
+          7.96475188977272,
+          8.990503352994219,
+          8.557091674826642
+        ],
+        "mean": 8.50411563919786,
+        "sample_sd": 0.5149236461248095
+      },
+      "paired_delta": {
+        "seeds": [
+          0.7581199028300531,
+          1.1968613884414454,
+          0.2311563676085946
+        ],
+        "mean": 0.728712552960031,
+        "sample_sd": 0.4835236715872633
+      }
+    },
+    {
+      "key": "class_8",
+      "section": "Object category",
+      "label": "bus",
+      "metric": "AP",
+      "images": 548,
+      "gt": 251,
+      "baseline": {
+        "seeds": [
+          33.41026752358453,
+          33.686834703246305,
+          32.481368908053575
+        ],
+        "mean": 33.19282371162814,
+        "sample_sd": 0.6314652043964936
+      },
+      "gsf_yolo": {
+        "seeds": [
+          37.63619656404801,
+          37.795485582556616,
+          35.6693056601325
+        ],
+        "mean": 37.033662602245705,
+        "sample_sd": 1.184248980144688
+      },
+      "paired_delta": {
+        "seeds": [
+          4.225929040463477,
+          4.108650879310311,
+          3.187936752078926
+        ],
+        "mean": 3.840838890617571,
+        "sample_sd": 0.5684623502503215
+      }
+    },
+    {
+      "key": "class_9",
+      "section": "Object category",
+      "label": "motor",
+      "metric": "AP",
+      "images": 548,
+      "gt": 4886,
+      "baseline": {
+        "seeds": [
+          19.64122840296458,
+          20.009321950028397,
+          20.365015426807894
+        ],
+        "mean": 20.005188593266958,
+        "sample_sd": 0.3619112148712426
+      },
+      "gsf_yolo": {
+        "seeds": [
+          22.94499522570751,
+          22.298801301044094,
+          22.675219400212235
+        ],
+        "mean": 22.63967197565461,
+        "sample_sd": 0.32456025883106293
+      },
+      "paired_delta": {
+        "seeds": [
+          3.3037668227429293,
+          2.2894793510156966,
+          2.3102039734043416
+        ],
+        "mean": 2.6344833823876557,
+        "sample_sd": 0.5797090823366762
+      }
+    }
+  ],
+  "records": [
+    {
+      "status": "PASS",
+      "model": "p2_baseline",
+      "seed": 0,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 21.3465998239853,
+        "size_small": 13.466981496467278,
+        "size_medium": 30.21427200039562,
+        "size_large": 37.69624298983637,
+        "class_0": 19.90690967454391,
+        "class_1": 12.553314829075704,
+        "class_2": 5.578031728423253,
+        "class_3": 54.48382568469816,
+        "class_4": 29.540968753626863,
+        "class_5": 18.202993415334788,
+        "class_6": 12.941826240658589,
+        "class_7": 7.206631986942667,
+        "class_8": 33.41026752358453,
+        "class_9": 19.64122840296458,
+        "density_low_AP": 28.64124862003848,
+        "density_low_AP_S": 16.31404923589236,
+        "density_medium_AP": 26.26845000081272,
+        "density_medium_AP_S": 14.53306435445118,
+        "density_high_AP": 20.903271636899348,
+        "density_high_AP_S": 13.413585539265252
+      },
+      "predictions": "assets/predictions/val_p2_baseline_seed0.json.gz",
+      "prediction_sha256": "4619e9939e6a3a14463a960c505378b46d8b3e1a54e7c659d42ad8edcb202315",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": 0.0,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 1,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    },
+    {
+      "status": "PASS",
+      "model": "p2_baseline",
+      "seed": 1,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 21.47338202583093,
+        "size_small": 13.870339067035914,
+        "size_medium": 30.34621633022569,
+        "size_large": 36.116585682147885,
+        "class_0": 19.980246548815064,
+        "class_1": 13.01444622010215,
+        "class_2": 5.647348749259018,
+        "class_3": 55.007697528147325,
+        "class_4": 29.801441945523493,
+        "class_5": 16.7987434211536,
+        "class_6": 12.994097227481172,
+        "class_7": 7.793641964552774,
+        "class_8": 33.686834703246305,
+        "class_9": 20.009321950028397,
+        "density_low_AP": 27.232883582602458,
+        "density_low_AP_S": 16.90525584805896,
+        "density_medium_AP": 26.99327398396311,
+        "density_medium_AP_S": 15.778656691873916,
+        "density_high_AP": 21.006663825318075,
+        "density_high_AP_S": 13.804112718945301
+      },
+      "predictions": "assets/predictions/val_p2_baseline_seed1.json.gz",
+      "prediction_sha256": "e33c6e13001d5b3002945f8dca8f5d7ca64167702a25979b262a524f4dcf190b",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": null,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 4,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    },
+    {
+      "status": "PASS",
+      "model": "p2_baseline",
+      "seed": 2,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 21.459148178008522,
+        "size_small": 13.505046439496592,
+        "size_medium": 30.45280183784813,
+        "size_large": 36.16991970489055,
+        "class_0": 20.333798078551364,
+        "class_1": 12.994663337927076,
+        "class_2": 5.1716043803992475,
+        "class_3": 55.091956366351305,
+        "class_4": 29.56187340033609,
+        "class_5": 17.511976865487753,
+        "class_6": 12.753289708952845,
+        "class_7": 8.325935307218048,
+        "class_8": 32.481368908053575,
+        "class_9": 20.365015426807894,
+        "density_low_AP": 28.816084674902022,
+        "density_low_AP_S": 18.93956290485302,
+        "density_medium_AP": 26.588656750664768,
+        "density_medium_AP_S": 16.132789711912636,
+        "density_high_AP": 20.988163324675526,
+        "density_high_AP_S": 13.243803928990333
+      },
+      "predictions": "assets/predictions/val_p2_baseline_seed2.json.gz",
+      "prediction_sha256": "8847c283db4826cc03ad7baa21070d912d01a2c490ba00af24abe24d0bb56670",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": null,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 1,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    },
+    {
+      "status": "PASS",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 24.15632685248737,
+        "size_small": 16.925226193623306,
+        "size_medium": 33.07490238703732,
+        "size_large": 36.78494689144444,
+        "class_0": 24.57372729815414,
+        "class_1": 16.59861519077478,
+        "class_2": 7.631412693392744,
+        "class_3": 57.707042418027456,
+        "class_4": 32.1614011118205,
+        "class_5": 20.457009114612614,
+        "class_6": 13.888117018563257,
+        "class_7": 7.96475188977272,
+        "class_8": 37.63619656404801,
+        "class_9": 22.94499522570751,
+        "density_low_AP": 32.098755057648816,
+        "density_low_AP_S": 21.273417290613768,
+        "density_medium_AP": 27.830010938882037,
+        "density_medium_AP_S": 17.664982061229,
+        "density_high_AP": 23.850822567035742,
+        "density_high_AP_S": 16.70745894748374
+      },
+      "predictions": "assets/predictions/val_gsf_yolo_seed0.json.gz",
+      "prediction_sha256": "113ac865e407c262a82ad9602ca050f4c78b4d9dcc6cc2efd01b21bc0fca3130",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": null,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 1,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    },
+    {
+      "status": "PASS",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 24.28629532572574,
+        "size_small": 17.18827858825408,
+        "size_medium": 32.88537972305387,
+        "size_large": 35.8486503944089,
+        "class_0": 24.22856246002084,
+        "class_1": 16.171613794965026,
+        "class_2": 7.850168356630527,
+        "class_3": 57.83600329800721,
+        "class_4": 33.53492355505003,
+        "class_5": 21.332793735539838,
+        "class_6": 12.82409782044896,
+        "class_7": 8.990503352994219,
+        "class_8": 37.795485582556616,
+        "class_9": 22.298801301044094,
+        "density_low_AP": 29.34677451558742,
+        "density_low_AP_S": 21.069575654814194,
+        "density_medium_AP": 29.283321023222094,
+        "density_medium_AP_S": 19.8773518594143,
+        "density_high_AP": 23.940431675982392,
+        "density_high_AP_S": 16.97817084184559
+      },
+      "predictions": "assets/predictions/val_gsf_yolo_seed1.json.gz",
+      "prediction_sha256": "5a44007bdb78161ccd5a93c893186edf0479c1ff84a97b7597b42065fe313d35",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": null,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 2,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    },
+    {
+      "status": "PASS",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "split": "validation",
+      "metrics_percent": {
+        "overall": 23.896143385672573,
+        "size_small": 16.573137195676356,
+        "size_medium": 32.813528018466954,
+        "size_large": 36.741819956328484,
+        "class_0": 24.191283384076485,
+        "class_1": 16.19491091731981,
+        "class_2": 7.639402138475104,
+        "class_3": 57.77348468244149,
+        "class_4": 33.22603728251784,
+        "class_5": 19.928637071643685,
+        "class_6": 13.106061645079958,
+        "class_7": 8.557091674826642,
+        "class_8": 35.6693056601325,
+        "class_9": 22.675219400212235,
+        "density_low_AP": 29.57448617647293,
+        "density_low_AP_S": 19.059324966136767,
+        "density_medium_AP": 28.105765714526132,
+        "density_medium_AP_S": 17.794597610658947,
+        "density_high_AP": 23.55911929789083,
+        "density_high_AP_S": 16.471035022023987
+      },
+      "predictions": "assets/predictions/val_gsf_yolo_seed2.json.gz",
+      "prediction_sha256": "09191feca87832843b1f82d5a9030efe8dbada3fba91552953abb0ecaa0e137f",
+      "checkpoint": "source/best.pt",
+      "checkpoint_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+      "prior_metrics_max_abs_error": 0.0,
+      "independent_subset_precision_max_abs_error": null,
+      "settings": {
+        "imgsz": 832,
+        "batch": 1,
+        "rect": false,
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 300,
+        "half": false,
+        "device": "0",
+        "augment": false,
+        "agnostic_nms": false,
+        "save": false,
+        "verbose": false
+      },
+      "zero_extent_predictions_retained": 1,
+      "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+    }
+  ],
+  "verification": {
+    "full_metric_agreement": true,
+    "independent_subset_precision_agreement": true
+  },
+  "script_sha256": "4298784cd927d8603606ad48a51b75f86fe47935aa55ca9b12061ab543b19c0e"
+}

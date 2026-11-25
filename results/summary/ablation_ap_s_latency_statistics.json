@@ -1,0 +1,329 @@
+{
+  "backend": "Python/matplotlib",
+  "claim": "Measured AP_S and latency trade-offs for the six ablation configurations.",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "coco_max_dets": [
+    1,
+    10,
+    300
+  ],
+  "error_bars": "Sample SD across three training seeds; each latency value averages three timing-round means.",
+  "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+  "timing_statistics_source": "source/statistics.json",
+  "timing_protocol": {
+    "input": 832,
+    "batch": 1,
+    "precision": "FP32",
+    "settings": {
+      "imgsz": 832,
+      "batch": 1,
+      "rect": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false,
+      "device": "0",
+      "augment": false,
+      "agnostic_nms": false,
+      "save": false,
+      "verbose": false
+    },
+    "rounds": 3,
+    "warmup_per_round": 50,
+    "measured_per_round": 548,
+    "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+    "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+    "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+    "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+  },
+  "labels": "Corrected YOLO ground truth; no official VisDrone ignored-region handling.",
+  "label_collisions": [],
+  "models": [
+    {
+      "experiment": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "table2_fps": 68.9,
+      "ap_s_mean_percent": 13.614122334333262,
+      "ap_s_sample_sd_pp": 0.2227049518074825,
+      "latency_mean_ms": 14.513504805352797,
+      "latency_sample_sd_ms": 0.17038065096870103,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 13.466981496467278,
+          "latency_ms": 14.706115328467153,
+          "round_means_ms": [
+            14.80043905109489,
+            14.592722810218978,
+            14.72518412408759
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 13.870339067035914,
+          "latency_ms": 14.382479866180049,
+          "round_means_ms": [
+            14.077869525547445,
+            14.471230291970803,
+            14.598339781021897
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 13.505046439496592,
+          "latency_ms": 14.451919221411192,
+          "round_means_ms": [
+            14.227365693430658,
+            14.608219343065693,
+            14.520172627737226
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959"
+        }
+      ]
+    },
+    {
+      "experiment": "dsf_refinement",
+      "label": "DSF + refinement",
+      "table2_fps": 64.4,
+      "ap_s_mean_percent": 15.517317305554952,
+      "ap_s_sample_sd_pp": 0.31002933395483967,
+      "latency_mean_ms": 15.52511697080292,
+      "latency_sample_sd_ms": 0.4131880396544228,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 15.712247128683831,
+          "latency_ms": 15.169998722627737,
+          "round_means_ms": [
+            15.379590510948905,
+            15.103698722627737,
+            15.026706934306569
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 15.679890777606643,
+          "latency_ms": 15.978615632603407,
+          "round_means_ms": [
+            15.400141240875913,
+            16.377801459854016,
+            16.157904197080292
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 15.159814010374383,
+          "latency_ms": 15.426736557177616,
+          "round_means_ms": [
+            15.128340328467154,
+            15.803383211678833,
+            15.348486131386862
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1"
+        }
+      ]
+    },
+    {
+      "experiment": "p2_p3_widening_without_dsf",
+      "label": "P2/P3 widening (no DSF)",
+      "table2_fps": 68.0,
+      "ap_s_mean_percent": 15.136246623219074,
+      "ap_s_sample_sd_pp": 0.2815847845334775,
+      "latency_mean_ms": 14.696893896999189,
+      "latency_sample_sd_ms": 0.2752853527417373,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 15.161212486578693,
+          "latency_ms": 14.66726392944039,
+          "round_means_ms": [
+            14.344323722627736,
+            14.729940875912408,
+            14.927527189781022
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "697ff0415ecf9d4c00e3b3d919a6addde9bf052c651c61d6cbb4c63f0cde8162"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 15.404517177948243,
+          "latency_ms": 14.985795681265207,
+          "round_means_ms": [
+            15.03681094890511,
+            14.822579562043796,
+            15.097996532846715
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "b9bb421d7afeebf0e4b8e59c111c385db21fdf2fb2b697921db60471de07c3f4"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 14.843010205130286,
+          "latency_ms": 14.437622080291971,
+          "round_means_ms": [
+            14.339201277372263,
+            14.688244525547445,
+            14.285420437956205
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "f0280a31aece8fa6d6fce2a0b2f98b424dac60ec3091756681b8d7c252c20b1d"
+        }
+      ]
+    },
+    {
+      "experiment": "dsf_p2_widening",
+      "label": "DSF + P2 widening",
+      "table2_fps": 65.6,
+      "ap_s_mean_percent": 16.899194782086848,
+      "ap_s_sample_sd_pp": 0.29521137484370735,
+      "latency_mean_ms": 15.237847850770478,
+      "latency_sample_sd_ms": 0.1905829897439286,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 16.643706908038517,
+          "latency_ms": 15.252077554744526,
+          "round_means_ms": [
+            15.415309854014598,
+            15.079316423357664,
+            15.261606386861313
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "e40401975cb767d01e3bbccb22d6a803cabbf2a526dda9cd7919461a86c52041"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 17.22237212336374,
+          "latency_ms": 15.420917153284671,
+          "round_means_ms": [
+            15.632653102189781,
+            15.624583394160585,
+            15.00551496350365
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "361236f781ed27dfb542b80514501f3ac03dba925e02a87f44d04f384ca18d13"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 16.831505314858283,
+          "latency_ms": 15.040548844282238,
+          "round_means_ms": [
+            14.966841058394161,
+            15.21578102189781,
+            14.939024452554744
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "b621d83086ad501044036dfb8dcdd783769216be6216b2db701423b1778d4a95"
+        }
+      ]
+    },
+    {
+      "experiment": "dsf_p3_widening",
+      "label": "DSF + P3 widening",
+      "table2_fps": 64.0,
+      "ap_s_mean_percent": 15.873416246637932,
+      "ap_s_sample_sd_pp": 0.23334294376659218,
+      "latency_mean_ms": 15.6159650648824,
+      "latency_sample_sd_ms": 0.062352284143573855,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 16.142578398742263,
+          "latency_ms": 15.545005352798054,
+          "round_means_ms": [
+            15.51426697080292,
+            15.924684306569343,
+            15.196064781021898
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "393062b6f5744eddd807188b5eade29cf314dae5d256aeb8419240ded96d9e28"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 15.749452670836916,
+          "latency_ms": 15.640892822384428,
+          "round_means_ms": [
+            15.756187226277373,
+            15.613718430656935,
+            15.552772810218977
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "7678a802bf34d1ef398ec99a0784bc283a2dc3cdc1c606265429314843be3cbe"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 15.728217670334619,
+          "latency_ms": 15.66199701946472,
+          "round_means_ms": [
+            15.58688503649635,
+            15.752089233576642,
+            15.647016788321167
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "2941562be4937ec67c2d7049352079d5b692c1131931c335528979ea0f52489e"
+        }
+      ]
+    },
+    {
+      "experiment": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "table2_fps": 65.5,
+      "ap_s_mean_percent": 16.895547325851247,
+      "ap_s_sample_sd_pp": 0.30864277022115477,
+      "latency_mean_ms": 15.276476682887267,
+      "latency_sample_sd_ms": 0.35482464496695826,
+      "seeds": [
+        {
+          "seed": 0,
+          "ap_s_percent": 16.925226193623306,
+          "latency_ms": 15.07468406326034,
+          "round_means_ms": [
+            14.913430291970803,
+            15.406996350364963,
+            14.903625547445255
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b"
+        },
+        {
+          "seed": 1,
+          "ap_s_percent": 17.18827858825408,
+          "latency_ms": 15.068568309002433,
+          "round_means_ms": [
+            14.882645802919708,
+            14.937194890510948,
+            15.385864233576642
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c"
+        },
+        {
+          "seed": 2,
+          "ap_s_percent": 16.573137195676356,
+          "latency_ms": 15.686177676399026,
+          "round_means_ms": [
+            16.20357317518248,
+            15.693631386861314,
+            15.161328467153284
+          ],
+          "timing_source": "source/summary.json",
+          "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3"
+        }
+      ]
+    }
+  ]
+}

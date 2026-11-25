@@ -1,0 +1,287 @@
+{
+  "status": "PASS",
+  "coco_max_dets": [
+    1,
+    10,
+    300
+  ],
+  "models": {
+    "p2_baseline": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "means_percent": {
+        "coco_ap": 21.426376675941587,
+        "ap_s": 13.614122334333262,
+        "ap_m": 30.337763389489815,
+        "ap_l": 36.66091612562494
+      },
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment_id": "p2_baseline",
+          "seed": 0,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.21346599823985302,
+            "ap_s": 0.13466981496467278,
+            "ap_m": 0.3021427200039562,
+            "ap_l": 0.3769624298983637
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "b496d68c1b65cfc04accba72f8adb4a009f13aa78bcc663ceda84ddad68c6879",
+          "predictions": "assets/predictions/val_p2_baseline_seed0.json.gz",
+          "predictions_sha256": "4619e9939e6a3a14463a960c505378b46d8b3e1a54e7c659d42ad8edcb202315",
+          "evaluation_kind": "Verified existing Table 4 COCO300 evaluation; source prediction hash and checkpoint hash matched",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        },
+        {
+          "status": "COMPLETE",
+          "experiment_id": "p2_baseline",
+          "seed": 1,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.2147338202583093,
+            "ap_s": 0.13870339067035914,
+            "ap_m": 0.3034621633022569,
+            "ap_l": 0.36116585682147884
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "e4784bd39c223eac7d164e7cb7bd0d40c203aeb8f5d39c785c514931a6d62d45",
+          "predictions": "assets/predictions/val_p2_baseline_seed1.json.gz",
+          "predictions_sha256": "e33c6e13001d5b3002945f8dca8f5d7ca64167702a25979b262a524f4dcf190b",
+          "evaluation_kind": "Verified existing Table 4 COCO300 evaluation; source prediction hash and checkpoint hash matched",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        },
+        {
+          "status": "COMPLETE",
+          "experiment_id": "p2_baseline",
+          "seed": 2,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.21459148178008522,
+            "ap_s": 0.13505046439496593,
+            "ap_m": 0.3045280183784813,
+            "ap_l": 0.3616991970489055
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "e6be5925ea0c162b26b8d82871bac939787b7585866751ce359ae696bc3cb85a",
+          "predictions": "assets/predictions/val_p2_baseline_seed2.json.gz",
+          "predictions_sha256": "8847c283db4826cc03ad7baa21070d912d01a2c490ba00af24abe24d0bb56670",
+          "evaluation_kind": "CPU-only COCO300 re-evaluation of checkpoint-matched saved predictions",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        }
+      ]
+    },
+    "gsf_yolo": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "means_percent": {
+        "coco_ap": 24.11292185462856,
+        "ap_s": 16.895547325851247,
+        "ap_m": 32.92460337618605,
+        "ap_l": 36.45847241406061
+      },
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment_id": "gsf_yolo",
+          "seed": 0,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.24156326852487373,
+            "ap_s": 0.16925226193623305,
+            "ap_m": 0.3307490238703732,
+            "ap_l": 0.3678494689144444
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "39c265c70617f6caaa81e16b7705a6c61223c6a3c54ab071652bb8a1792b877d",
+          "predictions": "assets/predictions/val_gsf_yolo_seed0.json.gz",
+          "predictions_sha256": "113ac865e407c262a82ad9602ca050f4c78b4d9dcc6cc2efd01b21bc0fca3130",
+          "evaluation_kind": "Verified existing Table 4 COCO300 evaluation; source prediction hash and checkpoint hash matched",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        },
+        {
+          "status": "COMPLETE",
+          "experiment_id": "gsf_yolo",
+          "seed": 1,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.24286295325725737,
+            "ap_s": 0.1718827858825408,
+            "ap_m": 0.3288537972305387,
+            "ap_l": 0.358486503944089
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "4e9adf84cb35c4de3b6fcb5a6e54f1123ffdb56691158dbdb03a162484fab488",
+          "predictions": "assets/predictions/val_gsf_yolo_seed1.json.gz",
+          "predictions_sha256": "5a44007bdb78161ccd5a93c893186edf0479c1ff84a97b7597b42065fe313d35",
+          "evaluation_kind": "Verified existing Table 4 COCO300 evaluation; source prediction hash and checkpoint hash matched",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        },
+        {
+          "status": "COMPLETE",
+          "experiment_id": "gsf_yolo",
+          "seed": 2,
+          "coco_max_dets": [
+            1,
+            10,
+            300
+          ],
+          "metrics": {
+            "coco_ap": 0.23896143385672572,
+            "ap_s": 0.16573137195676357,
+            "ap_m": 0.32813528018466953,
+            "ap_l": 0.36741819956328486
+          },
+          "settings": {
+            "imgsz": 832,
+            "batch": 1,
+            "rect": false,
+            "conf": 0.001,
+            "iou": 0.7,
+            "max_det": 300,
+            "half": false,
+            "device": "0",
+            "augment": false,
+            "agnostic_nms": false,
+            "save": false,
+            "verbose": false
+          },
+          "weight": "source/best.pt",
+          "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+          "source_summary": "source/summary.json",
+          "source_summary_sha256": "da0d5eecf7f38ca4940aa9e590281c6ef4edf1cf1996e41274dcaed3d3b44f24",
+          "predictions": "assets/predictions/val_gsf_yolo_seed2.json.gz",
+          "predictions_sha256": "09191feca87832843b1f82d5a9030efe8dbada3fba91552953abb0ecaa0e137f",
+          "evaluation_kind": "CPU-only COCO300 re-evaluation of checkpoint-matched saved predictions",
+          "gt_images": 548,
+          "ground_truth_sha256": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+          "labels": "Original-image areas; corrected YOLO ground truth; no official VisDrone ignored-region handling",
+          "gpu_inference_run": false
+        }
+      ]
+    }
+  },
+  "source_code_sha256": "43e2306270dc8e510722981f96ff0e7cbc98ac919341671b0015fcb83347782d"
+}

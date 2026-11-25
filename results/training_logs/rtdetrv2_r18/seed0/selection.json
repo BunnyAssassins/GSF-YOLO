@@ -1,0 +1,12 @@
+{
+  "configuration": "rtdetrv2_r18",
+  "seed": 0,
+  "selected_epoch_one_based": 99,
+  "checkpoint_selection": "Maximum native validation AP50:95; AP50 taken from the same epoch",
+  "logs": [
+    "epochs.jsonl",
+    "configured_native_protocol.json"
+  ],
+  "notes": "Historical configured arguments and checkpoint-stored arguments are separate records. Their differences are preserved; public paths and run names replace local identifiers. Inference checkpoints do not contain optimizer/scaler state and cannot resume training.",
+  "native_epoch_zero_based": 98
+}

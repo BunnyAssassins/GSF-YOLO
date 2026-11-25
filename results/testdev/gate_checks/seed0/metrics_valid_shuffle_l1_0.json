@@ -1,0 +1,13 @@
+{
+  "mode": "valid_shuffle_l1_0",
+  "label": "Shuffle, L1-matched",
+  "seed": 0,
+  "coco_no_ignore": {
+    "coco_ap": 0.16231292463444877,
+    "coco_ap50": 0.2955760027787959,
+    "ap_s": 0.09416731222711139
+  },
+  "predictions_sha256": "c0f4bb9e5f973fd711be32a513bf28a4400aee5f30e70f77cdd54f8bc798590d",
+  "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+  "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+}

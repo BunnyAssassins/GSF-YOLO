@@ -1,0 +1,548 @@
+{
+  "status": "PASS",
+  "n_images": 1610,
+  "n_gt": 75102,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "imgsz": 832,
+    "batch": 1,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "agnostic_nms": false,
+    "rect": false,
+    "device": 0,
+    "precision": "CUDA FP32",
+    "coco_max_dets": [
+      1,
+      10,
+      300
+    ],
+    "controls": "Frozen M1/DSF+refinement checkpoint per training seed; no retraining",
+    "shuffle": "CPU torch.Generator seed=1000003*image_id; same valid-cell HW permutation across channels, controls and training seeds",
+    "validity": "Image-geometry cell centers only; native padding gates and injections preserved exactly",
+    "l1": "Single scalar matches summed absolute injected branch over valid cells only",
+    "selection": "Validation-selected best.pt; fixed thresholds; no test-dev tuning",
+    "AP": "Supplementary COCO bbox, original-image corrected GT, no official VisDrone ignored-region handling",
+    "diagnostic": "score>0.25; same-class IoU>=0.5; existing custom ignore-region filtering"
+  },
+  "runs": {
+    "valid_spatial_mean__seed0": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.15879669777253763,
+        "coco_ap50": 0.2866341041291079,
+        "ap_s": 0.08675778696504854
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.30041111788657865,
+        "fp_per_image": 9.085093167701864,
+        "background_per_image": 2.116770186335404
+      },
+      "predictions_sha256": "e9a2c1366e6c3c436cc8a48e979c014e7537b1b115d031182661f534f34d181f",
+      "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_0__seed0": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.15604014307983335,
+        "coco_ap50": 0.2826414448715273,
+        "ap_s": 0.08546968331370292
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.29989967936738987,
+        "fp_per_image": 9.151552795031057,
+        "background_per_image": 2.142857142857143
+      },
+      "predictions_sha256": "527189dfa452b1e254e4431ce4528fac828958d06e6f5f7e104263918df3f4d0",
+      "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_l1_0__seed0": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.15588647093101776,
+        "coco_ap50": 0.28251147105569113,
+        "ap_s": 0.08524174369525447
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.2999586915042194,
+        "fp_per_image": 9.216770186335404,
+        "background_per_image": 2.1652173913043478
+      },
+      "predictions_sha256": "d56f63ed72238437ba0ab57d8f560a5cec81ffd8b44b775add121e9037c7a3a6",
+      "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "native__seed0": {
+      "mode": "native",
+      "label": "DSF + refinement",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.1719778560723159,
+        "coco_ap50": 0.3061255847174516,
+        "ap_s": 0.0972816115258858
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.31345280012589255,
+        "fp_per_image": 9.136645962732919,
+        "background_per_image": 2.0968944099378883
+      },
+      "predictions_sha256": "c2f9302a18f908ead35d96ea32944c4ed0c2ec900c910ee2589a6e7c6f8d8d18",
+      "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_spatial_mean__seed1": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.15653915230966195,
+        "coco_ap50": 0.2836339951920234,
+        "ap_s": 0.08545168753782605
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.30534846666797805,
+        "fp_per_image": 12.031677018633541,
+        "background_per_image": 3.059006211180124
+      },
+      "predictions_sha256": "5497f4a2ca468e0ab0da00081be654e7596a79edd851d41921bf9f8cfe5401cc",
+      "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_0__seed1": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.15353981093354507,
+        "coco_ap50": 0.279490411030208,
+        "ap_s": 0.08277244605096301
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3038338218226882,
+        "fp_per_image": 12.511801242236025,
+        "background_per_image": 3.2267080745341614
+      },
+      "predictions_sha256": "09b534037bfa5606205b44f5ee4bdbed705e08af008cee42f7704f2435c8e8af",
+      "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_l1_0__seed1": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.1536389690784814,
+        "coco_ap50": 0.2797589802237286,
+        "ap_s": 0.08309808109286586
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3034600782894349,
+        "fp_per_image": 12.468944099378882,
+        "background_per_image": 3.1993788819875775
+      },
+      "predictions_sha256": "6ffe9a276cd5614b5caebdcd215dac7ddb338c0be1238822cfba8a81085404a3",
+      "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "native__seed1": {
+      "mode": "native",
+      "label": "DSF + refinement",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.1741693231893668,
+        "coco_ap50": 0.31073424348900375,
+        "ap_s": 0.09867980684226095
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3128626787575978,
+        "fp_per_image": 9.295652173913043,
+        "background_per_image": 2.1236024844720496
+      },
+      "predictions_sha256": "ed2681e54e8eb11747b7aef69c928640fe5cd4b7124bf6873b10070ff6c49ba5",
+      "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_spatial_mean__seed2": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.15862935124593308,
+        "coco_ap50": 0.28429665237002927,
+        "ap_s": 0.08413215275852783
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3047780160119598,
+        "fp_per_image": 11.134782608695652,
+        "background_per_image": 2.896894409937888
+      },
+      "predictions_sha256": "0a54332e9c28c3c9e97db53cf474f8895c22e2d70812d608bc05759910e28d32",
+      "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_0__seed2": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.15505251066213502,
+        "coco_ap50": 0.27849613183680066,
+        "ap_s": 0.08122213012009802
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3058992466117198,
+        "fp_per_image": 11.583229813664596,
+        "background_per_image": 3.0962732919254656
+      },
+      "predictions_sha256": "34672349d74cbcd42bb7628a545fad031b4e53c1dd120ad3cd2ac14e76e63136",
+      "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "valid_shuffle_l1_0__seed2": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.15581291090303506,
+        "coco_ap50": 0.27921438088216843,
+        "ap_s": 0.08166705134000565
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.30113893424080884,
+        "fp_per_image": 11.000621118012422,
+        "background_per_image": 2.8763975155279504
+      },
+      "predictions_sha256": "28d84011433d9fb24a54cf7cccdda60ab6c103ce5993640bf7cef20095e383e6",
+      "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    },
+    "native__seed2": {
+      "mode": "native",
+      "label": "DSF + refinement",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.1738214089648249,
+        "coco_ap50": 0.30818211205948126,
+        "ap_s": 0.10061526781101607
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.31644274839191927,
+        "fp_per_image": 9.492546583850931,
+        "background_per_image": 2.1279503105590063
+      },
+      "predictions_sha256": "4fb761e9d05ede75ca40c527feb30d8dbe61e745e91f7b4b43ddc7207872807e",
+      "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+      "script_sha256": "d2e7ead5e636193d62cad0cfa8db3cf83b1de95a5c463f5c558a7a5b840f4d8e"
+    }
+  },
+  "summary": {
+    "valid_spatial_mean": {
+      "label": "Spatial-mean gate",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.1579884004427109,
+          "sample_sd": 0.0012578717455889634,
+          "values": [
+            0.15879669777253763,
+            0.15653915230966195,
+            0.15862935124593308
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.28485491723038686,
+          "sample_sd": 0.0015760419249899683,
+          "values": [
+            0.2866341041291079,
+            0.2836339951920234,
+            0.28429665237002927
+          ]
+        },
+        "ap_s": {
+          "mean": 0.08544720908713414,
+          "sample_sd": 0.0013128228322981633,
+          "values": [
+            0.08675778696504854,
+            0.08545168753782605,
+            0.08413215275852783
+          ]
+        },
+        "small_recall": {
+          "mean": 0.30351253352217217,
+          "sample_sd": 0.00270100679308029,
+          "values": [
+            0.30041111788657865,
+            0.30534846666797805,
+            0.3047780160119598
+          ]
+        },
+        "fp_per_image": {
+          "mean": 10.750517598343686,
+          "sample_sd": 1.5104084865619751,
+          "values": [
+            9.085093167701864,
+            12.031677018633541,
+            11.134782608695652
+          ]
+        },
+        "background_per_image": {
+          "mean": 2.6908902691511387,
+          "sample_sd": 0.5037662763075356,
+          "values": [
+            2.116770186335404,
+            3.059006211180124,
+            2.896894409937888
+          ]
+        }
+      }
+    },
+    "valid_shuffle_0": {
+      "label": "Spatial-shuffle gate",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.15487748822517114,
+          "sample_sd": 0.0012593211864021104,
+          "values": [
+            0.15604014307983335,
+            0.15353981093354507,
+            0.15505251066213502
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.28020932924617864,
+          "sample_sd": 0.0021641482365839675,
+          "values": [
+            0.2826414448715273,
+            0.279490411030208,
+            0.27849613183680066
+          ]
+        },
+        "ap_s": {
+          "mean": 0.08315475316158798,
+          "sample_sd": 0.002149429244765131,
+          "values": [
+            0.08546968331370292,
+            0.08277244605096301,
+            0.08122213012009802
+          ]
+        },
+        "small_recall": {
+          "mean": 0.3032109159339326,
+          "sample_sd": 0.0030479026542023836,
+          "values": [
+            0.29989967936738987,
+            0.3038338218226882,
+            0.3058992466117198
+          ]
+        },
+        "fp_per_image": {
+          "mean": 11.082194616977226,
+          "sample_sd": 1.7352505893891852,
+          "values": [
+            9.151552795031057,
+            12.511801242236025,
+            11.583229813664596
+          ]
+        },
+        "background_per_image": {
+          "mean": 2.8219461697722568,
+          "sample_sd": 0.5917133917581481,
+          "values": [
+            2.142857142857143,
+            3.2267080745341614,
+            3.0962732919254656
+          ]
+        }
+      }
+    },
+    "valid_shuffle_l1_0": {
+      "label": "Shuffle, L1-matched",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.1551127836375114,
+          "sample_sd": 0.0012768906708233926,
+          "values": [
+            0.15588647093101776,
+            0.1536389690784814,
+            0.15581291090303506
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.2804949440538627,
+          "sample_sd": 0.0017674651262568843,
+          "values": [
+            0.28251147105569113,
+            0.2797589802237286,
+            0.27921438088216843
+          ]
+        },
+        "ap_s": {
+          "mean": 0.083335625376042,
+          "sample_sd": 0.001799146137344279,
+          "values": [
+            0.08524174369525447,
+            0.08309808109286586,
+            0.08166705134000565
+          ]
+        },
+        "small_recall": {
+          "mean": 0.3015192346781544,
+          "sample_sd": 0.0017814035679498154,
+          "values": [
+            0.2999586915042194,
+            0.3034600782894349,
+            0.30113893424080884
+          ]
+        },
+        "fp_per_image": {
+          "mean": 10.895445134575569,
+          "sample_sd": 1.6286360185102944,
+          "values": [
+            9.216770186335404,
+            12.468944099378882,
+            11.000621118012422
+          ]
+        },
+        "background_per_image": {
+          "mean": 2.7469979296066254,
+          "sample_sd": 0.5290847633701974,
+          "values": [
+            2.1652173913043478,
+            3.1993788819875775,
+            2.8763975155279504
+          ]
+        }
+      }
+    },
+    "native": {
+      "label": "DSF + refinement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.17332286274216918,
+          "sample_sd": 0.001177728017571141,
+          "values": [
+            0.1719778560723159,
+            0.1741693231893668,
+            0.1738214089648249
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.30834731342197885,
+          "sample_sd": 0.0023087664532774697,
+          "values": [
+            0.3061255847174516,
+            0.31073424348900375,
+            0.30818211205948126
+          ]
+        },
+        "ap_s": {
+          "mean": 0.09885889539305427,
+          "sample_sd": 0.0016740282520364101,
+          "values": [
+            0.0972816115258858,
+            0.09867980684226095,
+            0.10061526781101607
+          ]
+        },
+        "small_recall": {
+          "mean": 0.31425274242513657,
+          "sample_sd": 0.0019194153818903965,
+          "values": [
+            0.31345280012589255,
+            0.3128626787575978,
+            0.31644274839191927
+          ]
+        },
+        "fp_per_image": {
+          "mean": 9.308281573498965,
+          "sample_sd": 0.1782861164770616,
+          "values": [
+            9.136645962732919,
+            9.295652173913043,
+            9.492546583850931
+          ]
+        },
+        "background_per_image": {
+          "mean": 2.1161490683229816,
+          "sample_sd": 0.016816132137491707,
+          "values": [
+            2.0968944099378883,
+            2.1236024844720496,
+            2.1279503105590063
+          ]
+        }
+      }
+    }
+  },
+  "source_label": "tab:testdev_legacy"
+}

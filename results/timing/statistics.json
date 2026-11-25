@@ -1,0 +1,1547 @@
+{
+  "status": "PASS",
+  "date": "2026-11-19T12:18:41.216368+08:00",
+  "models": {
+    "p2_baseline": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_baseline",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+          "round_means_ms": [
+            14.80043905109489,
+            14.592722810218978,
+            14.72518412408759
+          ],
+          "checkpoint_mean_ms": 14.706115328467153,
+          "round_sample_sd_ms": 0.10516284232425224,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_baseline",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+          "round_means_ms": [
+            14.077869525547445,
+            14.471230291970803,
+            14.598339781021897
+          ],
+          "checkpoint_mean_ms": 14.382479866180049,
+          "round_sample_sd_ms": 0.27134811638730877,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_baseline",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+          "round_means_ms": [
+            14.227365693430658,
+            14.608219343065693,
+            14.520172627737226
+          ],
+          "checkpoint_mean_ms": 14.451919221411192,
+          "round_sample_sd_ms": 0.1993897470192779,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 14.513504805352797,
+      "latency_seed_sample_sd_ms": 0.17038065096870103,
+      "fps": 68.90134487923173
+    },
+    "dsf_refinement": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_refinement",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+          "round_means_ms": [
+            15.379590510948905,
+            15.103698722627737,
+            15.026706934306569
+          ],
+          "checkpoint_mean_ms": 15.169998722627737,
+          "round_sample_sd_ms": 0.18554910984958092,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_refinement",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+          "round_means_ms": [
+            15.400141240875913,
+            16.377801459854016,
+            16.157904197080292
+          ],
+          "checkpoint_mean_ms": 15.978615632603407,
+          "round_sample_sd_ms": 0.5128968394884247,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_refinement",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+          "round_means_ms": [
+            15.128340328467154,
+            15.803383211678833,
+            15.348486131386862
+          ],
+          "checkpoint_mean_ms": 15.426736557177616,
+          "round_sample_sd_ms": 0.3442572735557086,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 15.52511697080292,
+      "latency_seed_sample_sd_ms": 0.4131880396544228,
+      "fps": 64.41175302451087
+    },
+    "p2_p3_widening_without_dsf": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_p3_widening_without_dsf",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "697ff0415ecf9d4c00e3b3d919a6addde9bf052c651c61d6cbb4c63f0cde8162",
+          "round_means_ms": [
+            14.344323722627736,
+            14.729940875912408,
+            14.927527189781022
+          ],
+          "checkpoint_mean_ms": 14.66726392944039,
+          "round_sample_sd_ms": 0.2966106382771794,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_p3_widening_without_dsf",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "b9bb421d7afeebf0e4b8e59c111c385db21fdf2fb2b697921db60471de07c3f4",
+          "round_means_ms": [
+            15.03681094890511,
+            14.822579562043796,
+            15.097996532846715
+          ],
+          "checkpoint_mean_ms": 14.985795681265207,
+          "round_sample_sd_ms": 0.14462207681001607,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "p2_p3_widening_without_dsf",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "f0280a31aece8fa6d6fce2a0b2f98b424dac60ec3091756681b8d7c252c20b1d",
+          "round_means_ms": [
+            14.339201277372263,
+            14.688244525547445,
+            14.285420437956205
+          ],
+          "checkpoint_mean_ms": 14.437622080291971,
+          "round_sample_sd_ms": 0.21870482898520716,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 14.696893896999189,
+      "latency_seed_sample_sd_ms": 0.2752853527417373,
+      "fps": 68.04158803950949
+    },
+    "dsf_p2_widening": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p2_widening",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "e40401975cb767d01e3bbccb22d6a803cabbf2a526dda9cd7919461a86c52041",
+          "round_means_ms": [
+            15.415309854014598,
+            15.079316423357664,
+            15.261606386861313
+          ],
+          "checkpoint_mean_ms": 15.252077554744526,
+          "round_sample_sd_ms": 0.16819927271628282,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p2_widening",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "361236f781ed27dfb542b80514501f3ac03dba925e02a87f44d04f384ca18d13",
+          "round_means_ms": [
+            15.632653102189781,
+            15.624583394160585,
+            15.00551496350365
+          ],
+          "checkpoint_mean_ms": 15.420917153284671,
+          "round_sample_sd_ms": 0.3597714753882946,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p2_widening",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "b621d83086ad501044036dfb8dcdd783769216be6216b2db701423b1778d4a95",
+          "round_means_ms": [
+            14.966841058394161,
+            15.21578102189781,
+            14.939024452554744
+          ],
+          "checkpoint_mean_ms": 15.040548844282238,
+          "round_sample_sd_ms": 0.15239152845229867,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 15.237847850770478,
+      "latency_seed_sample_sd_ms": 0.1905829897439286,
+      "fps": 65.62606542559989
+    },
+    "dsf_p3_widening": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p3_widening",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "393062b6f5744eddd807188b5eade29cf314dae5d256aeb8419240ded96d9e28",
+          "round_means_ms": [
+            15.51426697080292,
+            15.924684306569343,
+            15.196064781021898
+          ],
+          "checkpoint_mean_ms": 15.545005352798054,
+          "round_sample_sd_ms": 0.3652810415940106,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p3_widening",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "7678a802bf34d1ef398ec99a0784bc283a2dc3cdc1c606265429314843be3cbe",
+          "round_means_ms": [
+            15.756187226277373,
+            15.613718430656935,
+            15.552772810218977
+          ],
+          "checkpoint_mean_ms": 15.640892822384428,
+          "round_sample_sd_ms": 0.1043944052112657,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "dsf_p3_widening",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "2941562be4937ec67c2d7049352079d5b692c1131931c335528979ea0f52489e",
+          "round_means_ms": [
+            15.58688503649635,
+            15.752089233576642,
+            15.647016788321167
+          ],
+          "checkpoint_mean_ms": 15.66199701946472,
+          "round_sample_sd_ms": 0.08361466484458177,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 15.6159650648824,
+      "latency_seed_sample_sd_ms": 0.062352284143573855,
+      "fps": 64.03702850545092
+    },
+    "gsf_yolo": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "gsf_yolo",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+          "round_means_ms": [
+            14.913430291970803,
+            15.406996350364963,
+            14.903625547445255
+          ],
+          "checkpoint_mean_ms": 15.07468406326034,
+          "round_sample_sd_ms": 0.28783263431086425,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "gsf_yolo",
+          "seed": 1,
+          "weight": "source/best.pt",
+          "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+          "round_means_ms": [
+            14.882645802919708,
+            14.937194890510948,
+            15.385864233576642
+          ],
+          "checkpoint_mean_ms": 15.068568309002433,
+          "round_sample_sd_ms": 0.2761366121194562,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        },
+        {
+          "status": "COMPLETE",
+          "experiment": "gsf_yolo",
+          "seed": 2,
+          "weight": "source/best.pt",
+          "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+          "round_means_ms": [
+            16.20357317518248,
+            15.693631386861314,
+            15.161328467153284
+          ],
+          "checkpoint_mean_ms": 15.686177676399026,
+          "round_sample_sd_ms": 0.5211623319115244,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 15.276476682887267,
+      "latency_seed_sample_sd_ms": 0.35482464496695826,
+      "fps": 65.46012020691929
+    },
+    "yolo26n": {
+      "seeds": [
+        0
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "yolo26n",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "cdb61a3ded5c5adee0afe6b9998d0b2eeb77b719cb43270c644ea5e6a6518bf9",
+          "round_means_ms": [
+            11.962179379562043,
+            11.976449270072992,
+            12.516130839416059
+          ],
+          "checkpoint_mean_ms": 12.151586496350365,
+          "round_sample_sd_ms": 0.31578527671456996,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 12.151586496350365,
+      "latency_seed_sample_sd_ms": null,
+      "fps": 82.29378117008362
+    },
+    "yolo11n": {
+      "seeds": [
+        0
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "yolo11n",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "917f644aaa7fc6acb297e241fb1164cb67d29e0f6f91de2c17ecec35ed43686e",
+          "round_means_ms": [
+            10.974046715328468,
+            11.030761678832118,
+            11.172030839416058
+          ],
+          "checkpoint_mean_ms": 11.058946411192215,
+          "round_sample_sd_ms": 0.10195691590735896,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 11.058946411192215,
+      "latency_seed_sample_sd_ms": null,
+      "fps": 90.42452714916398
+    },
+    "yolo26s": {
+      "seeds": [
+        0
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "yolo26s",
+          "seed": 0,
+          "weight": "source/best.pt",
+          "weight_sha256": "82ec4f2090591b3586e5c176ec7328708be86398ba387a436ce3c1127d80bce4",
+          "round_means_ms": [
+            12.646789598540146,
+            12.785844525547445,
+            12.561556204379562
+          ],
+          "checkpoint_mean_ms": 12.664730109489051,
+          "round_sample_sd_ms": 0.11321532229741563,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 12.664730109489051,
+      "latency_seed_sample_sd_ms": null,
+      "fps": 78.95944022137115
+    },
+    "rtmdet_tiny": {
+      "seeds": [
+        0
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "rtmdet_tiny",
+          "seed": 0,
+          "weight": "source/best_coco_bbox_mAP_epoch_97.pth",
+          "weight_sha256": "f9f0c06265b12e4de3e65cc68a433ea905b9b3e13c1f9f0cdb66b22ce4fcc37f",
+          "round_means_ms": [
+            31.377479562043796,
+            31.241651459854015,
+            31.481913868613137
+          ],
+          "checkpoint_mean_ms": 31.36701496350365,
+          "round_sample_sd_ms": 0.12047255759150582,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 31.36701496350365,
+      "latency_seed_sample_sd_ms": null,
+      "fps": 31.880623679477516
+    },
+    "rtdetrv2_r18": {
+      "seeds": [
+        0
+      ],
+      "records": [
+        {
+          "status": "COMPLETE",
+          "experiment": "rtdetrv2_r18",
+          "seed": 0,
+          "weight": "source/best.pth",
+          "weight_sha256": "ac779065a39004db4c9164c3ed4bf8fe65c7502ad1c0ddf4514243b04a73ea82",
+          "round_means_ms": [
+            32.163962408759126,
+            32.13412718978102,
+            32.1127447080292
+          ],
+          "checkpoint_mean_ms": 32.136944768856445,
+          "round_sample_sd_ms": 0.02572483782067151,
+          "environment": {
+            "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.9.1+cu130",
+            "cuda": "13.0",
+            "ultralytics": "8.4.22",
+            "opencv": "4.9.0",
+            "gpu": "NVIDIA GeForce RTX 5060 Ti",
+            "tf32": false,
+            "torch_threads": 4,
+            "torch_interop_threads": 1,
+            "opencv_threads": 1,
+            "cudnn_benchmark": false
+          },
+          "protocol": {
+            "input": 832,
+            "batch": 1,
+            "precision": "FP32",
+            "settings": {
+              "imgsz": 832,
+              "batch": 1,
+              "rect": false,
+              "conf": 0.001,
+              "iou": 0.7,
+              "max_det": 300,
+              "half": false,
+              "device": "0",
+              "augment": false,
+              "agnostic_nms": false,
+              "save": false,
+              "verbose": false
+            },
+            "rounds": 3,
+            "warmup_per_round": 50,
+            "measured_per_round": 548,
+            "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+            "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+            "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+            "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+          },
+          "telemetry_files": [
+            "source/timing_repeat0.json",
+            "source/timing_repeat1.json",
+            "source/timing_repeat2.json"
+          ]
+        }
+      ],
+      "latency_mean_ms": 32.136944768856445,
+      "latency_seed_sample_sd_ms": null,
+      "fps": 31.11683475801623
+    }
+  },
+  "protocol": {
+    "input": 832,
+    "batch": 1,
+    "precision": "FP32",
+    "settings": {
+      "imgsz": 832,
+      "batch": 1,
+      "rect": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false,
+      "device": "0",
+      "augment": false,
+      "agnostic_nms": false,
+      "save": false,
+      "verbose": false
+    },
+    "rounds": 3,
+    "warmup_per_round": 50,
+    "measured_per_round": 548,
+    "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+    "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+    "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+    "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+  },
+  "source_signatures": {
+    "source/head.py": {
+      "sha256": "c092316743055f02adc84589d843588631ffe705fb0777178e0362d81471f4bc",
+      "bytes": 78412
+    },
+    "source/tasks.py": {
+      "sha256": "285d1864d38b16b22a9205b248b827692c5a79ebca1638cf7ed2d7fb23bd039f",
+      "bytes": 79140
+    },
+    "source/predictor.py": {
+      "sha256": "b4cb4678b57fc4f71698f30aba732d955ad9d463e50c382f70db982dfede869d",
+      "bytes": 23122
+    },
+    "source/predict.py": {
+      "sha256": "da7c65332c3fcd52aad5a7891514e06f81062f6bce16ae292d3f6d02b1c17c5f",
+      "bytes": 5385
+    },
+    "source/remeasure_latency_balanced.py": {
+      "sha256": "a4bb97f5938f77f1356b385ded77919e1d8055071a961bce2ac7c84fec6adacf",
+      "bytes": 14999
+    },
+    "source/measure_unified_serial_gpu.py": {
+      "sha256": "ab92f7ec593dff2d8997eba92ff3ea268bd3ef5214b22cced4e33c25bbe07e98",
+      "bytes": 14445
+    }
+  },
+  "images_sha256": "abcd3e973ed15c2d39962d7a09606f04bfe7d3e2cb083dd7cd6dd290fe24fe10",
+  "software_environment_consistent": true,
+  "environment": {
+    "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.9.1+cu130",
+    "cuda": "13.0",
+    "ultralytics": "8.4.22",
+    "opencv": "4.9.0",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "tf32": false,
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "opencv_threads": 1,
+    "cudnn_benchmark": false
+  },
+  "final_environment": {
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5060 Ti",
+      "driver_version": "595.79",
+      "memory.used": "5",
+      "utilization.gpu": "0",
+      "temperature.gpu": "39",
+      "power.draw": "12.53",
+      "clocks.current.graphics": "1162",
+      "clocks.current.memory": "7001",
+      "pstate": "P3",
+      "clocks_event_reasons.active": "0x0000000000000000"
+    },
+    "cpu_percent": 12.9,
+    "cpu_frequency_mhz": 4201.0,
+    "ram_percent": 50.9,
+    "ram_available_bytes": 16400343040
+  }
+}

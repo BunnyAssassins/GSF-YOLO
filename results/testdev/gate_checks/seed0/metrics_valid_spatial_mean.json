@@ -1,0 +1,13 @@
+{
+  "mode": "valid_spatial_mean",
+  "label": "Spatial-mean gate",
+  "seed": 0,
+  "coco_no_ignore": {
+    "coco_ap": 0.1654072781043766,
+    "coco_ap50": 0.3007451920081943,
+    "ap_s": 0.09653970979268217
+  },
+  "predictions_sha256": "161e31a953e83a270fdd3e984a6be564c7539f59372c851244c1427a26047de0",
+  "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+  "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+}

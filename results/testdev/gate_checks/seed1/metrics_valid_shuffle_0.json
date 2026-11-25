@@ -1,0 +1,13 @@
+{
+  "mode": "valid_shuffle_0",
+  "label": "Spatial-shuffle gate",
+  "seed": 1,
+  "coco_no_ignore": {
+    "coco_ap": 0.1599397995479292,
+    "coco_ap50": 0.289259554508128,
+    "ap_s": 0.08922479916340695
+  },
+  "predictions_sha256": "a77867ec181afec8a43bb2e173b3487d0183ecc4feef8a4ebfdc390b188c6886",
+  "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+  "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+}

@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "n_images": 1610,
+  "runs": [
+    {
+      "experiment_id": "dsf_p2_widening",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.18025994820551897,
+        "coco_ap50": 0.3200159993756377,
+        "ap_s": 0.10591833712818133
+      },
+      "weight_sha256": "e40401975cb767d01e3bbccb22d6a803cabbf2a526dda9cd7919461a86c52041",
+      "predictions_sha256": "deff726b938330c7d012287041f4f9be9bf19d7da2f8436c38b42ac6d55244bc"
+    },
+    {
+      "experiment_id": "dsf_p2_widening",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.17922123906726012,
+        "coco_ap50": 0.3200898763874514,
+        "ap_s": 0.10655997563235398
+      },
+      "weight_sha256": "361236f781ed27dfb542b80514501f3ac03dba925e02a87f44d04f384ca18d13",
+      "predictions_sha256": "779dc0ee89a3fdbd3258ffb875432a274964b208fa075566f3fa88b5148c6921"
+    },
+    {
+      "experiment_id": "dsf_p2_widening",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.17979868766241688,
+        "coco_ap50": 0.32270664195874293,
+        "ap_s": 0.1064079586578277
+      },
+      "weight_sha256": "b621d83086ad501044036dfb8dcdd783769216be6216b2db701423b1778d4a95",
+      "predictions_sha256": "6969e9e386195b287cac4f49795151be1092663f15447a68a0cb1593c5c9f711"
+    },
+    {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.16590197518048902,
+        "coco_ap50": 0.294604728679137,
+        "ap_s": 0.08725944563154998
+      },
+      "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+      "predictions_sha256": "53c984a95e146aa72ff6f4a80e9419827d2d4d729d7a541e7510faf2c7c3b556"
+    },
+    {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.16422785965683503,
+        "coco_ap50": 0.2913733804845822,
+        "ap_s": 0.084827763206148
+      },
+      "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+      "predictions_sha256": "857bc6f4a9584d8e454b3d10e89af64935a0343a2fe5e570c96202db11a8cd53"
+    },
+    {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.1666708069764013,
+        "coco_ap50": 0.2940950385993106,
+        "ap_s": 0.08575729077827719
+      },
+      "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+      "predictions_sha256": "693d9b4dc464b8aeebc39a2a042b7779ddf5a990b2604c6af8d7b0d67208a59e"
+    },
+    {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.18414615513618618,
+        "coco_ap50": 0.32919558667617416,
+        "ap_s": 0.11010474633242626
+      },
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "predictions_sha256": "e20189acb108dc99b997cd313c984f2819fc4c14820343c905514b2ee8ef76a3"
+    },
+    {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.18549604240194245,
+        "coco_ap50": 0.3291763837886812,
+        "ap_s": 0.10868318466594097
+      },
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "predictions_sha256": "6c3277b36cb82d924c2bc36c8d0913e444b0cff43fc78589c812389452259c7b"
+    },
+    {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.18188770988374994,
+        "coco_ap50": 0.3227977040394476,
+        "ap_s": 0.10722032918891268
+      },
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "predictions_sha256": "6536d2d7cf0c9bdcbbf92b985637862b340f32437b3d122df64c2f4723bd8a5b"
+    }
+  ],
+  "summary": {
+    "p2_baseline": {
+      "coco_ap": {
+        "values": [
+          0.16590197518048902,
+          0.16422785965683503,
+          0.1666708069764013
+        ],
+        "mean": 0.16560021393790844,
+        "sample_sd": 0.0012491168028598543
+      },
+      "coco_ap50": {
+        "values": [
+          0.294604728679137,
+          0.2913733804845822,
+          0.2940950385993106
+        ],
+        "mean": 0.29335771592100995,
+        "sample_sd": 0.0017372784283371042
+      },
+      "ap_s": {
+        "values": [
+          0.08725944563154998,
+          0.084827763206148,
+          0.08575729077827719
+        ],
+        "mean": 0.08594816653865839,
+        "sample_sd": 0.0012270269033024673
+      }
+    },
+    "dsf_p2_widening": {
+      "coco_ap": {
+        "values": [
+          0.18025994820551897,
+          0.17922123906726012,
+          0.17979868766241688
+        ],
+        "mean": 0.179759958311732,
+        "sample_sd": 0.0005204364902934503
+      },
+      "coco_ap50": {
+        "values": [
+          0.3200159993756377,
+          0.3200898763874514,
+          0.32270664195874293
+        ],
+        "mean": 0.3209375059072773,
+        "sample_sd": 0.0015325619823240721
+      },
+      "ap_s": {
+        "values": [
+          0.10591833712818133,
+          0.10655997563235398,
+          0.1064079586578277
+        ],
+        "mean": 0.106295423806121,
+        "sample_sd": 0.0003352954848275107
+      }
+    },
+    "gsf_yolo": {
+      "coco_ap": {
+        "values": [
+          0.18414615513618618,
+          0.18549604240194245,
+          0.18188770988374994
+        ],
+        "mean": 0.18384330247395952,
+        "sample_sd": 0.0018231307390652767
+      },
+      "coco_ap50": {
+        "values": [
+          0.32919558667617416,
+          0.3291763837886812,
+          0.3227977040394476
+        ],
+        "mean": 0.327056558168101,
+        "sample_sd": 0.0036882883638055066
+      },
+      "ap_s": {
+        "values": [
+          0.11010474633242626,
+          0.10868318466594097,
+          0.10722032918891268
+        ],
+        "mean": 0.10866942006242664,
+        "sample_sd": 0.0014422578350215974
+      }
+    }
+  },
+  "paired_M6_minus_M5": {
+    "coco_ap": {
+      "values": [
+        0.003886206930667213,
+        0.006274803334682333,
+        0.002089022221333059
+      ],
+      "mean": 0.004083344162227535,
+      "sample_sd": 0.0020998424222470414
+    },
+    "coco_ap50": {
+      "values": [
+        0.009179587300536474,
+        0.009086507401229793,
+        9.106208070464028e-05
+      ],
+      "mean": 0.006119052260823636,
+      "sample_sd": 0.005220600078115735
+    },
+    "ap_s": {
+      "values": [
+        0.004186409204244929,
+        0.002123209033586995,
+        0.0008123705310849744
+      ],
+      "mean": 0.0023739962563056327,
+      "sample_sd": 0.0017009423609587544
+    }
+  },
+  "settings": {
+    "imgsz": 832,
+    "batch": 1,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "agnostic_nms": false,
+    "rect": false,
+    "device": 0
+  },
+  "coco_max_dets": [
+    1,
+    10,
+    300
+  ],
+  "ignore_handling": "Same supplementary COCO protocol as existing M0/M6; no official ignored-region handling"
+}

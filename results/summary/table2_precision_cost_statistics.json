@@ -1,0 +1,583 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "coco_max_dets": [
+    1,
+    10,
+    300
+  ],
+  "fps_definition": "1000 / pooled mean prediction-call latency in ms; equal image counts per seed/round",
+  "models": [
+    {
+      "experiment": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "flags": [
+        false,
+        false,
+        false
+      ],
+      "parameters": 2518352,
+      "gflops": 12.743238144000001,
+      "mean_latency_ms": 14.513504805352797,
+      "fps": 68.90134487923173,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 38.897999999999996,
+          "sample_sd": 0.2910171816233543
+        },
+        "logged_ap_percent": {
+          "mean": 23.485666666666667,
+          "sample_sd": 0.17054129509691637
+        },
+        "ap_s_percent": {
+          "mean": 13.614122334333262,
+          "sample_sd": 0.2227049518074825
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 82,
+          "logged_ap50_percent": 38.699,
+          "logged_ap_percent": 23.49,
+          "ap_s_percent": 13.466981496467278,
+          "latency_ms": 14.706115328467153,
+          "rounds_ms": [
+            14.80043905109489,
+            14.592722810218978,
+            14.72518412408759
+          ],
+          "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "b8534e80c3dfc4059b39b6b42dc26f383d68981fe5827e9d2af992233a0da8e6",
+          "original_csv_sha256": "5e3dff76c30ab2e5081b1351ebec4dc78d43a8de2164cc355b30b3060992cb58",
+          "published_csv_sha256": "494d6a8183db0af2f6276fb27f6fcf5f4fcc5bdce9304e7e426fab6146e50245",
+          "published_log_file": "results/training_logs/p2_baseline/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 91,
+          "logged_ap50_percent": 39.232,
+          "logged_ap_percent": 23.654,
+          "ap_s_percent": 13.870339067035914,
+          "latency_ms": 14.382479866180049,
+          "rounds_ms": [
+            14.077869525547445,
+            14.471230291970803,
+            14.598339781021897
+          ],
+          "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "bcdc05b7943ebe3c3d356d444f93b951880ffbdf941a7efa62fdea77f9625ec3",
+          "original_csv_sha256": "7dc43b357ab6127aca6fab94b21ffcaff5e0103f0540ce7b13b71e81cfebb361",
+          "published_csv_sha256": "ae077183b30c02413e97a06a70b45fffe275e87343bb3083dd7035d5590e4d91",
+          "published_log_file": "results/training_logs/p2_baseline/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 94,
+          "logged_ap50_percent": 38.763,
+          "logged_ap_percent": 23.313,
+          "ap_s_percent": 13.505046439496592,
+          "latency_ms": 14.451919221411192,
+          "rounds_ms": [
+            14.227365693430658,
+            14.608219343065693,
+            14.520172627737226
+          ],
+          "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "2583babbf10e85689a363c73b422f0cd787e97a8f72851e2d7bdd8dcf6646898",
+          "original_csv_sha256": "31d17298a2a029510338e927d6f26612e9196c3094897ed5f83271a5c8d53cdb",
+          "published_csv_sha256": "343d8d298360c1dfc55bcd79476f436c07d6ab768800e6443d4b6a5c8e6add76",
+          "published_log_file": "results/training_logs/p2_baseline/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.17038065096870103
+    },
+    {
+      "experiment": "dsf_refinement",
+      "label": "DSF fusion + refinement",
+      "flags": [
+        true,
+        false,
+        false
+      ],
+      "parameters": 2568432,
+      "gflops": 15.936640512,
+      "mean_latency_ms": 15.52511697080292,
+      "fps": 64.41175302451087,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 40.78,
+          "sample_sd": 0.15121838512562277
+        },
+        "logged_ap_percent": {
+          "mean": 24.542333333333335,
+          "sample_sd": 0.1278175783424702
+        },
+        "ap_s_percent": {
+          "mean": 15.517317305554952,
+          "sample_sd": 0.31002933395483967
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 88,
+          "logged_ap50_percent": 40.714,
+          "logged_ap_percent": 24.407,
+          "ap_s_percent": 15.712247128683831,
+          "latency_ms": 15.169998722627737,
+          "rounds_ms": [
+            15.379590510948905,
+            15.103698722627737,
+            15.026706934306569
+          ],
+          "weight_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "ba3c0ed529da8bf20190bd70115e9c378dd24d345d9ab67948765e3c25bd641d",
+          "original_csv_sha256": "5796d90579d1991d599aeb7df0791c3c569802733eb67e3c7cda65e1e6de7e14",
+          "published_csv_sha256": "975ef439c862935e57c7ebef1e47725e359a866ff6d2ea7b6b9664338fd566d2",
+          "published_log_file": "results/training_logs/dsf_refinement/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 100,
+          "logged_ap50_percent": 40.953,
+          "logged_ap_percent": 24.661,
+          "ap_s_percent": 15.679890777606643,
+          "latency_ms": 15.978615632603407,
+          "rounds_ms": [
+            15.400141240875913,
+            16.377801459854016,
+            16.157904197080292
+          ],
+          "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "7fe2c9c280f73a47eceb71c207d3fed97be1986926fdd0a0b4e51c4530587603",
+          "original_csv_sha256": "70d07518acac5d257bed757847b0f1aca23563ef205965df68ebff2f1dd9aa1a",
+          "published_csv_sha256": "78f1e535f8827ca2d0bf446c52a8ae3fffc9591c5a58cc1805a04f891d680b09",
+          "published_log_file": "results/training_logs/dsf_refinement/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 97,
+          "logged_ap50_percent": 40.672999999999995,
+          "logged_ap_percent": 24.559,
+          "ap_s_percent": 15.159814010374383,
+          "latency_ms": 15.426736557177616,
+          "rounds_ms": [
+            15.128340328467154,
+            15.803383211678833,
+            15.348486131386862
+          ],
+          "weight_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "d6b002e1c854a76ffca2d6bd8566c35507f89d3fbdea72dcdda2c65c63c933d9",
+          "original_csv_sha256": "31e2098a2a52d9d3f2f7f59204f36491b6ba622189058c387e6361ce9ae471ae",
+          "published_csv_sha256": "33ca14831cc4c54fac3f2354d1c79f0724906018a2818d073fa1a3a4a591af6e",
+          "published_log_file": "results/training_logs/dsf_refinement/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.4131880396544228
+    },
+    {
+      "experiment": "p2_p3_widening_without_dsf",
+      "label": "P2/P3 widening (no DSF)",
+      "flags": [
+        false,
+        true,
+        true
+      ],
+      "parameters": 2661800,
+      "gflops": 16.498791296,
+      "mean_latency_ms": 14.696893896999189,
+      "fps": 68.04158803950949,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 41.059333333333335,
+          "sample_sd": 0.46538729391049555
+        },
+        "logged_ap_percent": {
+          "mean": 25.119666666666664,
+          "sample_sd": 0.294357492402236
+        },
+        "ap_s_percent": {
+          "mean": 15.136246623219074,
+          "sample_sd": 0.2815847845334775
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 94,
+          "logged_ap50_percent": 41.42,
+          "logged_ap_percent": 25.313999999999997,
+          "ap_s_percent": 15.161212486578693,
+          "latency_ms": 14.66726392944039,
+          "rounds_ms": [
+            14.344323722627736,
+            14.729940875912408,
+            14.927527189781022
+          ],
+          "weight_sha256": "697ff0415ecf9d4c00e3b3d919a6addde9bf052c651c61d6cbb4c63f0cde8162",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "0459666c4ba6b2e048a56479806de7a2959bc0de2f20ffab10438a533148057c",
+          "original_csv_sha256": "7978ed92e5fcd45caeab011aabfe3b5c948b8e35ba116d2c17e4c656b545fcf2",
+          "published_csv_sha256": "adca0ace5bc347b9d63a0b3ce614fb5b92b7b4a21084c43f35c322ca868b1859",
+          "published_log_file": "results/training_logs/p2_p3_widening_without_dsf/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 87,
+          "logged_ap50_percent": 41.224,
+          "logged_ap_percent": 25.263999999999996,
+          "ap_s_percent": 15.404517177948243,
+          "latency_ms": 14.985795681265207,
+          "rounds_ms": [
+            15.03681094890511,
+            14.822579562043796,
+            15.097996532846715
+          ],
+          "weight_sha256": "b9bb421d7afeebf0e4b8e59c111c385db21fdf2fb2b697921db60471de07c3f4",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "1f062d566bbf1c2c843c746c8d8910a1ff59ed1e161462038217eb25dd24891b",
+          "original_csv_sha256": "348d4e51fb92a7f0946845e02bb550ccc161a770d656c99b5e86389f88b318d9",
+          "published_csv_sha256": "1c681b692b493ff2007488e57c5de44eb320fa368b3f2500d93639fac2729a79",
+          "published_log_file": "results/training_logs/p2_p3_widening_without_dsf/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 98,
+          "logged_ap50_percent": 40.534,
+          "logged_ap_percent": 24.781,
+          "ap_s_percent": 14.843010205130286,
+          "latency_ms": 14.437622080291971,
+          "rounds_ms": [
+            14.339201277372263,
+            14.688244525547445,
+            14.285420437956205
+          ],
+          "weight_sha256": "f0280a31aece8fa6d6fce2a0b2f98b424dac60ec3091756681b8d7c252c20b1d",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "0d61b0522bf07a766ad71f027fc7b08e57ab49b22c0cf96321ed7693044baa41",
+          "original_csv_sha256": "15f2825b46364b887c2804b0afc6753f922a948238650fb61f5f933c9a86a124",
+          "published_csv_sha256": "20080fabb6f784aeb6ed825b1529ee71fe60eedde301e05a446dc1ef274d01f9",
+          "published_log_file": "results/training_logs/p2_p3_widening_without_dsf/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.2752853527417373
+    },
+    {
+      "experiment": "dsf_p2_widening",
+      "label": "DSF + P2 widening",
+      "flags": [
+        true,
+        true,
+        false
+      ],
+      "parameters": 2643940,
+      "gflops": 19.485608063999997,
+      "mean_latency_ms": 15.237847850770478,
+      "fps": 65.62606542559989,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 42.60933333333333,
+          "sample_sd": 0.27812647003356666
+        },
+        "logged_ap_percent": {
+          "mean": 25.646,
+          "sample_sd": 0.16139702599490366
+        },
+        "ap_s_percent": {
+          "mean": 16.899194782086848,
+          "sample_sd": 0.29521137484370735
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 94,
+          "logged_ap50_percent": 42.551,
+          "logged_ap_percent": 25.534000000000002,
+          "ap_s_percent": 16.643706908038517,
+          "latency_ms": 15.252077554744526,
+          "rounds_ms": [
+            15.415309854014598,
+            15.079316423357664,
+            15.261606386861313
+          ],
+          "weight_sha256": "e40401975cb767d01e3bbccb22d6a803cabbf2a526dda9cd7919461a86c52041",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "7a28507fb6707f241bc2eca8d23a6a0972d9a8e13f3928b3fadfb31545980adf",
+          "original_csv_sha256": "e5127edd7638f35aa8062d39c7cb8f7806233a9d15398759b0743ec7c4af8fe1",
+          "published_csv_sha256": "95807449fe074740db220e259b3a0380e8e06c718974312264770f28cf0a41a9",
+          "published_log_file": "results/training_logs/dsf_p2_widening/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 100,
+          "logged_ap50_percent": 42.912,
+          "logged_ap_percent": 25.831,
+          "ap_s_percent": 17.22237212336374,
+          "latency_ms": 15.420917153284671,
+          "rounds_ms": [
+            15.632653102189781,
+            15.624583394160585,
+            15.00551496350365
+          ],
+          "weight_sha256": "361236f781ed27dfb542b80514501f3ac03dba925e02a87f44d04f384ca18d13",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "79e99f4ba42000d633915a8b8725675bc7d35e637931b0c9612ae682e687c4a1",
+          "original_csv_sha256": "0523a3996dc4011970522c4258f974d550d6a040bfe40c9065acf455b0db8250",
+          "published_csv_sha256": "cc4ad09b68b656d10cb39dc49c1401a741d96591ae5928f8073d8b8ac198e28d",
+          "published_log_file": "results/training_logs/dsf_p2_widening/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 95,
+          "logged_ap50_percent": 42.365,
+          "logged_ap_percent": 25.573,
+          "ap_s_percent": 16.831505314858283,
+          "latency_ms": 15.040548844282238,
+          "rounds_ms": [
+            14.966841058394161,
+            15.21578102189781,
+            14.939024452554744
+          ],
+          "weight_sha256": "b621d83086ad501044036dfb8dcdd783769216be6216b2db701423b1778d4a95",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "0fdf1a8c8babd3a6f2caf26968ef3d4a61c5a0b25fcae888ff7d7b894dc32a2b",
+          "original_csv_sha256": "ace42532c97df49b8bce789728b279c288a87b1994e795293c7a7d6055d2bda1",
+          "published_csv_sha256": "e653b691f542d377d9e882dcae96c525bddd5c36a7ee9f8193005f4f8ec3eee1",
+          "published_log_file": "results/training_logs/dsf_p2_widening/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.1905829897439286
+    },
+    {
+      "experiment": "dsf_p3_widening",
+      "label": "DSF + P3 widening",
+      "flags": [
+        true,
+        false,
+        true
+      ],
+      "parameters": 2651004,
+      "gflops": 17.096634880000003,
+      "mean_latency_ms": 15.6159650648824,
+      "fps": 64.03702850545092,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 41.059666666666665,
+          "sample_sd": 0.23958784053731227
+        },
+        "logged_ap_percent": {
+          "mean": 24.821666666666665,
+          "sample_sd": 0.03869539162915164
+        },
+        "ap_s_percent": {
+          "mean": 15.873416246637932,
+          "sample_sd": 0.23334294376659218
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 100,
+          "logged_ap50_percent": 41.285,
+          "logged_ap_percent": 24.845,
+          "ap_s_percent": 16.142578398742263,
+          "latency_ms": 15.545005352798054,
+          "rounds_ms": [
+            15.51426697080292,
+            15.924684306569343,
+            15.196064781021898
+          ],
+          "weight_sha256": "393062b6f5744eddd807188b5eade29cf314dae5d256aeb8419240ded96d9e28",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "1fdabf132a1aaf5d013ffb2cfdc3981da4093356f8466715188f719cade8913c",
+          "original_csv_sha256": "4a53c87936160303ebaf02de6149a7af12e79080832dd9e279b98860a50e6499",
+          "published_csv_sha256": "fec58e813e719d16095ab7c841a6999f37e7983cc00c5f70edf6b2c20ee5dbbd",
+          "published_log_file": "results/training_logs/dsf_p3_widening/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 90,
+          "logged_ap50_percent": 41.086,
+          "logged_ap_percent": 24.776999999999997,
+          "ap_s_percent": 15.749452670836916,
+          "latency_ms": 15.640892822384428,
+          "rounds_ms": [
+            15.756187226277373,
+            15.613718430656935,
+            15.552772810218977
+          ],
+          "weight_sha256": "7678a802bf34d1ef398ec99a0784bc283a2dc3cdc1c606265429314843be3cbe",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "74eee44a37e8ee6f6c68527bab1af3fae5e0838e46a5a16e471bb040ab4e7476",
+          "original_csv_sha256": "de78197d2b2adb249ad64f411bb65881819d79997d34890737cc31ed573ff3f1",
+          "published_csv_sha256": "815e8d59afc9e3cfe256d79c11f4a231cf050881c94398e74973e21152b182a2",
+          "published_log_file": "results/training_logs/dsf_p3_widening/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 95,
+          "logged_ap50_percent": 40.808,
+          "logged_ap_percent": 24.843,
+          "ap_s_percent": 15.728217670334619,
+          "latency_ms": 15.66199701946472,
+          "rounds_ms": [
+            15.58688503649635,
+            15.752089233576642,
+            15.647016788321167
+          ],
+          "weight_sha256": "2941562be4937ec67c2d7049352079d5b692c1131931c335528979ea0f52489e",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "949a98529a19a0bd68619c304953c46ae305c5cb4390dad49b82253223c7937c",
+          "original_csv_sha256": "3be7c0eb308e5ae4acf46dd0110431cdf93f456993c235cdbae1260093712395",
+          "published_csv_sha256": "dca75ab5aec4283d15e2ab2416a359b1e512f872da7bb400203a18dbe4bccee6",
+          "published_log_file": "results/training_logs/dsf_p3_widening/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.062352284143573855
+    },
+    {
+      "experiment": "gsf_yolo",
+      "label": "GSF-YOLO",
+      "flags": [
+        true,
+        true,
+        true
+      ],
+      "parameters": 2727280,
+      "gflops": 20.670522496,
+      "mean_latency_ms": 15.276476682887267,
+      "fps": 65.46012020691929,
+      "statistics": {
+        "logged_ap50_percent": {
+          "mean": 42.97333333333333,
+          "sample_sd": 0.4964980698183356
+        },
+        "logged_ap_percent": {
+          "mean": 26.041333333333334,
+          "sample_sd": 0.1693408790969654
+        },
+        "ap_s_percent": {
+          "mean": 16.895547325851247,
+          "sample_sd": 0.30864277022115477
+        }
+      },
+      "runs": [
+        {
+          "seed": 0,
+          "selected_epoch": 86,
+          "logged_ap50_percent": 43.208,
+          "logged_ap_percent": 26.077,
+          "ap_s_percent": 16.925226193623306,
+          "latency_ms": 15.07468406326034,
+          "rounds_ms": [
+            14.913430291970803,
+            15.406996350364963,
+            14.903625547445255
+          ],
+          "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "d62dc9455d6a5daf491c2e44c5acf196cf5dbfeb1ab6d583064625ca05a645f3",
+          "original_csv_sha256": "ab64114c8a555ee9e17ab45ded5dc404d98afc9bfcaba8438d625563a96158b9",
+          "published_csv_sha256": "43a57bfa8a2fa9528adc1dcddd8f60d4627e0f626954243505c1e88e04229153",
+          "published_log_file": "results/training_logs/gsf_yolo/seed0/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 1,
+          "selected_epoch": 80,
+          "logged_ap50_percent": 43.309,
+          "logged_ap_percent": 26.19,
+          "ap_s_percent": 17.18827858825408,
+          "latency_ms": 15.068568309002433,
+          "rounds_ms": [
+            14.882645802919708,
+            14.937194890510948,
+            15.385864233576642
+          ],
+          "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "dcf157e8dbf3410b0ff8ff506397247f68e6b16fb60e62e349846b7511f04536",
+          "original_csv_sha256": "b179c679b095f4ae41039514a0ccde6fcea7bff8fedc0442c82265a209021c4d",
+          "published_csv_sha256": "45c59bcb822ef1b54c2cccc825445e021e4ed5218268d67a2d0a0fe07459b016",
+          "published_log_file": "results/training_logs/gsf_yolo/seed1/results.csv",
+          "original_csv": "source/results.csv"
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 76,
+          "logged_ap50_percent": 42.403,
+          "logged_ap_percent": 25.857000000000003,
+          "ap_s_percent": 16.573137195676356,
+          "latency_ms": 15.686177676399026,
+          "rounds_ms": [
+            16.20357317518248,
+            15.693631386861314,
+            15.161328467153284
+          ],
+          "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+          "timing_source": "source/summary.json",
+          "timing_sha256": "e3ab97e072bff8080b4823df01ea503f0a7e54dfed4f91c411f481ee527b9928",
+          "original_csv_sha256": "c044446bc53bbfeb463dd78e81daffefbc87693305c9a74a02a1bded23603c2a",
+          "published_csv_sha256": "8cc0a8a4949ed14d2cbd6da7101eb81784c7f4042dd5fe1dbde96fd161d82d19",
+          "published_log_file": "results/training_logs/gsf_yolo/seed2/results.csv",
+          "original_csv": "source/results.csv"
+        }
+      ],
+      "latency_seed_sample_sd_ms": 0.35482464496695826
+    }
+  ],
+  "timing_protocol": {
+    "input": 832,
+    "batch": 1,
+    "precision": "FP32",
+    "settings": {
+      "imgsz": 832,
+      "batch": 1,
+      "rect": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false,
+      "device": "0",
+      "augment": false,
+      "agnostic_nms": false,
+      "save": false,
+      "verbose": false
+    },
+    "rounds": 3,
+    "warmup_per_round": 50,
+    "measured_per_round": 548,
+    "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+    "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+    "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+    "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+  },
+  "timing_date": "2026-11-19",
+  "timing_statistics_source": "source/statistics.json"
+}

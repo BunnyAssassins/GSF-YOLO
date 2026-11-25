@@ -1,0 +1,13 @@
+{
+  "configuration": "yolo11n",
+  "seed": 0,
+  "selected_epoch_one_based": 88,
+  "checkpoint_selection": "Maximum native validation AP50:95; AP50 taken from the same epoch",
+  "logs": [
+    "results.csv",
+    "configured_args.yaml",
+    "checkpoint_train_args.yaml",
+    "configured_native_protocol.json"
+  ],
+  "notes": "Historical configured arguments and checkpoint-stored arguments are separate records. Their differences are preserved; public paths and run names replace local identifiers. Inference checkpoints do not contain optimizer/scaler state and cannot resume training."
+}

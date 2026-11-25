@@ -1,0 +1,13 @@
+{
+  "mode": "native",
+  "label": "GSF-YOLO",
+  "seed": 2,
+  "coco_no_ignore": {
+    "coco_ap": 0.18188770988374994,
+    "coco_ap50": 0.3227977040394476,
+    "ap_s": 0.10722032918891268
+  },
+  "predictions_sha256": "6536d2d7cf0c9bdcbbf92b985637862b340f32437b3d122df64c2f4723bd8a5b",
+  "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+  "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+}

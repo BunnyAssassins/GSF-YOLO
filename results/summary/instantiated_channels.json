@@ -1,0 +1,1889 @@
+{
+  "input_bchw": [
+    1,
+    3,
+    832,
+    832
+  ],
+  "scale": "n",
+  "nc": 10,
+  "source_label": "sec:dsf / sec:capacity / fig:architecture",
+  "models": {
+    "p2_baseline": {
+      "label": "P2 baseline",
+      "yaml": "configs/models/p2_baseline.yaml",
+      "yaml_sha256": "0dbc2fa3dfede5edcda2566ab8c7ea150ad066ea29d79e68d6c4da2bab476279",
+      "parameters_unfused_dual_head": 2518352,
+      "detect_from": [
+        19,
+        22,
+        25,
+        28
+      ],
+      "detect_stride": [
+        4.0,
+        8.0,
+        16.0,
+        32.0
+      ],
+      "reg_max": 1,
+      "end2end": true,
+      "nodes": [
+        {
+          "index": 0,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 464,
+          "output_shape": [
+            1,
+            16,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 1,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 4672,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 2,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 6640,
+          "output_shape": [
+            1,
+            64,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 3,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 36992,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 4,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 26080,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 5,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 6,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 87040,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 7,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 295424,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 8,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 346112,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 9,
+          "from": -1,
+          "module": "SPPF",
+          "parameters": 164608,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 10,
+          "from": -1,
+          "module": "C2PSA",
+          "parameters": 249728,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 11,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 12,
+          "from": [
+            -1,
+            6
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 13,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 119808,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 14,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 15,
+          "from": [
+            -1,
+            4
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 16,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 34304,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 17,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            64,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 18,
+          "from": [
+            -1,
+            2
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 19,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 8704,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 20,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 9280,
+          "output_shape": [
+            1,
+            32,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 21,
+          "from": [
+            -1,
+            16
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            96,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 22,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 24064,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 23,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 36992,
+          "output_shape": [
+            1,
+            64,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 24,
+          "from": [
+            -1,
+            13
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            192,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 25,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 95232,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 26,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "from": [
+            -1,
+            10
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 28,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 463104,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 29,
+          "from": [
+            19,
+            22,
+            25,
+            28
+          ],
+          "module": "Detect",
+          "parameters": 213680
+        }
+      ],
+      "dsf": null,
+      "dsf_index": null,
+      "prediction_branch": "one2one",
+      "native_forward_compute": "one2many_and_one2one_until_explicit_head_fusion_or_pruning"
+    },
+    "dsf_refinement": {
+      "label": "DSF fusion + refinement",
+      "yaml": "configs/models/dsf_refinement.yaml",
+      "yaml_sha256": "8b972cd08bddac90f41e39e2f68abaa29766b11e2841e940d8b8e4ac6e47bb30",
+      "parameters_unfused_dual_head": 2568432,
+      "detect_from": [
+        30,
+        22,
+        25,
+        28
+      ],
+      "detect_stride": [
+        4.0,
+        8.0,
+        16.0,
+        32.0
+      ],
+      "reg_max": 1,
+      "end2end": true,
+      "nodes": [
+        {
+          "index": 0,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 464,
+          "output_shape": [
+            1,
+            16,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 1,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 4672,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 2,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 6640,
+          "output_shape": [
+            1,
+            64,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 3,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 36992,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 4,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 26080,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 5,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 6,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 87040,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 7,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 295424,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 8,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 346112,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 9,
+          "from": -1,
+          "module": "SPPF",
+          "parameters": 164608,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 10,
+          "from": -1,
+          "module": "C2PSA",
+          "parameters": 249728,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 11,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 12,
+          "from": [
+            -1,
+            6
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 13,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 119808,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 14,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 15,
+          "from": [
+            -1,
+            4
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 16,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 34304,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 17,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            64,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 18,
+          "from": [
+            -1,
+            2
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 19,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 8704,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 20,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 9280,
+          "output_shape": [
+            1,
+            32,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 21,
+          "from": [
+            -1,
+            16
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            96,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 22,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 24064,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 23,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 36992,
+          "output_shape": [
+            1,
+            64,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 24,
+          "from": [
+            -1,
+            13
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            192,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 25,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 95232,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 26,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "from": [
+            -1,
+            10
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 28,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 463104,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 29,
+          "from": [
+            19,
+            22,
+            25,
+            28
+          ],
+          "module": "DetailSemanticFusion",
+          "parameters": 44448,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 30,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 5632,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 31,
+          "from": [
+            30,
+            22,
+            25,
+            28
+          ],
+          "module": "Detect",
+          "parameters": 213680
+        }
+      ],
+      "dsf": {
+        "equation_output_max_abs_error": 0.0,
+        "equation_test_input": "nonzero_random_features_with_recorded_actual_shapes",
+        "semantic_max_abs": 1.4450056552886963,
+        "sum_vs_mean_semantic_max_abs_difference": 1.0816518068313599,
+        "input_shapes": [
+          [
+            1,
+            32,
+            208,
+            208
+          ],
+          [
+            1,
+            64,
+            104,
+            104
+          ],
+          [
+            1,
+            128,
+            52,
+            52
+          ],
+          [
+            1,
+            256,
+            26,
+            26
+          ]
+        ],
+        "detail_shape": [
+          1,
+          32,
+          208,
+          208
+        ],
+        "semantic_shape": [
+          1,
+          32,
+          208,
+          208
+        ],
+        "gate_shape": [
+          1,
+          32,
+          208,
+          208
+        ],
+        "output_shape": [
+          1,
+          32,
+          208,
+          208
+        ],
+        "semantic_aggregation": "sum_without_division",
+        "interpolation": "nearest",
+        "gate_convolution": "raw_1x1_conv_with_bias_no_BN_or_SiLU",
+        "other_convolutions": "bias_free_Conv2d_BatchNorm2d_SiLU"
+      },
+      "dsf_index": 29,
+      "prediction_branch": "one2one",
+      "native_forward_compute": "one2many_and_one2one_until_explicit_head_fusion_or_pruning"
+    },
+    "dsf_p2_widening": {
+      "label": "DSF + P2 widening",
+      "yaml": "configs/models/dsf_p2_widening.yaml",
+      "yaml_sha256": "3ca66452747fca60b433f83df5c615ef30754f46bb949b94c3c4e201a1771a23",
+      "parameters_unfused_dual_head": 2643940,
+      "detect_from": [
+        30,
+        22,
+        25,
+        28
+      ],
+      "detect_stride": [
+        4.0,
+        8.0,
+        16.0,
+        32.0
+      ],
+      "reg_max": 1,
+      "end2end": true,
+      "nodes": [
+        {
+          "index": 0,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 464,
+          "output_shape": [
+            1,
+            16,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 1,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 4672,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 2,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 9980,
+          "output_shape": [
+            1,
+            80,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 3,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 57760,
+          "output_shape": [
+            1,
+            80,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 4,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 27104,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 5,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 6,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 87040,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 7,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 295424,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 8,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 346112,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 9,
+          "from": -1,
+          "module": "SPPF",
+          "parameters": 164608,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 10,
+          "from": -1,
+          "module": "C2PSA",
+          "parameters": 249728,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 11,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 12,
+          "from": [
+            -1,
+            6
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 13,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 119808,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 14,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 15,
+          "from": [
+            -1,
+            4
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 16,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 34304,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 17,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            64,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 18,
+          "from": [
+            -1,
+            2
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            144,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 19,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 12880,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 20,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 14480,
+          "output_shape": [
+            1,
+            40,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 21,
+          "from": [
+            -1,
+            16
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            104,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 22,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 24576,
+          "output_shape": [
+            1,
+            64,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 23,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 36992,
+          "output_shape": [
+            1,
+            64,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 24,
+          "from": [
+            -1,
+            13
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            192,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 25,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 95232,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 26,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "from": [
+            -1,
+            10
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 28,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 463104,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 29,
+          "from": [
+            19,
+            22,
+            25,
+            28
+          ],
+          "module": "DetailSemanticFusion",
+          "parameters": 64840,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 30,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 8720,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 31,
+          "from": [
+            30,
+            22,
+            25,
+            28
+          ],
+          "module": "Detect",
+          "parameters": 230688
+        }
+      ],
+      "dsf": {
+        "equation_output_max_abs_error": 0.0,
+        "equation_test_input": "nonzero_random_features_with_recorded_actual_shapes",
+        "semantic_max_abs": 1.3830080032348633,
+        "sum_vs_mean_semantic_max_abs_difference": 1.0345113277435303,
+        "input_shapes": [
+          [
+            1,
+            40,
+            208,
+            208
+          ],
+          [
+            1,
+            64,
+            104,
+            104
+          ],
+          [
+            1,
+            128,
+            52,
+            52
+          ],
+          [
+            1,
+            256,
+            26,
+            26
+          ]
+        ],
+        "detail_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "semantic_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "gate_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "output_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "semantic_aggregation": "sum_without_division",
+        "interpolation": "nearest",
+        "gate_convolution": "raw_1x1_conv_with_bias_no_BN_or_SiLU",
+        "other_convolutions": "bias_free_Conv2d_BatchNorm2d_SiLU"
+      },
+      "dsf_index": 29,
+      "prediction_branch": "one2one",
+      "native_forward_compute": "one2many_and_one2one_until_explicit_head_fusion_or_pruning"
+    },
+    "gsf_yolo": {
+      "label": "DSF + P2/P3 widening",
+      "yaml": "configs/models/gsf_yolo.yaml",
+      "yaml_sha256": "37eba1ee38db33cf669aaac5a647ad648d8a486d65ae6f77101041e39d8983ea",
+      "parameters_unfused_dual_head": 2727280,
+      "detect_from": [
+        30,
+        22,
+        25,
+        28
+      ],
+      "detect_stride": [
+        4.0,
+        8.0,
+        16.0,
+        32.0
+      ],
+      "reg_max": 1,
+      "end2end": true,
+      "nodes": [
+        {
+          "index": 0,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 464,
+          "output_shape": [
+            1,
+            16,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 1,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 4672,
+          "output_shape": [
+            1,
+            32,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 2,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 9980,
+          "output_shape": [
+            1,
+            80,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 3,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 57760,
+          "output_shape": [
+            1,
+            80,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 4,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 33516,
+          "output_shape": [
+            1,
+            144,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 5,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 166144,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 6,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 87040,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 7,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 295424,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 8,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 346112,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 9,
+          "from": -1,
+          "module": "SPPF",
+          "parameters": 164608,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 10,
+          "from": -1,
+          "module": "C2PSA",
+          "parameters": 249728,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 11,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            256,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 12,
+          "from": [
+            -1,
+            6
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 13,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 119808,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 14,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            128,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 15,
+          "from": [
+            -1,
+            4
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            272,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 16,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 49600,
+          "output_shape": [
+            1,
+            80,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 17,
+          "from": -1,
+          "module": "Upsample",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            80,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 18,
+          "from": [
+            -1,
+            2
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            160,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 19,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 13520,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 20,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 14480,
+          "output_shape": [
+            1,
+            40,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 21,
+          "from": [
+            -1,
+            16
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            120,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 22,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 37440,
+          "output_shape": [
+            1,
+            80,
+            104,
+            104
+          ]
+        },
+        {
+          "index": 23,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 57760,
+          "output_shape": [
+            1,
+            80,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 24,
+          "from": [
+            -1,
+            13
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            208,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 25,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 97280,
+          "output_shape": [
+            1,
+            128,
+            52,
+            52
+          ]
+        },
+        {
+          "index": 26,
+          "from": -1,
+          "module": "Conv",
+          "parameters": 147712,
+          "output_shape": [
+            1,
+            128,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "from": [
+            -1,
+            10
+          ],
+          "module": "Concat",
+          "parameters": 0,
+          "output_shape": [
+            1,
+            384,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 28,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 463104,
+          "output_shape": [
+            1,
+            256,
+            26,
+            26
+          ]
+        },
+        {
+          "index": 29,
+          "from": [
+            19,
+            22,
+            25,
+            28
+          ],
+          "module": "DetailSemanticFusion",
+          "parameters": 65480,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 30,
+          "from": -1,
+          "module": "C3k2",
+          "parameters": 8720,
+          "output_shape": [
+            1,
+            40,
+            208,
+            208
+          ]
+        },
+        {
+          "index": 31,
+          "from": [
+            30,
+            22,
+            25,
+            28
+          ],
+          "module": "Detect",
+          "parameters": 236928
+        }
+      ],
+      "dsf": {
+        "equation_output_max_abs_error": 0.0,
+        "equation_test_input": "nonzero_random_features_with_recorded_actual_shapes",
+        "semantic_max_abs": 1.4062670469284058,
+        "sum_vs_mean_semantic_max_abs_difference": 1.0522046089172363,
+        "input_shapes": [
+          [
+            1,
+            40,
+            208,
+            208
+          ],
+          [
+            1,
+            80,
+            104,
+            104
+          ],
+          [
+            1,
+            128,
+            52,
+            52
+          ],
+          [
+            1,
+            256,
+            26,
+            26
+          ]
+        ],
+        "detail_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "semantic_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "gate_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "output_shape": [
+          1,
+          40,
+          208,
+          208
+        ],
+        "semantic_aggregation": "sum_without_division",
+        "interpolation": "nearest",
+        "gate_convolution": "raw_1x1_conv_with_bias_no_BN_or_SiLU",
+        "other_convolutions": "bias_free_Conv2d_BatchNorm2d_SiLU"
+      },
+      "dsf_index": 29,
+      "prediction_branch": "one2one",
+      "native_forward_compute": "one2many_and_one2one_until_explicit_head_fusion_or_pruning"
+    }
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "status": "PASS",
+  "scope": "M0 baseline versus final M6/GSF-YOLO on official-split VisDrone DET test-dev",
+  "n_images": 1610,
+  "n_gt": 75102,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "coco": "bbox IoU .50:.05:.95; maxDets=[1,10,300]; corrected original-image GT; no official ignored-region handling",
+    "diagnostics": "score>0.25; same-class IoU>=0.5; custom ignored-region filtering",
+    "selection": "Validation-selected best.pt; no test-dev model or threshold selection"
+  },
+  "runs": {
+    "p2_baseline__seed0": {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.16590197518048902,
+        "coco_ap50": 0.294604728679137,
+        "ap_s": 0.08725944563154998
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.2715345122646891,
+        "fp_per_image": 8.862111801242236,
+        "background_per_image": 1.6496894409937888
+      },
+      "weight_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+      "predictions_sha256": "53c984a95e146aa72ff6f4a80e9419827d2d4d729d7a541e7510faf2c7c3b556"
+    },
+    "p2_baseline__seed1": {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.16422785965683503,
+        "coco_ap50": 0.2913733804845822,
+        "ap_s": 0.084827763206148
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.2699411845702933,
+        "fp_per_image": 8.878881987577639,
+        "background_per_image": 1.6509316770186335
+      },
+      "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+      "predictions_sha256": "857bc6f4a9584d8e454b3d10e89af64935a0343a2fe5e570c96202db11a8cd53"
+    },
+    "p2_baseline__seed2": {
+      "experiment_id": "p2_baseline",
+      "label": "YOLO26-P2 baseline",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.1666708069764013,
+        "coco_ap50": 0.2940950385993106,
+        "ap_s": 0.08575729077827719
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.2753112890217755,
+        "fp_per_image": 8.844099378881987,
+        "background_per_image": 1.7124223602484472
+      },
+      "weight_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+      "predictions_sha256": "693d9b4dc464b8aeebc39a2a042b7779ddf5a990b2604c6af8d7b0d67208a59e"
+    },
+    "gsf_yolo__seed0": {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.18414615513618618,
+        "coco_ap50": 0.32919558667617416,
+        "ap_s": 0.11010474633242626
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3378248126364656,
+        "fp_per_image": 9.213664596273292,
+        "background_per_image": 2.1236024844720496
+      },
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "predictions_sha256": "e20189acb108dc99b997cd313c984f2819fc4c14820343c905514b2ee8ef76a3"
+    },
+    "gsf_yolo__seed1": {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.18549604240194245,
+        "coco_ap50": 0.3291763837886812,
+        "ap_s": 0.10868318466594097
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.3270649330212247,
+        "fp_per_image": 8.798136645962733,
+        "background_per_image": 1.957142857142857
+      },
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "predictions_sha256": "6c3277b36cb82d924c2bc36c8d0913e444b0cff43fc78589c812389452259c7b"
+    },
+    "gsf_yolo__seed2": {
+      "experiment_id": "gsf_yolo",
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.18188770988374994,
+        "coco_ap50": 0.3227977040394476,
+        "ap_s": 0.10722032918891268
+      },
+      "diagnostics_conf025": {
+        "confidence": 0.25,
+        "n_gt": 75102,
+        "n_small": 50837,
+        "small_recall": 0.32808781005960225,
+        "fp_per_image": 8.930434782608696,
+        "background_per_image": 2.05527950310559
+      },
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "predictions_sha256": "6536d2d7cf0c9bdcbbf92b985637862b340f32437b3d122df64c2f4723bd8a5b"
+    }
+  },
+  "summary": {
+    "p2_baseline": {
+      "label": "YOLO26-P2 baseline",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.16560021393790844,
+          "sample_sd": 0.0012491168028598543,
+          "values": [
+            0.16590197518048902,
+            0.16422785965683503,
+            0.1666708069764013
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.29335771592100995,
+          "sample_sd": 0.0017372784283371042,
+          "values": [
+            0.294604728679137,
+            0.2913733804845822,
+            0.2940950385993106
+          ]
+        },
+        "ap_s": {
+          "mean": 0.08594816653865839,
+          "sample_sd": 0.0012270269033024673,
+          "values": [
+            0.08725944563154998,
+            0.084827763206148,
+            0.08575729077827719
+          ]
+        },
+        "small_recall": {
+          "mean": 0.2722623286189193,
+          "sample_sd": 0.0027580415042328236,
+          "values": [
+            0.2715345122646891,
+            0.2699411845702933,
+            0.2753112890217755
+          ]
+        },
+        "fp_per_image": {
+          "mean": 8.861697722567287,
+          "sample_sd": 0.01739500108595847,
+          "values": [
+            8.862111801242236,
+            8.878881987577639,
+            8.844099378881987
+          ]
+        },
+        "background_per_image": {
+          "mean": 1.6710144927536232,
+          "sample_sd": 0.03586564380346508,
+          "values": [
+            1.6496894409937888,
+            1.6509316770186335,
+            1.7124223602484472
+          ]
+        }
+      }
+    },
+    "gsf_yolo": {
+      "label": "GSF-YOLO (DSF + P2/P3 widening)",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.18384330247395952,
+          "sample_sd": 0.0018231307390652767,
+          "values": [
+            0.18414615513618618,
+            0.18549604240194245,
+            0.18188770988374994
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.327056558168101,
+          "sample_sd": 0.0036882883638055066,
+          "values": [
+            0.32919558667617416,
+            0.3291763837886812,
+            0.3227977040394476
+          ]
+        },
+        "ap_s": {
+          "mean": 0.10866942006242664,
+          "sample_sd": 0.0014422578350215974,
+          "values": [
+            0.11010474633242626,
+            0.10868318466594097,
+            0.10722032918891268
+          ]
+        },
+        "small_recall": {
+          "mean": 0.33099251857243084,
+          "sample_sd": 0.005939002525003105,
+          "values": [
+            0.3378248126364656,
+            0.3270649330212247,
+            0.32808781005960225
+          ]
+        },
+        "fp_per_image": {
+          "mean": 8.980745341614908,
+          "sample_sd": 0.21228338049164733,
+          "values": [
+            9.213664596273292,
+            8.798136645962733,
+            8.930434782608696
+          ]
+        },
+        "background_per_image": {
+          "mean": 2.045341614906832,
+          "sample_sd": 0.08367361052943557,
+          "values": [
+            2.1236024844720496,
+            1.957142857142857,
+            2.05527950310559
+          ]
+        }
+      }
+    }
+  },
+  "paired_seed_deltas": {
+    "small_recall": {
+      "paired_mean": 0.058730189953511536,
+      "paired_sample_sd": 0.006898626580528948,
+      "values": [
+        0.06629030037177647,
+        0.05712374845093138,
+        0.05277652103782676
+      ]
+    },
+    "fp_per_image": {
+      "paired_mean": 0.1190476190476198,
+      "paired_sample_sd": 0.21799767546993207,
+      "values": [
+        0.35155279503105596,
+        -0.08074534161490554,
+        0.086335403726709
+      ]
+    },
+    "background_per_image": {
+      "paired_mean": 0.3743271221532091,
+      "paired_sample_sd": 0.08816886321584944,
+      "values": [
+        0.4739130434782608,
+        0.30621118012422355,
+        0.34285714285714297
+      ]
+    }
+  },
+  "paired_image_bootstrap": {
+    "seed0_GSF_minus_baseline": {
+      "small_recall": {
+        "delta": 0.06629030037177647,
+        "ci95": [
+          0.06148833480698224,
+          0.0712657038464479
+        ]
+      }
+    },
+    "seed1_GSF_minus_baseline": {
+      "small_recall": {
+        "delta": 0.05712374845093138,
+        "ci95": [
+          0.052561878794733626,
+          0.061844560582192745
+        ]
+      }
+    },
+    "seed2_GSF_minus_baseline": {
+      "small_recall": {
+        "delta": 0.05277652103782676,
+        "ci95": [
+          0.04835193571936828,
+          0.057207270849154626
+        ]
+      }
+    }
+  },
+  "interpretation_boundary": "Official split with no exact train/val image overlap; scene-level independence is not established.",
+  "script_sha256": "6be7ec025837ae80c80572fbc226afa350aec0530dd673bcd69684133d552aa6"
+}

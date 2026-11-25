@@ -1,0 +1,433 @@
+{
+  "status": "PASS",
+  "n_images": 1610,
+  "n_gt": 75102,
+  "n_runs": 12,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol": {
+    "imgsz": 832,
+    "batch": 1,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "agnostic_nms": false,
+    "rect": false,
+    "device": 0,
+    "precision": "CUDA FP32",
+    "coco_max_dets": [
+      1,
+      10,
+      300
+    ],
+    "controls": "Frozen M6/GSF-YOLO checkpoint per training seed; no retraining",
+    "shuffle": "CPU torch.Generator seed=1000003*image_id; same valid-cell HW permutation across channels, controls and training seeds",
+    "validity": "Image-geometry cell centers only; native padding gates and injections preserved exactly",
+    "l1": "Single scalar matches summed absolute injected branch over valid cells only",
+    "selection": "Validation-selected best.pt; fixed thresholds; no test-dev tuning",
+    "AP": "Supplementary COCO bbox, original-image corrected GT, no official VisDrone ignored-region handling"
+  },
+  "runs": {
+    "valid_spatial_mean__seed0": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.1654072781043766,
+        "coco_ap50": 0.3007451920081943,
+        "ap_s": 0.09653970979268217
+      },
+      "predictions_sha256": "161e31a953e83a270fdd3e984a6be564c7539f59372c851244c1427a26047de0",
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_0__seed0": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.1623459010112161,
+        "coco_ap50": 0.29568435724358894,
+        "ap_s": 0.0940805424627803
+      },
+      "predictions_sha256": "5f094bf18f3875f8c18481828c73cc77d6695d91df0cfc33b05c2ee2a403add9",
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_l1_0__seed0": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.16231292463444877,
+        "coco_ap50": 0.2955760027787959,
+        "ap_s": 0.09416731222711139
+      },
+      "predictions_sha256": "c0f4bb9e5f973fd711be32a513bf28a4400aee5f30e70f77cdd54f8bc798590d",
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "native__seed0": {
+      "mode": "native",
+      "label": "GSF-YOLO",
+      "seed": 0,
+      "coco_no_ignore": {
+        "coco_ap": 0.18414615513618618,
+        "coco_ap50": 0.32919558667617416,
+        "ap_s": 0.11010474633242626
+      },
+      "predictions_sha256": "e20189acb108dc99b997cd313c984f2819fc4c14820343c905514b2ee8ef76a3",
+      "weight_sha256": "53284b619dcf68210313f3fa6df1d5ac5b1d2d14fe58931f6a247072ebfdf07b",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_spatial_mean__seed1": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.16347240298514856,
+        "coco_ap50": 0.2939573353406402,
+        "ap_s": 0.0916661761527104
+      },
+      "predictions_sha256": "474827c1453392c48c92399c0db5d39a1e6d86e20ff0f76bbaa30db056103e90",
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_0__seed1": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.1599397995479292,
+        "coco_ap50": 0.289259554508128,
+        "ap_s": 0.08922479916340695
+      },
+      "predictions_sha256": "a77867ec181afec8a43bb2e173b3487d0183ecc4feef8a4ebfdc390b188c6886",
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_l1_0__seed1": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.16042882618693283,
+        "coco_ap50": 0.2898979173276732,
+        "ap_s": 0.08991882257016258
+      },
+      "predictions_sha256": "94ac38f5e35626bdab4ebec08580fb336b9ebf9795bd90ecf6f8071d08bba817",
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "native__seed1": {
+      "mode": "native",
+      "label": "GSF-YOLO",
+      "seed": 1,
+      "coco_no_ignore": {
+        "coco_ap": 0.18549604240194245,
+        "coco_ap50": 0.3291763837886812,
+        "ap_s": 0.10868318466594097
+      },
+      "predictions_sha256": "6c3277b36cb82d924c2bc36c8d0913e444b0cff43fc78589c812389452259c7b",
+      "weight_sha256": "8f86e2236f5378aebe1a0c3701a5f89e89bff0d28fb6f071a8c8d7709c9d614c",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_spatial_mean__seed2": {
+      "mode": "valid_spatial_mean",
+      "label": "Spatial-mean gate",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.16699937119464794,
+        "coco_ap50": 0.2995449694396809,
+        "ap_s": 0.0959170739026173
+      },
+      "predictions_sha256": "ab88315480c0f3cb8d44aa37bebe3c45c65a6ebb56d3fde1a5b4ed0691d6a4ef",
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_0__seed2": {
+      "mode": "valid_shuffle_0",
+      "label": "Spatial-shuffle gate",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.1648429764435965,
+        "coco_ap50": 0.2964592446514834,
+        "ap_s": 0.0937591071058679
+      },
+      "predictions_sha256": "e05b8efd0da9b82c8dad0d2d63628a61db9c1870618c8d12402e02da11251d8d",
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "valid_shuffle_l1_0__seed2": {
+      "mode": "valid_shuffle_l1_0",
+      "label": "Shuffle, L1-matched",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.16510697471573388,
+        "coco_ap50": 0.29690493483014385,
+        "ap_s": 0.09395768052261531
+      },
+      "predictions_sha256": "9434a2ce38247f7aead05f8c6f468c90a683c9698b75ed6c76fb6d0ed40a7617",
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    },
+    "native__seed2": {
+      "mode": "native",
+      "label": "GSF-YOLO",
+      "seed": 2,
+      "coco_no_ignore": {
+        "coco_ap": 0.18188770988374994,
+        "coco_ap50": 0.3227977040394476,
+        "ap_s": 0.10722032918891268
+      },
+      "predictions_sha256": "6536d2d7cf0c9bdcbbf92b985637862b340f32437b3d122df64c2f4723bd8a5b",
+      "weight_sha256": "d3bd6fae6fc7cb30e7c013c19a2e449e73eb51951a382b1581d385b117c341b3",
+      "script_sha256": "b9c23c8b9dc2f15390a2f49f0d644351fc9aa3aa4901bc3a32cd244e6d99ab42"
+    }
+  },
+  "summary": {
+    "valid_spatial_mean": {
+      "label": "Spatial-mean gate",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.16529301742805771,
+          "sample_sd": 0.0017662581392082694,
+          "values": [
+            0.1654072781043766,
+            0.16347240298514856,
+            0.16699937119464794
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.2980824989295051,
+          "sample_sd": 0.0036225494516520834,
+          "values": [
+            0.3007451920081943,
+            0.2939573353406402,
+            0.2995449694396809
+          ]
+        },
+        "ap_s": {
+          "mean": 0.09470765328266996,
+          "sample_sd": 0.002652330336128871,
+          "values": [
+            0.09653970979268217,
+            0.0916661761527104,
+            0.0959170739026173
+          ]
+        }
+      }
+    },
+    "valid_shuffle_0": {
+      "label": "Spatial-shuffle gate",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.1623762256675806,
+          "sample_sd": 0.00245172910537423,
+          "values": [
+            0.1623459010112161,
+            0.1599397995479292,
+            0.1648429764435965
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.2938010521344001,
+          "sample_sd": 0.003952089718212967,
+          "values": [
+            0.29568435724358894,
+            0.289259554508128,
+            0.2964592446514834
+          ]
+        },
+        "ap_s": {
+          "mean": 0.09235481624401838,
+          "sample_sd": 0.0027154346550520895,
+          "values": [
+            0.0940805424627803,
+            0.08922479916340695,
+            0.0937591071058679
+          ]
+        }
+      }
+    },
+    "valid_shuffle_l1_0": {
+      "label": "Shuffle, L1-matched",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.16261624184570517,
+          "sample_sd": 0.002353777689664877,
+          "values": [
+            0.16231292463444877,
+            0.16042882618693283,
+            0.16510697471573388
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.294126284978871,
+          "sample_sd": 0.00372167097478361,
+          "values": [
+            0.2955760027787959,
+            0.2898979173276732,
+            0.29690493483014385
+          ]
+        },
+        "ap_s": {
+          "mean": 0.09268127177329642,
+          "sample_sd": 0.0023946462291544457,
+          "values": [
+            0.09416731222711139,
+            0.08991882257016258,
+            0.09395768052261531
+          ]
+        }
+      }
+    },
+    "native": {
+      "label": "GSF-YOLO",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "statistics": {
+        "coco_ap": {
+          "mean": 0.18384330247395952,
+          "sample_sd": 0.0018231307390652767,
+          "values": [
+            0.18414615513618618,
+            0.18549604240194245,
+            0.18188770988374994
+          ]
+        },
+        "coco_ap50": {
+          "mean": 0.327056558168101,
+          "sample_sd": 0.0036882883638055066,
+          "values": [
+            0.32919558667617416,
+            0.3291763837886812,
+            0.3227977040394476
+          ]
+        },
+        "ap_s": {
+          "mean": 0.10866942006242664,
+          "sample_sd": 0.0014422578350215974,
+          "values": [
+            0.11010474633242626,
+            0.10868318466594097,
+            0.10722032918891268
+          ]
+        }
+      }
+    }
+  },
+  "paired_seed_control_minus_native": {
+    "valid_spatial_mean": {
+      "coco_ap": {
+        "paired_mean": -0.01855028504590182,
+        "paired_sample_sd": 0.0035713868904826843,
+        "values": [
+          -0.01873887703180957,
+          -0.02202363941679389,
+          -0.014888338689101999
+        ]
+      },
+      "coco_ap50": {
+        "paired_mean": -0.028974059238595844,
+        "paired_sample_sd": 0.006000319592799958,
+        "values": [
+          -0.028450394667979884,
+          -0.03521904844804097,
+          -0.023252734599766678
+        ]
+      },
+      "ap_s": {
+        "paired_mean": -0.013961766779756676,
+        "paired_sample_sd": 0.0028774624492916363,
+        "values": [
+          -0.013565036539744085,
+          -0.01701700851323057,
+          -0.011303255286295374
+        ]
+      }
+    },
+    "valid_shuffle_0": {
+      "coco_ap": {
+        "paired_mean": -0.021467076806378927,
+        "paired_sample_sd": 0.004265524993453177,
+        "values": [
+          -0.02180025412497008,
+          -0.025556242854013256,
+          -0.017044733440153448
+        ]
+      },
+      "coco_ap50": {
+        "paired_mean": -0.033255506033700866,
+        "paired_sample_sd": 0.006792796042687022,
+        "values": [
+          -0.03351122943258522,
+          -0.03991682928055318,
+          -0.026338459387964197
+        ]
+      },
+      "ap_s": {
+        "paired_mean": -0.01631460381840825,
+        "paired_sample_sd": 0.0030091097300856033,
+        "values": [
+          -0.016024203869645953,
+          -0.019458385502534023,
+          -0.013461222083044774
+        ]
+      }
+    },
+    "valid_shuffle_l1_0": {
+      "coco_ap": {
+        "paired_mean": -0.021227060628254368,
+        "paired_sample_sd": 0.004176364863393129,
+        "values": [
+          -0.02183323050173741,
+          -0.025067216215009624,
+          -0.016780735168016064
+        ]
+      },
+      "coco_ap50": {
+        "paired_mean": -0.032930273189229975,
+        "paired_sample_sd": 0.006719418476910522,
+        "values": [
+          -0.033619583897378236,
+          -0.039278466461007966,
+          -0.025892769209303723
+        ]
+      },
+      "ap_s": {
+        "paired_mean": -0.01598814828913021,
+        "paired_sample_sd": 0.0027512073006887377,
+        "values": [
+          -0.015937434105314868,
+          -0.018764362095778392,
+          -0.013262648666297366
+        ]
+      }
+    }
+  },
+  "interpretation_boundary": "Frozen-weight sensitivity across three training seeds; no retrained gate ablation or scene-independent generalization claim"
+}

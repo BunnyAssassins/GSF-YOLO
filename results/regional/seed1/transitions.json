@@ -1,0 +1,139 @@
+{
+  "n_images": 548,
+  "models": {
+    "M0": {
+      "operating_points": {
+        "fp_per_image_budgets": [
+          {
+            "budget": 1,
+            "measured": {
+              "threshold_inclusive": 0.6772589683532715,
+              "small_recall": 0.08402918829459113,
+              "fp_per_image": 1.0
+            }
+          },
+          {
+            "budget": 5,
+            "measured": {
+              "threshold_inclusive": 0.37335824966430664,
+              "small_recall": 0.24005115474309788,
+              "fp_per_image": 5.0
+            }
+          },
+          {
+            "budget": 10,
+            "measured": {
+              "threshold_inclusive": 0.26445963978767395,
+              "small_recall": 0.3239675016926202,
+              "fp_per_image": 10.0
+            }
+          },
+          {
+            "budget": 20,
+            "measured": {
+              "threshold_inclusive": 0.17745617032051086,
+              "small_recall": 0.41010306176182953,
+              "fp_per_image": 20.0
+            }
+          },
+          {
+            "budget": 50,
+            "measured": {
+              "threshold_inclusive": 0.09237546473741531,
+              "small_recall": 0.5255021439855563,
+              "fp_per_image": 50.0
+            }
+          }
+        ]
+      }
+    },
+    "M1": {
+      "operating_points": {
+        "fp_per_image_budgets": [
+          {
+            "budget": 1,
+            "measured": {
+              "threshold_inclusive": 0.7033863663673401,
+              "small_recall": 0.12615662378695555,
+              "fp_per_image": 1.0
+            }
+          },
+          {
+            "budget": 5,
+            "measured": {
+              "threshold_inclusive": 0.4142310917377472,
+              "small_recall": 0.287331678326939,
+              "fp_per_image": 5.0
+            }
+          },
+          {
+            "budget": 10,
+            "measured": {
+              "threshold_inclusive": 0.2836974859237671,
+              "small_recall": 0.3723012111637704,
+              "fp_per_image": 10.0
+            }
+          },
+          {
+            "budget": 20,
+            "measured": {
+              "threshold_inclusive": 0.18056198954582214,
+              "small_recall": 0.4587752952681863,
+              "fp_per_image": 20.0
+            }
+          },
+          {
+            "budget": 50,
+            "measured": {
+              "threshold_inclusive": 0.08702482283115387,
+              "small_recall": 0.56383058752727,
+              "fp_per_image": 50.0
+            }
+          }
+        ]
+      }
+    }
+  },
+  "transitions": {
+    "0.25": {
+      "small": {
+        "lost": 1176,
+        "both_missed": 14844,
+        "both_hit": 7769,
+        "gained": 2797
+      }
+    }
+  },
+  "identities": {
+    "M0": {
+      "weight": "source/best.pt",
+      "weight_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+      "predictions_sha256": "e33c6e13001d5b3002945f8dca8f5d7ca64167702a25979b262a524f4dcf190b"
+    },
+    "M1": {
+      "weight": "source/best.pt",
+      "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "predictions_sha256": "8b5d49f9f8fc2ed4a21fa6d461eb5043c8aed41ebc19488c08e0024b61d97b9a"
+    }
+  },
+  "rules": {
+    "matching_iou": 0.5,
+    "background_iou": 0.1,
+    "ignore_prediction_union_ioa_gt": 0.5,
+    "ignore_categories": [
+      0,
+      11
+    ],
+    "ignore_zero_score": true,
+    "matching_before_ignore": true,
+    "primary_conf": 0.25,
+    "bootstrap_image_clusters": 2000,
+    "diagnostic_size_boundaries": "small <1024, medium [1024,9216), large >=9216; original-image area",
+    "evaluation": "custom diagnostics, NOT official VisDrone or TIDE; ignored rectangles are raster union"
+  },
+  "input_hashes": {
+    "gt": "0ae204e377090a500d9cc3e253de671a1791495b663f7b65a20b35151809eee7",
+    "dataset_hashes": "598ed00535b4f979c0718c3579ffd0889a8b33d9a9606959a9f4ebfd218e4d5e",
+    "script": "0d56816087c2830673a3d77fb1af7aebc4c2eac6b1c4f455f8753573ea4363eb"
+  }
+}

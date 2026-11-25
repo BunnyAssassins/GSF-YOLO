@@ -1,0 +1,53 @@
+{
+  "manuscript_label": "tab:external",
+  "scope": "Completed single-seed native-framework comparison. Historical queue/acceptance status and superseded shared evaluation plans are omitted.",
+  "model": {
+    "id": "yolo11n",
+    "name": "YOLO11n",
+    "backend": "ultralytics",
+    "scale": "n",
+    "native_loss": "local_YOLO11_CIoU_DFL",
+    "native_assignment": "native_TaskAlignedAssigner",
+    "postprocess": "native_class_aware_NMS",
+    "released_model_config": "ultralytics/cfg/models/11/yolo11.yaml"
+  },
+  "dataset": {
+    "yaml": "datasets/VisDrone2019-DET-corrected/data.yaml",
+    "train_images": 6471,
+    "val_images": 548,
+    "nc": 10,
+    "mode": "original_full_image_not_sliced",
+    "category_mapping": "original_1_to_10_to_contiguous_0_to_9",
+    "ordered_names_and_labels_sha256": {
+      "train": "7c189d34776ad45faa4e9350d84ad18795db2734ecaf34df0ff345a6535b6d7f",
+      "val": "6fb01a14ca5bc2564e5943bf80367013f43ceb70f08c3a65f4a08111c6e87e07"
+    }
+  },
+  "runtime_versions": {
+    "torch": "2.9.1+cu130",
+    "torchvision": "0.24.1+cu130"
+  },
+  "shared_source_sha256_at_recording": {
+    "ultralytics/engine/trainer.py": "18125ba895b64961cf0f7db29214aca27392176e65d72a9166fa818f00a1033a",
+    "ultralytics/data/augment.py": "37a32d0d0555db44bd84f149673d9a85d7be1529e793e4e204a5001b62201dae",
+    "ultralytics/data/dataset.py": "51c6f92dc5e10f881b66cfe908868719a42745a4f33901fd7bd9a1163c623b8d",
+    "ultralytics/utils/metrics.py": "7023f140596db687b9df74a0b1e16b3356db787d8deba99b6e3e882261bf8770"
+  },
+  "seed_policy": "single_fixed_seed_independent_of_structural_repeats",
+  "seeds": [
+    0
+  ],
+  "actual_training_configuration_sources": [
+    "configured_args.yaml",
+    "checkpoint_train_args.yaml"
+  ],
+  "completed_training_record": {
+    "status": "COMPLETE",
+    "epochs": 100,
+    "seed": 0,
+    "native_log": "results.csv",
+    "checkpoint_selection_record": "selection.json",
+    "selected_epoch_one_based": 88
+  },
+  "native_recipe": "local_MuSGD_and_parent_augmentation"
+}

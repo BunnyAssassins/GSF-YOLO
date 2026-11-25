@@ -1,0 +1,109 @@
+{
+  "models": [
+    {
+      "experiment": "yolo26n",
+      "training_seeds": [
+        0
+      ],
+      "accuracy_aggregation": "single training run",
+      "latency_mean_ms": 12.151586496350365,
+      "latency_seed_sample_sd_ms": null,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "p2_baseline",
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "accuracy_aggregation": "mean and sample SD",
+      "latency_mean_ms": 14.513504805352797,
+      "latency_seed_sample_sd_ms": 0.17038065096870103,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "yolo11n",
+      "training_seeds": [
+        0
+      ],
+      "accuracy_aggregation": "single training run",
+      "latency_mean_ms": 11.058946411192215,
+      "latency_seed_sample_sd_ms": null,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "yolo26s",
+      "training_seeds": [
+        0
+      ],
+      "accuracy_aggregation": "single training run",
+      "latency_mean_ms": 12.664730109489051,
+      "latency_seed_sample_sd_ms": null,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "gsf_yolo",
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "accuracy_aggregation": "mean and sample SD",
+      "latency_mean_ms": 15.276476682887267,
+      "latency_seed_sample_sd_ms": 0.35482464496695826,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "rtmdet_tiny",
+      "training_seeds": [
+        0
+      ],
+      "accuracy_aggregation": "single training run",
+      "latency_mean_ms": 31.36701496350365,
+      "latency_seed_sample_sd_ms": null,
+      "timing_rounds_per_checkpoint": 3
+    },
+    {
+      "experiment": "rtdetrv2_r18",
+      "training_seeds": [
+        0
+      ],
+      "accuracy_aggregation": "single training run",
+      "latency_mean_ms": 32.136944768856445,
+      "latency_seed_sample_sd_ms": null,
+      "timing_rounds_per_checkpoint": 3
+    }
+  ],
+  "timing_protocol": {
+    "input": 832,
+    "batch": 1,
+    "precision": "FP32",
+    "settings": {
+      "imgsz": 832,
+      "batch": 1,
+      "rect": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false,
+      "device": "0",
+      "augment": false,
+      "agnostic_nms": false,
+      "save": false,
+      "verbose": false
+    },
+    "rounds": 3,
+    "warmup_per_round": 50,
+    "measured_per_round": 548,
+    "timing_scope": "GPU-synchronized decoded-image prediction including native preprocessing, transfer, inference and postprocessing; image decoding, disk access, telemetry, drawing and serialization outside the timed interval.",
+    "execution": "One checkpoint-round subprocess at a time; checkpoint order interleaved by architecture and seed, reversed for round 2 and rotated for round 3.",
+    "monitoring": "GPU clocks, temperature, power, compute PIDs, CPU load and RAM sampled between measured calls every 100 images and at the end of each round.",
+    "aggregation": "Mean of three complete round means per checkpoint; equal-weight mean and sample SD across training checkpoints; FPS=1000/unrounded mean latency."
+  },
+  "accuracy_values_preserved": true,
+  "baseline_and_gsf_only_have_three_training_seeds": true,
+  "displayed_decimal_places": 1,
+  "full_precision_source_data_preserved": true,
+  "timing_statistics_source": "source/statistics.json"
+}

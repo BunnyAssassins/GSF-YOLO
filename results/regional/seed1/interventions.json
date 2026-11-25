@@ -1,0 +1,115 @@
+{
+  "n_images": 548,
+  "modes": {
+    "native": {
+      "coco_no_ignore": {
+        "ap_s": 0.15679826849614195
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.3974272173324306,
+          "fp_per_image": 12.379562043795621,
+          "background_per_image": 2.1624087591240877
+        }
+      }
+    },
+    "zero": {
+      "coco_no_ignore": {
+        "ap_s": 0.043077988986889505
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.059693071541412776,
+          "fp_per_image": 3.664233576642336,
+          "background_per_image": 0.38503649635036497
+        }
+      }
+    },
+    "one": {
+      "coco_no_ignore": {
+        "ap_s": 0.04651159492619103
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.30444594899571203,
+          "fp_per_image": 44.32299270072993,
+          "background_per_image": 14.496350364963504
+        }
+      }
+    },
+    "valid_spatial_mean": {
+      "coco_no_ignore": {
+        "ap_s": 0.12200901548660907
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.36902881215677424,
+          "fp_per_image": 15.596715328467154,
+          "background_per_image": 3.031021897810219
+        }
+      }
+    },
+    "valid_shuffle_0": {
+      "coco_no_ignore": {
+        "ap_s": 0.11740381275832353
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.365380275332882,
+          "fp_per_image": 16.645985401459853,
+          "background_per_image": 3.321167883211679
+        }
+      }
+    },
+    "valid_shuffle_l1_0": {
+      "coco_no_ignore": {
+        "ap_s": 0.11719567792536066
+      },
+      "diagnostics": {
+        "0.25": {
+          "confidence": 0.25,
+          "n_gt": 38759,
+          "n_small": 26586,
+          "small_recall": 0.3666591439103287,
+          "fp_per_image": 16.784671532846716,
+          "background_per_image": 3.3613138686131387
+        }
+      }
+    }
+  },
+  "ap_protocol": "supplementary COCO bbox AP; NO official ignore handling; comparable with historical supplement",
+  "diagnostic_protocol": "custom ignore-aware score-ordered IoU .5 matching; not official VisDrone/TIDE",
+  "causal_scope": "frozen trained-model sensitivity; interventions may be out of distribution; not training-level ablation",
+  "script_sha256": "0d56816087c2830673a3d77fb1af7aebc4c2eac6b1c4f455f8753573ea4363eb",
+  "padding_preserving_supplement": {
+    "n_images": 548,
+    "modes": [
+      "valid_spatial_mean",
+      "valid_shuffle_0",
+      "valid_shuffle_l1_0"
+    ],
+    "weight_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+    "elapsed_s": 156.50199222564697,
+    "device": "cpu",
+    "threads": 2,
+    "FP32": true,
+    "rule": "operate only on P2 cell centres inside resized image; gate and injected branch on padding unchanged",
+    "seed": "1000003*image_id; repeat 0",
+    "script_sha256": "0c2738a6c92ca1da12b19e6b1223ab735d81ac8759111d124d96fd5b90c5ae89"
+  }
+}
