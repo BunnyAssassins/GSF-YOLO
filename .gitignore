@@ -1,4 +1,24 @@
 # Byte-compiled / optimized / DLL files
+# Public large assets are distributed through the paper Release.
+weights/**/*.pt
+weights/**/*.pth
+/assets/
+/datasets/
+/runs/
+/outputs/
+/reproduced/
+/.runtime/
+/.cache/
+/.ultralytics_settings/
+ultralytics/settings.json
+ultralytics/persistent_cache.json
+ultralytics/Arial.ttf
+*.download
+.env
+.env.*
+*.pem
+*.key
+
 __pycache__/
 *.py[codz]
 *$py.class

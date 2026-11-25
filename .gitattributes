@@ -1,0 +1,2 @@
+# Preserve source/CSV/JSON byte identity across checkout platforms for SHA256 manifests.
+* -text
