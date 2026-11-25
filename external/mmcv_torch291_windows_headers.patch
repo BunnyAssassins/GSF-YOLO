@@ -1,0 +1,46 @@
+diff --git a/mmcv/ops/csrc/pytorch/cuda/fused_spconv_ops_cuda.cu b/mmcv/ops/csrc/pytorch/cuda/fused_spconv_ops_cuda.cu
+index aa0e456..f1af3e4 100644
+--- a/mmcv/ops/csrc/pytorch/cuda/fused_spconv_ops_cuda.cu
++++ b/mmcv/ops/csrc/pytorch/cuda/fused_spconv_ops_cuda.cu
+@@ -1,5 +1,5 @@
+ #include <cuda_runtime_api.h>
+-#include <torch/script.h>
++#include <torch/types.h>
+ // clang-format off
+ // TODO: make spconv_utils.h order agnostic
+ #include "../spconv_utils.h"
+diff --git a/mmcv/ops/csrc/pytorch/cuda/sparse_pool_ops_cuda.cu b/mmcv/ops/csrc/pytorch/cuda/sparse_pool_ops_cuda.cu
+index 74b182d..ad34325 100644
+--- a/mmcv/ops/csrc/pytorch/cuda/sparse_pool_ops_cuda.cu
++++ b/mmcv/ops/csrc/pytorch/cuda/sparse_pool_ops_cuda.cu
+@@ -1,5 +1,5 @@
+ #include <cuda_runtime_api.h>
+-#include <torch/script.h>
++#include <torch/types.h>
+ // clang-format off
+ // TODO: make spconv_utils.h order agnostic
+ #include "../spconv_utils.h"
+diff --git a/mmcv/ops/csrc/pytorch/cuda/spconv_ops_cuda.cu b/mmcv/ops/csrc/pytorch/cuda/spconv_ops_cuda.cu
+index d3791f3..7137e37 100644
+--- a/mmcv/ops/csrc/pytorch/cuda/spconv_ops_cuda.cu
++++ b/mmcv/ops/csrc/pytorch/cuda/spconv_ops_cuda.cu
+@@ -1,5 +1,5 @@
+ #include <cuda_runtime_api.h>
+-#include <torch/script.h>
++#include <torch/types.h>
+ // clang-format off
+ // TODO: make spconv_utils.h order agnostic
+ #include "../spconv_utils.h"
+diff --git a/mmcv/ops/csrc/pytorch/spconv_utils.h b/mmcv/ops/csrc/pytorch/spconv_utils.h
+index 7d3de02..14d1d60 100644
+--- a/mmcv/ops/csrc/pytorch/spconv_utils.h
++++ b/mmcv/ops/csrc/pytorch/spconv_utils.h
+@@ -15,7 +15,7 @@
+ #pragma once
+ #include <ATen/ATen.h>
+ #include <ATen/cuda/CUDAContext.h>
+-#include <torch/script.h>
++#include <torch/types.h>
+ #include <utils/spconv/tensorview/tensorview.h>
+ 
+ #include "pytorch_cuda_helper.hpp"
