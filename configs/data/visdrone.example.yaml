@@ -1,0 +1,6 @@
+path: datasets/VisDrone2019-DET-corrected
+train: train/images
+val: val/images
+test: test-dev/images
+nc: 10
+names: [pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, motor]

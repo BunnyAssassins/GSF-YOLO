@@ -1,0 +1,168 @@
+{
+  "runs": [
+    {
+      "model": "p2_baseline",
+      "seed": 0,
+      "original_args_sha256": "b531d582b1fec857ad08ad15e8d06abeaca1783bc3a6b0e5a6e3701ea8cdc73b",
+      "original_model_sha256": "0dbc2fa3dfede5edcda2566ab8c7ea150ad066ea29d79e68d6c4da2bab476279",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_baseline",
+      "seed": 1,
+      "original_args_sha256": "033cf5b27a3e73e527a91c20dc511092c3442411941e27e493816d2cfbb771f1",
+      "original_model_sha256": "0dbc2fa3dfede5edcda2566ab8c7ea150ad066ea29d79e68d6c4da2bab476279",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_baseline",
+      "seed": 2,
+      "original_args_sha256": "61bf8b5b3fff1138e6890f011757eb7273547f5339366864d03a75ae59cf944c",
+      "original_model_sha256": "0dbc2fa3dfede5edcda2566ab8c7ea150ad066ea29d79e68d6c4da2bab476279",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_refinement",
+      "seed": 0,
+      "original_args_sha256": "b2ca78a2d36ab86e090b0272cdbbc379e00821f8e06fec79c473027a06d67d24",
+      "original_model_sha256": "8b972cd08bddac90f41e39e2f68abaa29766b11e2841e940d8b8e4ac6e47bb30",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "dsf_refinement",
+      "seed": 1,
+      "original_args_sha256": "d9f72eef2633360944f7cbc47133d9bcd59f2678a89fd748239729664412d248",
+      "original_model_sha256": "8b972cd08bddac90f41e39e2f68abaa29766b11e2841e940d8b8e4ac6e47bb30",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "dsf_refinement",
+      "seed": 2,
+      "original_args_sha256": "9468299d73c1863b847e2d62b16d2471390dbb4d8da35668750861c4008ee62f",
+      "original_model_sha256": "8b972cd08bddac90f41e39e2f68abaa29766b11e2841e940d8b8e4ac6e47bb30",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_p3_widening_without_dsf",
+      "seed": 0,
+      "original_args_sha256": "21aa48b83a7ba8b2db59608773f8fefdbf133f7e57f053f58311dc794b6d3367",
+      "original_model_sha256": "bf630ed6c718028ed26206cbacccd11cc58588c7c26ef5f8c2a11ee5b9fbf399",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_p3_widening_without_dsf",
+      "seed": 1,
+      "original_args_sha256": "b6288b58f51b60533fe545be61e15ad1aa918625f39ee9b889371e58762296ac",
+      "original_model_sha256": "bf630ed6c718028ed26206cbacccd11cc58588c7c26ef5f8c2a11ee5b9fbf399",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_p3_widening_without_dsf",
+      "seed": 2,
+      "original_args_sha256": "afe1092914ebf01abea2ed928bcccf6874f1c339c8591b2df5696b3d22bbaa35",
+      "original_model_sha256": "bf630ed6c718028ed26206cbacccd11cc58588c7c26ef5f8c2a11ee5b9fbf399",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_p2_widening",
+      "seed": 0,
+      "original_args_sha256": "47bf781c672505dc0b6f96229c287ae0806f63c0c9f03d3cde655b7e02e78f4a",
+      "original_model_sha256": "3ca66452747fca60b433f83df5c615ef30754f46bb949b94c3c4e201a1771a23",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "dsf_p2_widening",
+      "seed": 1,
+      "original_args_sha256": "f6f548d323fd37a269d255bdcfb541b7eb3e7bf5eba8b3d00d058569b892af05",
+      "original_model_sha256": "3ca66452747fca60b433f83df5c615ef30754f46bb949b94c3c4e201a1771a23",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "dsf_p2_widening",
+      "seed": 2,
+      "original_args_sha256": "1383b8ae19f62f6aa838ccdee80bdbc8b3d6c8fe315888f984c0f29a606a9b14",
+      "original_model_sha256": "3ca66452747fca60b433f83df5c615ef30754f46bb949b94c3c4e201a1771a23",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_p3_widening",
+      "seed": 0,
+      "original_args_sha256": "f6ce65adb5e480b4f895838187c056fb18b95dec1884059784a28b9abe952af7",
+      "original_model_sha256": "a4099f2a41e56deb59a42884092db29b0737c1597f913a9eb9b080724836c8d3",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_p3_widening",
+      "seed": 1,
+      "original_args_sha256": "37817f798a46b72065834016c4ff02caa57681bc23d56c6b14c61943aafec971",
+      "original_model_sha256": "a4099f2a41e56deb59a42884092db29b0737c1597f913a9eb9b080724836c8d3",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_p3_widening",
+      "seed": 2,
+      "original_args_sha256": "f6b5e5e7266a36eb68dd0fbeb1148e37833d2a544613552203780a9893dd85ae",
+      "original_model_sha256": "a4099f2a41e56deb59a42884092db29b0737c1597f913a9eb9b080724836c8d3",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "gsf_yolo",
+      "seed": 0,
+      "original_args_sha256": "5112f09f2fd0e8650b84dc96c3e063831c20247d88ce775ad59e810dd0f447c2",
+      "original_model_sha256": "37eba1ee38db33cf669aaac5a647ad648d8a486d65ae6f77101041e39d8983ea",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "gsf_yolo",
+      "seed": 1,
+      "original_args_sha256": "a5bcea8662a59dc4c26903a277c94d2c60352f322c7ae6a167efce06ef6a1379",
+      "original_model_sha256": "37eba1ee38db33cf669aaac5a647ad648d8a486d65ae6f77101041e39d8983ea",
+      "recorded_optimizer": "auto",
+      "batch": 6,
+      "warmup_bias_lr": 0.1
+    },
+    {
+      "model": "gsf_yolo",
+      "seed": 2,
+      "original_args_sha256": "57fd4a3d98a4ca6de84b46ae40cbafa88e383c405df472f0fbc9436802c779c6",
+      "original_model_sha256": "37eba1ee38db33cf669aaac5a647ad648d8a486d65ae6f77101041e39d8983ea",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    }
+  ],
+  "note": "Original paths sanitized. Fresh training cannot reproduce historical interrupted-state chronology from stripped inference checkpoints.",
+  "argument_scope": "Only relevant detection training/validation settings are public; full original records are retained in the private scope archive."
+}
