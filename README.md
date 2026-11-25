@@ -83,11 +83,25 @@ recorded seed-specific arguments in `configs/recorded_args/`.
 | `dsf_p2_widening` | DSF and P2 widening |
 | `dsf_p3_widening` | DSF and P3 widening |
 | `gsf_yolo` | DSF and joint P2/P3 widening |
+| `dsf_fusion_only` | DSF without post-fusion refinement |
+| `p2_refinement_only` | C3k2 refinement applied directly to P2 |
+| `fixed_sum_refinement` | Fixed-sum detail–semantic fusion followed by refinement |
 
 Run training seeds 0, 1 and 2 separately for each configuration. The five
 external comparison models each use seed 0. Training instructions are documented in
 [TRAINING_REPRODUCIBILITY.md](docs/TRAINING_REPRODUCIBILITY.md); released
 inference checkpoints omit optimizer state.
+
+The three component controls retain the original P2 width of 32. Fusion-only
+removes the additional refinement block; refinement-only removes DSF; fixed-sum
+fusion keeps the detail and semantic transformations and replaces `D + G*S`
+with `D + S`, without a gate network. Their nine completed training runs use
+the same selected-epoch native AP/AP50 protocol:
+
+```bash
+python scripts/train.py --model fixed_sum_refinement --seed 0 --dry-run
+python scripts/download_assets.py weights --models dsf_fusion_only p2_refinement_only fixed_sum_refinement --seeds 0 1 2
+```
 
 ## Evaluation
 
@@ -106,9 +120,9 @@ python scripts/evaluate_coco.py --split test-dev --weights weights/gsf_yolo/seed
 
 The supplementary evaluator uses corrected ground truth, original-image areas,
 832 input, batch 1, FP32, confidence 0.001 and `maxDets=[1,10,300]`. It does
-not apply official VisDrone ignored-region filtering. Validation Tables 2/5
-use selected-epoch native AP/AP50 and supplementary AP_S; test-dev Table 6
-uses COCO-style AP/AP50/AP_S. See
+not apply official VisDrone ignored-region filtering. The validation ablation
+and detector comparisons use selected-epoch native AP/AP50 and supplementary
+AP_S; test-dev architecture and gate comparisons use COCO-style AP/AP50/AP_S. See
 [EVALUATION_PROTOCOLS.md](docs/EVALUATION_PROTOCOLS.md) for these distinctions
 and the separate threshold diagnostics.
 
@@ -140,7 +154,8 @@ python analysis/plot_gate_summary.py --output reproduced/gate_summary
 ```
 
 The retained records support the six-configuration ablation, external
-comparison, stratified validation, frozen gate interventions, matched-region
+comparison, separately trained fusion/refinement controls, stratified
+validation, frozen gate interventions, matched-region
 bootstrap analysis and test-dev evaluation. Validation gate diagnostics use
 DSF + refinement seeds 0/1; the final-GSF test-dev controls and supplementary
 DSF + refinement test-dev controls use seeds 0–2. Frozen controls replace gates
@@ -149,7 +164,28 @@ conditions and result inputs.
 
 ## Main VisDrone results
 
-The validation comparison follows manuscript Table 5, with one decimal place.
+The component comparison uses means of selected-epoch native validation scores
+over training seeds 0–2 at the original P2 width. It reports one decimal place.
+The underlying logs, selected epochs and unrounded summaries are provided in
+`results/training_logs/` and
+`results/summary/fusion_component_statistics.json`.
+
+| Configuration | Fusion | Post-fusion refinement | Native AP@0.50:0.95 (%) | Native AP@0.50 (%) |
+|---|---|---|---:|---:|
+| YOLO26-P2 baseline | — | — | 23.5 | 38.9 |
+| DSF without post-fusion refinement | Gated | — | 24.2 | 40.2 |
+| P2 refinement only | — | Yes | 23.8 | 39.0 |
+| Fixed-sum fusion + refinement | Fixed sum | Yes | 24.4 | 40.6 |
+| DSF + refinement | Gated | Yes | 24.5 | 40.8 |
+
+With refinement fixed, DSF adds 0.775 percentage points in mean AP. Its mean AP
+is 0.153 points above the fixed-sum control, a difference comparable in
+magnitude to the variation across training seeds. These results describe
+separately trained structures; frozen gate replacements test a trained
+checkpoint's functional dependence. Supplementary small-object AP and latency
+are not reported for the three added component controls.
+
+The validation comparison reports results with one decimal place.
 AP/AP50 are selected-epoch native scores; AP_S is supplementary COCO-style AP.
 Means and sample SDs use training seeds 0–2.
 
@@ -162,8 +198,8 @@ Parameters and GFLOPs describe the native unfused dual-head model. Latency
 includes the complete prediction call under the protocol above. Hardware,
 software and timing scope should accompany any reproduced latency.
 
-The test-dev architecture comparison follows manuscript Table 6(a), with two
-decimal places. All three models use training seeds 0–2 and supplementary
+The test-dev architecture comparison reports results with two decimal places.
+All three models use training seeds 0–2 and supplementary
 COCO-style AP without official ignored-region filtering.
 
 | Method | Seeds | AP@0.50:0.95 (%) | AP@0.50 (%) | AP_S (%) |
@@ -175,7 +211,7 @@ COCO-style AP without official ignored-region filtering.
 ## Repository layout
 
 ```text
-configs/       six model YAMLs, seed-specific arguments and external recipes
+configs/       nine model YAMLs, seed-specific arguments and external recipes
 ultralytics/   compatible detection training and inference runtime
 external/      RTMDet/RT-DETR dependencies, source identities and licenses
 scripts/       data preparation, training, evaluation, inference and latency
@@ -189,9 +225,10 @@ docs/          data, training, evaluation and analysis protocols
 ## Data and weights
 
 The [paper Release](https://github.com/BunnyAssassins/GSF-YOLO/releases/tag/v1.0-paper)
-contains 23 checkpoints and 24 distinct prediction archives, plus `SHA256SUMS`.
-The checkpoints comprise the six three-seed ablation configurations and five
-single-seed external detectors. Final-GSF native-gate predictions also serve
+contains 32 checkpoints and 24 distinct prediction archives, plus `SHA256SUMS`.
+The checkpoints comprise six three-seed ablation configurations, three
+three-seed fusion/refinement controls and five single-seed external detectors.
+Final-GSF native-gate predictions also serve
 as the corresponding final-model architecture predictions.
 
 Download the Release assets directly to the destinations recorded in

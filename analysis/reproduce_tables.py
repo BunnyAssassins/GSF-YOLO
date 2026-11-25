@@ -11,7 +11,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",type=Path,default=ROOT/"reproduced/tables")
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
-    data=json.loads((ROOT/"results/summary/table2_precision_cost_statistics.json").read_text(encoding="utf-8"))
+    data=json.loads((ROOT/"results/summary/ablation_accuracy_cost_statistics.json").read_text(encoding="utf-8"))
     rows=[]
     for model in data["models"]:
         runs=sorted(model["runs"],key=lambda r:r["seed"])
@@ -27,6 +27,38 @@ def main():
         rows.append(row)
     with (args.output/"ablation_unrounded.csv").open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    component=json.loads((ROOT/"results/summary/fusion_component_statistics.json").read_text(encoding="utf-8"))
+    component_rows=[]
+    for model in ("p2_baseline","dsf_fusion_only","p2_refinement_only","fixed_sum_refinement","dsf_refinement"):
+        runs=sorted((r for r in component["records"] if r["configuration"]==model),key=lambda r:r["seed"])
+        assert [r["seed"] for r in runs]==[0,1,2]
+        row=dict(model=model,seeds="0,1,2")
+        for key,source_key in (("native_ap","native_ap_percent"),("native_ap50","native_ap50_percent")):
+            values=[]
+            for run in runs:
+                with (ROOT/run["results_csv"]).open(encoding="utf-8-sig",newline="") as f:
+                    logs=list(csv.DictReader(f))
+                selected=next(r for r in logs if int(float(r["epoch"]))==run["selected_epoch_one_based"])
+                metric="metrics/mAP50-95(B)" if key=="native_ap" else "metrics/mAP50(B)"
+                value=100*float(selected[metric])
+                assert abs(value-run[source_key])<1e-10
+                values.append(value)
+            row[key]=statistics.mean(values);row[key+"_sample_sd"]=statistics.stdev(values)
+        component_rows.append(row)
+    with (args.output/"fusion_component_unrounded.csv").open("w",encoding="utf-8",newline="") as f:
+        w=csv.DictWriter(f,fieldnames=list(component_rows[0]));w.writeheader();w.writerows(component_rows)
+    component_gains=[]
+    for name,contrast in component["paired_contrasts"].items():
+        row=dict(comparison=name,seeds="0,1,2")
+        for key in ("native_ap_percent","native_ap50_percent"):
+            lhs=[r[key] for r in component["records"] if r["configuration"]==contrast["lhs"]]
+            rhs=[r[key] for r in component["records"] if r["configuration"]==contrast["rhs"]]
+            differences=[a-b for a,b in zip(lhs,rhs)]
+            row[key+"_paired_delta_pp"]=statistics.mean(differences)
+            row[key+"_paired_delta_sd_pp"]=statistics.stdev(differences)
+        component_gains.append(row)
+    with (args.output/"fusion_component_paired_gains.csv").open("w",encoding="utf-8",newline="") as f:
+        w=csv.DictWriter(f,fieldnames=list(component_gains[0]));w.writeheader();w.writerows(component_gains)
     gate=json.loads((ROOT/"results/testdev/final_gate.json").read_text(encoding="utf-8"))
     gate_rows=[]
     for mode in ("native","valid_spatial_mean","valid_shuffle_0","valid_shuffle_l1_0"):
@@ -42,7 +74,7 @@ def main():
     with (args.output/"testdev_gate_unrounded.csv").open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(gate_rows[0]));w.writeheader();w.writerows(gate_rows)
     external=json.loads((ROOT/"results/summary/external_comparison_statistics.json").read_text())
-    timing=json.loads((ROOT/"results/summary/table5_unified_timing_statistics.json").read_text())
+    timing=json.loads((ROOT/"results/summary/external_latency_statistics.json").read_text())
     by_timing={r["experiment"]:r for r in timing["models"]}
     external_rows=[]
     for model in ("yolo26n","p2_baseline","yolo11n","yolo26s","gsf_yolo","rtmdet_tiny","rtdetrv2_r18"):
@@ -89,7 +121,7 @@ def main():
         gain[key+"_paired_delta_sd_pp"]=100*statistics.stdev(stats["values"])
     with (args.output/"testdev_widening_paired_gain.csv").open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(gain));w.writeheader();w.writerow(gain)
-    validation=json.loads((ROOT/"results/summary/table5_seed01_statistics.json").read_text())
+    validation=json.loads((ROOT/"results/summary/validation_gate_statistics.json").read_text())
     validation_rows=[]
     for source in validation["rows"]:
         row=dict(condition=source["mode"],seeds="0,1")
@@ -117,7 +149,7 @@ def main():
         appendix_rows.append(row)
     with (args.output/"appendix_testdev_unrounded.csv").open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(appendix_rows[0]));w.writeheader();w.writerows(appendix_rows)
-    print("PASS",len(rows),"ablation rows,",len(external_rows),"external rows,",len(arch_rows),"test-dev architecture rows,",len(gate_rows),"test-dev gate rows,",len(validation_rows),"validation gate rows and",len(appendix_rows),"Appendix-B rows")
+    print("PASS",len(rows),"ablation rows,",len(component_rows),"fusion/refinement rows,",len(external_rows),"external rows,",len(arch_rows),"test-dev architecture rows,",len(gate_rows),"test-dev gate rows,",len(validation_rows),"validation gate rows and",len(appendix_rows),"supplementary test-dev rows")
 
 
 if __name__=="__main__":main()

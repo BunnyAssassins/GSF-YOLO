@@ -116,16 +116,16 @@
       "bytes": 3047
     },
     "ultralytics/nn/tasks.py": {
-      "sha256": "989cbff12ab44312857bc416b2678dc1fd9cfee62508166bd46f0df41541d574",
-      "bytes": 13266
+      "sha256": "641f9ad4cb5f2d4ff43ecfd99861523e1d6ab26bc67f0116cb6678a38c32533f",
+      "bytes": 13328
     },
     "ultralytics/nn/__init__.py": {
       "sha256": "6d2febb786bbadf95b1697d43eb0f82e37634c5b94de84eb297654f9a5f0299d",
       "bytes": 214
     },
     "ultralytics/nn/modules/block.py": {
-      "sha256": "ced952089babeb6621eae46a4f5031183a1d7f9738f96b69b23b150df930c292",
-      "bytes": 8954
+      "sha256": "bc19626351ce1f1b9c37273729cc1df56169779ee7e4e18f54e7149a499b8baf",
+      "bytes": 9636
     },
     "ultralytics/nn/modules/cbam.py": {
       "sha256": "4d490dd6840913d8074ba4a3bb4da6cba1454e893229f3b122f4a0d681d1e800",
@@ -144,8 +144,8 @@
       "bytes": 5790
     },
     "ultralytics/nn/modules/__init__.py": {
-      "sha256": "4a8d63097cfeb459f8cc4a3e396860d4d31b5e3ba8a65fa8f04180474d6644ef",
-      "bytes": 532
+      "sha256": "c67bc81b0db3a628a67ee984954ded9ce9a1d940dda5aacdf2a1a6c6c5f72f34",
+      "bytes": 594
     },
     "ultralytics/optim/muon.py": {
       "sha256": "22ef96094e891696ccb8bb14c17c669a1e2e219698943f2e29aa55db2812c1ee",

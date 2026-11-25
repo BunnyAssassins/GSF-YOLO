@@ -1,6 +1,6 @@
 # Publication training records
 
-Each configuration/seed directory corresponds to a checkpoint in [`../../manifests/checkpoints.csv`](../../manifests/checkpoints.csv). The directories contain native training logs and the selected validation epoch used for publication. The main six configurations have three training seeds each; the five external configurations each have one seed.
+Each configuration/seed directory corresponds to a checkpoint in [`../../manifests/checkpoints.csv`](../../manifests/checkpoints.csv). The directories contain native training logs and the selected validation epoch used for publication. The main six configurations and three fusion/refinement controls have three training seeds each; the five external configurations each have one seed.
 
 For Ultralytics runs:
 

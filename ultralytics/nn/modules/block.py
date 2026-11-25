@@ -212,3 +212,19 @@ class DetailSemanticFusion(nn.Module):
         semantic = self.semantic_mix(semantic)
         gate = self.gate(torch.cat((detail, semantic), dim=1))
         return self.out(detail + gate * semantic)
+
+
+class FixedSumDetailSemanticFusion(DetailSemanticFusion):
+    """Training control: same aligned projections and output, with D + S and no gate."""
+
+    def __init__(self, ch: tuple = (), c2: int | None = None):
+        super().__init__(ch, c2)
+        del self.gate
+
+    def forward(self, x: list[torch.Tensor] | tuple[torch.Tensor, ...]) -> torch.Tensor:
+        detail = self.detail_proj(x[0])
+        semantic = 0
+        for proj, feat in zip(self.semantic_proj, x[1:]):
+            semantic = semantic + F.interpolate(proj(feat), size=detail.shape[2:], mode="nearest")
+        semantic = self.semantic_mix(semantic)
+        return self.out(detail + semantic)

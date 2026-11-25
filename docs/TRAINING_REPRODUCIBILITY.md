@@ -1,6 +1,6 @@
 # Training configuration
 
-The six manuscript configurations are distributed in `configs/models/`:
+The six main configurations and three fusion/refinement controls are distributed in `configs/models/`:
 
 | File stem | Configuration |
 |---|---|
@@ -10,8 +10,13 @@ The six manuscript configurations are distributed in `configs/models/`:
 | `dsf_p2_widening` | DSF and P2 widening |
 | `dsf_p3_widening` | DSF and P3 widening |
 | `gsf_yolo` | DSF and P2/P3 widening |
+| `dsf_fusion_only` | DSF without the additional post-fusion C3k2 refinement |
+| `p2_refinement_only` | C3k2 refinement directly on the original P2 feature |
+| `fixed_sum_refinement` | Detail–semantic fixed sum and post-fusion C3k2 refinement, without a gate network |
 
-The released YAML files explicitly set `nc: 10` and retain only the `n` compound scale used in the manuscript experiments. Their backbone, neck and prediction-head definitions specify the six studied configurations and their channel allocation. Formatting and unused configuration metadata have been normalized for the release. Released checkpoints contain the corresponding ten-class trained detectors.
+The released YAML files explicitly set `nc: 10` and retain only the `n` compound scale used in the manuscript experiments. Their backbone, neck and prediction-head definitions specify the studied configurations and their channel allocation. Formatting and unused configuration metadata have been normalized for the release. Released checkpoints contain the corresponding ten-class trained detectors.
+
+The three component controls use the original P2 width of 32 and retain the backbone and P3–P5 prediction inputs. Each has complete 100-epoch logs for seeds 0, 1 and 2 and its validation-selected inference checkpoint. The fixed-sum control replaces `D + G*S` with `D + S` while retaining the detail and semantic projections, semantic mixing, output transformation and post-fusion refinement. Component native AP/AP50 means are reconstructed from the selected epochs; supplementary AP_S and latency are not reported for these controls.
 
 ## Fresh training
 

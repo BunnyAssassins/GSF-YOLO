@@ -1,8 +1,56 @@
 {
   "files": {
     "results/training_logs/README.md": {
-      "sha256": "3bef3007c6c33a94e6aadd4a7674363dfdfc489055202fd6431ef7fd5f762725",
-      "bytes": 2124
+      "sha256": "978241fa6a4281163d1a3a36e9bcfeb76ad9c9512074f5df96dd9ac806e84b0b",
+      "bytes": 2161
+    },
+    "results/training_logs/dsf_fusion_only/seed0/checkpoint_train_args.yaml": {
+      "sha256": "116cf380c74f6f6613311750214d893727ebe9d7ba01f030fd71ffb1b87722c0",
+      "bytes": 1084
+    },
+    "results/training_logs/dsf_fusion_only/seed0/configured_args.yaml": {
+      "sha256": "b867794fd6451402676e1e396e2a27b2724c015d4a72594d6bf35935a992e073",
+      "bytes": 1136
+    },
+    "results/training_logs/dsf_fusion_only/seed0/results.csv": {
+      "sha256": "8c52da970d97c05c1b3dd2c99d723d2d62a427fc273efd101ca0dd5d46ea88d8",
+      "bytes": 14848
+    },
+    "results/training_logs/dsf_fusion_only/seed0/selection.json": {
+      "sha256": "06d988d5d98259200bdf5cb5da0f8f84d025374b84f56768d136c2133c1ad19c",
+      "bytes": 559
+    },
+    "results/training_logs/dsf_fusion_only/seed1/checkpoint_train_args.yaml": {
+      "sha256": "d2c8746ef03ae2989e753d4d47e7a90bc1234a693fa6ea635353e1979d9f4927",
+      "bytes": 1084
+    },
+    "results/training_logs/dsf_fusion_only/seed1/configured_args.yaml": {
+      "sha256": "11e882a7aa53c6a3c66bd97594f4923f298ced5123dee886aef758a65113b71c",
+      "bytes": 1136
+    },
+    "results/training_logs/dsf_fusion_only/seed1/results.csv": {
+      "sha256": "38aa87a956c8e9f763d15ec3ccbec836b5695d47d484242af3c407f94d58dbe1",
+      "bytes": 14849
+    },
+    "results/training_logs/dsf_fusion_only/seed1/selection.json": {
+      "sha256": "1a8bea765073cd15bf07928cfc7200154077e59c3176a61850de7d3dee4a4058",
+      "bytes": 547
+    },
+    "results/training_logs/dsf_fusion_only/seed2/checkpoint_train_args.yaml": {
+      "sha256": "ce1cbf06b06a0331dde9609bc8c1cea62f68518c4be86bd9d627d01ee7b3263c",
+      "bytes": 1084
+    },
+    "results/training_logs/dsf_fusion_only/seed2/configured_args.yaml": {
+      "sha256": "b96a0dde04b21dd81108dce18bd141c5f80b055b5792fb5b0186777736db4c54",
+      "bytes": 1136
+    },
+    "results/training_logs/dsf_fusion_only/seed2/results.csv": {
+      "sha256": "d9fbb6701c17acfec5f0da873b8b81f6c0ba39492dbd6b6924947318b179f0d8",
+      "bytes": 14843
+    },
+    "results/training_logs/dsf_fusion_only/seed2/selection.json": {
+      "sha256": "4b272cbd559ed4b25bab8c1f53af66d4eacc23fce7dc3965939b9baadc12161c",
+      "bytes": 547
     },
     "results/training_logs/dsf_p2_widening/seed0/checkpoint_train_args.yaml": {
       "sha256": "f5ad1671c25fd8983521bcc7d5f8454a32d92652a438844e5304b9a65c4391f9",
@@ -148,6 +196,54 @@
       "sha256": "1ede29c99db9de75a5fe4b9d7162c7dab300536a431f45d8605ee80f84240510",
       "bytes": 564
     },
+    "results/training_logs/fixed_sum_refinement/seed0/checkpoint_train_args.yaml": {
+      "sha256": "08e2a60838cde085f48bfb94c754d22d823f4b7e3107b20f7061f50a37a89f0f",
+      "bytes": 1094
+    },
+    "results/training_logs/fixed_sum_refinement/seed0/configured_args.yaml": {
+      "sha256": "f9008137c948e0c7c839978e28b415ec97a23dba4763b386e5b463ccaf6c8381",
+      "bytes": 1151
+    },
+    "results/training_logs/fixed_sum_refinement/seed0/results.csv": {
+      "sha256": "61f17ad9c993f0ea63ddbe57b263e2dcd23bed8527e8e4cf0b319a26d508849c",
+      "bytes": 14850
+    },
+    "results/training_logs/fixed_sum_refinement/seed0/selection.json": {
+      "sha256": "f13014a36dfeb601c504678c146da6fd6e02df4eda9b93a53b2aecdc0984cf31",
+      "bytes": 552
+    },
+    "results/training_logs/fixed_sum_refinement/seed1/checkpoint_train_args.yaml": {
+      "sha256": "d3e57bcf2f841714f0b65e99afafc0a43a77fd43d5c390c579625c3306d4afbf",
+      "bytes": 1094
+    },
+    "results/training_logs/fixed_sum_refinement/seed1/configured_args.yaml": {
+      "sha256": "a30efe3227b7932f83e25b883507c6520ab11492ff634144fb6505cf4f263e15",
+      "bytes": 1151
+    },
+    "results/training_logs/fixed_sum_refinement/seed1/results.csv": {
+      "sha256": "d71dda3c54c57ed9f205b123a20ab1caf3e0d5cf9111d1d969d5aa256832b184",
+      "bytes": 14849
+    },
+    "results/training_logs/fixed_sum_refinement/seed1/selection.json": {
+      "sha256": "4e3093006a6dff38e46060379c012a78d667d6b2c70b632845b736d635a04d0a",
+      "bytes": 552
+    },
+    "results/training_logs/fixed_sum_refinement/seed2/checkpoint_train_args.yaml": {
+      "sha256": "340f55daf71317150dff5b801c802821fc7df4f4e0772d08ec0ca1b117f4ed48",
+      "bytes": 1094
+    },
+    "results/training_logs/fixed_sum_refinement/seed2/configured_args.yaml": {
+      "sha256": "1cb13401536bb454918387c29567fbbcfa4a65bcb609eaac8eeedd78cc9ec052",
+      "bytes": 1151
+    },
+    "results/training_logs/fixed_sum_refinement/seed2/results.csv": {
+      "sha256": "095f1d8aaccf48edb522b7d49ae48c34c0143e373db45c2d3a23402f914df1cd",
+      "bytes": 14826
+    },
+    "results/training_logs/fixed_sum_refinement/seed2/selection.json": {
+      "sha256": "dc91d46e4ddd6475d6ccc4d957c134f9dd37ed0be7f0f16f8c18aca96b6e73fd",
+      "bytes": 564
+    },
     "results/training_logs/gsf_yolo/seed0/checkpoint_train_args.yaml": {
       "sha256": "46b4b85a3d1179d055b0559b53d980116786c4eb4c8a2a422ca3854f016fb316",
       "bytes": 1923
@@ -291,6 +387,54 @@
     "results/training_logs/p2_p3_widening_without_dsf/seed2/selection.json": {
       "sha256": "ac37203a91642c390f673bb6ee1d44e7fa1546fb1ce46698906c3502acb5d64b",
       "bytes": 576
+    },
+    "results/training_logs/p2_refinement_only/seed0/checkpoint_train_args.yaml": {
+      "sha256": "4e4d9255e2fa5f3b325c7545f185e6b9494b0517fd00d41f701d37e3dbda67d2",
+      "bytes": 1090
+    },
+    "results/training_logs/p2_refinement_only/seed0/configured_args.yaml": {
+      "sha256": "683985fc302667a52f3a030a0679be9dd62fd9e1a514ef9522191d2c91842ac8",
+      "bytes": 1145
+    },
+    "results/training_logs/p2_refinement_only/seed0/results.csv": {
+      "sha256": "8459e031e54f2e4e5a1550d368bd3fcb9c1a72b47282e900b53b2ecf508d1241",
+      "bytes": 14827
+    },
+    "results/training_logs/p2_refinement_only/seed0/selection.json": {
+      "sha256": "ff09e5543c20b46ab849cf175a2f6b17d8893f2562b3b6d4aa577df52a782dcf",
+      "bytes": 550
+    },
+    "results/training_logs/p2_refinement_only/seed1/checkpoint_train_args.yaml": {
+      "sha256": "10318b001b27ac65f7672fb2c0c19a9abce7deaba71b2e756b9558603e9b3b81",
+      "bytes": 1090
+    },
+    "results/training_logs/p2_refinement_only/seed1/configured_args.yaml": {
+      "sha256": "5e0b664ba75016c3ea02403cf3746f5569a18bd57dc905b0eb5187e02d809e1b",
+      "bytes": 1145
+    },
+    "results/training_logs/p2_refinement_only/seed1/results.csv": {
+      "sha256": "8dc73c60ce6dd2f3c4f44d18cc2e4af435c5c546345ccaf38585bf677102342d",
+      "bytes": 14851
+    },
+    "results/training_logs/p2_refinement_only/seed1/selection.json": {
+      "sha256": "c22af2a29f8d47c4739e60e569932e06b64354b1dbfc37b53f9c9b0218980d8a",
+      "bytes": 549
+    },
+    "results/training_logs/p2_refinement_only/seed2/checkpoint_train_args.yaml": {
+      "sha256": "bd270478f5a94debaf56761e542b65af02644336fa3c5092d73bf30b11ea5442",
+      "bytes": 1090
+    },
+    "results/training_logs/p2_refinement_only/seed2/configured_args.yaml": {
+      "sha256": "2531790ca43074e6774cd1855efec0967f2d81c5df21bb3e7733364f6a7b6c34",
+      "bytes": 1145
+    },
+    "results/training_logs/p2_refinement_only/seed2/results.csv": {
+      "sha256": "ce0ea74879b1ecc5b7e63aebf1e042582cd1acfc40165303428cd8db10a66aba",
+      "bytes": 14817
+    },
+    "results/training_logs/p2_refinement_only/seed2/selection.json": {
+      "sha256": "b3f2d9f66d14b1681daa55252b3791a3eec32773381967936231bbce38a59704",
+      "bytes": 550
     },
     "results/training_logs/rtdetrv2_r18/seed0/configured_native_protocol.json": {
       "sha256": "4c85defac196f1b4de92b0b95f57269cd60f2cce4031406a72730ff1936cb366",

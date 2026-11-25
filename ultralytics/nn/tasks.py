@@ -4,7 +4,7 @@ import re
 from copy import deepcopy
 from pathlib import Path
 import torch
-from ultralytics.nn.modules import C2PSA, C3, SPPF, Bottleneck, C2f, C3k2, DetailSemanticFusion, Concat, Conv, Conv2, ConvTranspose, Detect, DWConv, RepConv, RepVGGDW
+from ultralytics.nn.modules import C2PSA, C3, SPPF, Bottleneck, C2f, C3k2, DetailSemanticFusion, FixedSumDetailSemanticFusion, Concat, Conv, Conv2, ConvTranspose, Detect, DWConv, RepConv, RepVGGDW
 from ultralytics.utils import DEFAULT_CFG_DICT, LOGGER, YAML
 from ultralytics.utils.checks import check_yaml
 from ultralytics.utils.loss import E2ELoss, v8DetectionLoss
@@ -281,7 +281,7 @@ def parse_model(d, ch, verbose=True):
             args = [ch[f]]
         elif m is Concat:
             c2 = sum((ch[x] for x in f))
-        elif m is DetailSemanticFusion:
+        elif m in {DetailSemanticFusion, FixedSumDetailSemanticFusion}:
             c2 = args[0] if args else ch[f[0]]
             c2 = make_divisible(min(c2, max_channels) * width, 8)
             args = [[ch[x] for x in f], c2]

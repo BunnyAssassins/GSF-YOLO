@@ -8,7 +8,8 @@ from pathlib import Path
 from _common import ROOT, dump, init_runtime, read_yaml, resolve
 
 MODELS = ("p2_baseline", "dsf_refinement", "p2_p3_widening_without_dsf",
-          "dsf_p2_widening", "dsf_p3_widening", "gsf_yolo")
+          "dsf_p2_widening", "dsf_p3_widening", "gsf_yolo", "dsf_fusion_only",
+          "p2_refinement_only", "fixed_sum_refinement")
 
 
 def main():

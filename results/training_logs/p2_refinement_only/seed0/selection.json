@@ -1,0 +1,16 @@
+{
+  "configuration": "p2_refinement_only",
+  "seed": 0,
+  "selected_epoch_one_based": 86,
+  "checkpoint_selection": "Maximum native validation AP50:95; AP50 taken from the same epoch",
+  "metrics_percent": {
+    "native_ap": 23.916,
+    "native_ap50": 39.308
+  },
+  "logs": [
+    "results.csv",
+    "configured_args.yaml",
+    "checkpoint_train_args.yaml"
+  ],
+  "notes": "Relevant configured and checkpoint-stored detector arguments are separate records. Release weights retain inference tensors and have no optimizer/scaler state."
+}

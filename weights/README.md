@@ -1,6 +1,6 @@
 # Publication checkpoints
 
-The 23 publication checkpoints are distributed as assets of the [`v1.0-paper` release](https://github.com/BunnyAssassins/GSF-YOLO/releases/tag/v1.0-paper). The six primary architecture configurations each have training seeds 0, 1 and 2; the five external detector configurations each have seed 0.
+The 32 publication checkpoints are distributed as assets of the [`v1.0-paper` release](https://github.com/BunnyAssassins/GSF-YOLO/releases/tag/v1.0-paper). The six primary architecture configurations and three fusion/refinement controls each have training seeds 0, 1 and 2; the five external detector configurations each have seed 0.
 
 [`../manifests/checkpoints.csv`](../manifests/checkpoints.csv) records the download URL, local destination, selected epoch, framework, original checkpoint SHA256, published checkpoint SHA256 and tensor verification for every checkpoint. Download each asset to its `file` destination in that manifest. Asset names use `<configuration>__seed<seed>.pt` or `.pth`.
 

@@ -1,0 +1,476 @@
+{
+  "protocol": "native training-validation only; no new inference or training",
+  "checkpoint_selection": "maximum native AP50:95 row; AP50 from that same epoch",
+  "display_decimal_places": 1,
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "original_p2_width": 32,
+  "records": [
+    {
+      "configuration": "p2_baseline",
+      "seed": 0,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 82,
+      "native_ap_percent": 23.49,
+      "native_ap50_percent": 38.699,
+      "results_csv": "results/training_logs/p2_baseline/seed0/results.csv",
+      "original_results_csv_sha256": "5e3dff76c30ab2e5081b1351ebec4dc78d43a8de2164cc355b30b3060992cb58",
+      "published_results_csv_sha256": "494d6a8183db0af2f6276fb27f6fcf5f4fcc5bdce9304e7e426fab6146e50245",
+      "weight": "weights/p2_baseline/seed0.pt",
+      "original_checkpoint_sha256": "4bae4f06418d5ba23984544615e0b1860945d5ba9b3e78108d4fea52d20dd3fa",
+      "published_checkpoint_sha256": "5730ca0e3aec6fbab2d14c2fe09f3a137ee97f357b24b7c708378bf1fc3b7fc0"
+    },
+    {
+      "configuration": "p2_baseline",
+      "seed": 1,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 91,
+      "native_ap_percent": 23.654,
+      "native_ap50_percent": 39.232,
+      "results_csv": "results/training_logs/p2_baseline/seed1/results.csv",
+      "original_results_csv_sha256": "7dc43b357ab6127aca6fab94b21ffcaff5e0103f0540ce7b13b71e81cfebb361",
+      "published_results_csv_sha256": "ae077183b30c02413e97a06a70b45fffe275e87343bb3083dd7035d5590e4d91",
+      "weight": "weights/p2_baseline/seed1.pt",
+      "original_checkpoint_sha256": "b329bdcb093a5353cc2316f89d392f77e82e3e874d66292fed6fe0035bf5950d",
+      "published_checkpoint_sha256": "03431d2f961b7c079c05ca729de498a3260e37c1ea888b95004ef85d332caa4e"
+    },
+    {
+      "configuration": "p2_baseline",
+      "seed": 2,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 94,
+      "native_ap_percent": 23.313,
+      "native_ap50_percent": 38.763,
+      "results_csv": "results/training_logs/p2_baseline/seed2/results.csv",
+      "original_results_csv_sha256": "31d17298a2a029510338e927d6f26612e9196c3094897ed5f83271a5c8d53cdb",
+      "published_results_csv_sha256": "343d8d298360c1dfc55bcd79476f436c07d6ab768800e6443d4b6a5c8e6add76",
+      "weight": "weights/p2_baseline/seed2.pt",
+      "original_checkpoint_sha256": "012f1318485b127d7f142176cf84ae4101c99d269115deb71d547e5c605e3959",
+      "published_checkpoint_sha256": "0725914e1f149be661938f21e40f3c15e97f06c08deb24ecd135ae9a6af7ed16"
+    },
+    {
+      "configuration": "dsf_fusion_only",
+      "seed": 0,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 95,
+      "native_ap_percent": 24.512999999999998,
+      "native_ap50_percent": 40.568,
+      "results_csv": "results/training_logs/dsf_fusion_only/seed0/results.csv",
+      "original_results_csv_sha256": "e7575cb9280d4149d010986f1fde1cc967ba06e200885764a5dd82718ef06aae",
+      "published_results_csv_sha256": "8c52da970d97c05c1b3dd2c99d723d2d62a427fc273efd101ca0dd5d46ea88d8",
+      "weight": "weights/dsf_fusion_only/seed0.pt",
+      "original_checkpoint_sha256": "4ab95458866681b4ab16250c93c28df90db4bb2ec3a20fbf4e26c33b18de6cb5",
+      "published_checkpoint_sha256": "1b7960ced7ef9212550b3ce5f03c66ac6973497bc0ebe56a38ae901c6f724017"
+    },
+    {
+      "configuration": "dsf_fusion_only",
+      "seed": 1,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 92,
+      "native_ap_percent": 23.905,
+      "native_ap50_percent": 39.766,
+      "results_csv": "results/training_logs/dsf_fusion_only/seed1/results.csv",
+      "original_results_csv_sha256": "10b89be1343c9a64d1bf7551f31115adce5100a982b91419d177186a4e47186a",
+      "published_results_csv_sha256": "38aa87a956c8e9f763d15ec3ccbec836b5695d47d484242af3c407f94d58dbe1",
+      "weight": "weights/dsf_fusion_only/seed1.pt",
+      "original_checkpoint_sha256": "99bd3dc40d4a6b25ad3a9378fd67f109619de3f61b934af2aa0f2bda75427799",
+      "published_checkpoint_sha256": "d98e971eab1b81bb6142af427bbc3b4aeeac9b63f94de262e78e08f94b5c2a7a"
+    },
+    {
+      "configuration": "dsf_fusion_only",
+      "seed": 2,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 79,
+      "native_ap_percent": 24.215,
+      "native_ap50_percent": 40.126,
+      "results_csv": "results/training_logs/dsf_fusion_only/seed2/results.csv",
+      "original_results_csv_sha256": "8c7208c4e081f55e1b32beab3ed5969927032d69e5779d557b3d23775fe64fa2",
+      "published_results_csv_sha256": "d9fbb6701c17acfec5f0da873b8b81f6c0ba39492dbd6b6924947318b179f0d8",
+      "weight": "weights/dsf_fusion_only/seed2.pt",
+      "original_checkpoint_sha256": "1e20d6c40afcff8675a58a8a75e7d92bf522d6650a600161a86e4f46eed9dcfb",
+      "published_checkpoint_sha256": "e85ddf15c149a71d4e829cc78595ff788e9503f11a9311a13eb98245b3d023ca"
+    },
+    {
+      "configuration": "p2_refinement_only",
+      "seed": 0,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 86,
+      "native_ap_percent": 23.916,
+      "native_ap50_percent": 39.308,
+      "results_csv": "results/training_logs/p2_refinement_only/seed0/results.csv",
+      "original_results_csv_sha256": "1867a8fba5d86c2ad67e88b0debbd977f216abacc50a2b54304fd472bd215c74",
+      "published_results_csv_sha256": "8459e031e54f2e4e5a1550d368bd3fcb9c1a72b47282e900b53b2ecf508d1241",
+      "weight": "weights/p2_refinement_only/seed0.pt",
+      "original_checkpoint_sha256": "47759cf218b60db478a3641f6d6ca2bef0bb8f639aaad60e5e8fdf5018366294",
+      "published_checkpoint_sha256": "c8b329079b9203330d1296358f6074ac832eb2bc83e70ee963732854ba01d63b"
+    },
+    {
+      "configuration": "p2_refinement_only",
+      "seed": 1,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 86,
+      "native_ap_percent": 23.584,
+      "native_ap50_percent": 38.74,
+      "results_csv": "results/training_logs/p2_refinement_only/seed1/results.csv",
+      "original_results_csv_sha256": "04f214bb572f5eef1f12c0d815f7aa8787bec39a390dc6cacd608d5225bb4a48",
+      "published_results_csv_sha256": "8dc73c60ce6dd2f3c4f44d18cc2e4af435c5c546345ccaf38585bf677102342d",
+      "weight": "weights/p2_refinement_only/seed1.pt",
+      "original_checkpoint_sha256": "f229c937ca1512562291a431a9fc22886fac096aa44bb91eca7cc9358758d564",
+      "published_checkpoint_sha256": "668ea459c829863ddafafcd6a1173e320839c9a5f2c041a2bcca9432a1887dd2"
+    },
+    {
+      "configuration": "p2_refinement_only",
+      "seed": 2,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 89,
+      "native_ap_percent": 23.802,
+      "native_ap50_percent": 39.064,
+      "results_csv": "results/training_logs/p2_refinement_only/seed2/results.csv",
+      "original_results_csv_sha256": "d237ebc5147b70d3f651dc1e460afaec3865577da9fe58bf6b2d38171b694108",
+      "published_results_csv_sha256": "ce0ea74879b1ecc5b7e63aebf1e042582cd1acfc40165303428cd8db10a66aba",
+      "weight": "weights/p2_refinement_only/seed2.pt",
+      "original_checkpoint_sha256": "0794975380ce3e158cd8d9a164a74e6919c3d8e2b77a230115a4c2b23f567444",
+      "published_checkpoint_sha256": "a6534b17a583a97a8c2c23dc9a581e310386967fdaa44acabee5d009ffa11106"
+    },
+    {
+      "configuration": "fixed_sum_refinement",
+      "seed": 0,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 93,
+      "native_ap_percent": 24.434,
+      "native_ap50_percent": 40.553,
+      "results_csv": "results/training_logs/fixed_sum_refinement/seed0/results.csv",
+      "original_results_csv_sha256": "ac1946d26ad0587447dcf9ca8ee28d9738b7b0337423d1c302ef74c6b6d181e8",
+      "published_results_csv_sha256": "61f17ad9c993f0ea63ddbe57b263e2dcd23bed8527e8e4cf0b319a26d508849c",
+      "weight": "weights/fixed_sum_refinement/seed0.pt",
+      "original_checkpoint_sha256": "ccde829b3fa385d985d11f4ae4b64742a21616ef472a126b2dd42f7c0a239951",
+      "published_checkpoint_sha256": "6124ad65842a8664b3796f63d48f8e36704554566c3aa71a7ac80bf41f773689"
+    },
+    {
+      "configuration": "fixed_sum_refinement",
+      "seed": 1,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 89,
+      "native_ap_percent": 24.032,
+      "native_ap50_percent": 40.371,
+      "results_csv": "results/training_logs/fixed_sum_refinement/seed1/results.csv",
+      "original_results_csv_sha256": "da0e0581135eafa592e1064d7b484a2e5a53dafc3dc82a490e8d6f4f85c714ae",
+      "published_results_csv_sha256": "d71dda3c54c57ed9f205b123a20ab1caf3e0d5cf9111d1d969d5aa256832b184",
+      "weight": "weights/fixed_sum_refinement/seed1.pt",
+      "original_checkpoint_sha256": "c0757798cecd6e2eea6540d39eedede15d987faf13037b49d01ad9c34e6b3513",
+      "published_checkpoint_sha256": "200f8f129946b1902e7837613ab377142385493647354c3ade335fe4919e6c89"
+    },
+    {
+      "configuration": "fixed_sum_refinement",
+      "seed": 2,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 87,
+      "native_ap_percent": 24.701999999999998,
+      "native_ap50_percent": 40.958,
+      "results_csv": "results/training_logs/fixed_sum_refinement/seed2/results.csv",
+      "original_results_csv_sha256": "83770bbe4b469fc4315b1a7b87489817eba2a88116d83e85757bd9cc21cc1235",
+      "published_results_csv_sha256": "095f1d8aaccf48edb522b7d49ae48c34c0143e373db45c2d3a23402f914df1cd",
+      "weight": "weights/fixed_sum_refinement/seed2.pt",
+      "original_checkpoint_sha256": "da509e267b6315aa9aadb559ebd833dbc1da786728a85acb38e888a85604d269",
+      "published_checkpoint_sha256": "1963672cc0c47b5659868da33cf0ed7366779a5196a29f275461eb28aaa007c5"
+    },
+    {
+      "configuration": "dsf_refinement",
+      "seed": 0,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 88,
+      "native_ap_percent": 24.407,
+      "native_ap50_percent": 40.714,
+      "results_csv": "results/training_logs/dsf_refinement/seed0/results.csv",
+      "original_results_csv_sha256": "5796d90579d1991d599aeb7df0791c3c569802733eb67e3c7cda65e1e6de7e14",
+      "published_results_csv_sha256": "975ef439c862935e57c7ebef1e47725e359a866ff6d2ea7b6b9664338fd566d2",
+      "weight": "weights/dsf_refinement/seed0.pt",
+      "original_checkpoint_sha256": "d74eab69d0b688d7610113cfa833c47a368ee7e81eb6836409ae372efb562fbe",
+      "published_checkpoint_sha256": "5d0b5c60e8998e32d15d6f808e3c623ef8e1eeaf8a6af0716792ecbdcb5a6af5"
+    },
+    {
+      "configuration": "dsf_refinement",
+      "seed": 1,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 100,
+      "native_ap_percent": 24.661,
+      "native_ap50_percent": 40.953,
+      "results_csv": "results/training_logs/dsf_refinement/seed1/results.csv",
+      "original_results_csv_sha256": "70d07518acac5d257bed757847b0f1aca23563ef205965df68ebff2f1dd9aa1a",
+      "published_results_csv_sha256": "78f1e535f8827ca2d0bf446c52a8ae3fffc9591c5a58cc1805a04f891d680b09",
+      "weight": "weights/dsf_refinement/seed1.pt",
+      "original_checkpoint_sha256": "10d321bc8df9b69fe66b91149c50c7a6cc49535631a37f3601c7cb2764e86f91",
+      "published_checkpoint_sha256": "be2e51ccc1d2dd37a9f875db9c7ad347672b0635de1d4363be817a04dd5e48cb"
+    },
+    {
+      "configuration": "dsf_refinement",
+      "seed": 2,
+      "completed_epochs": 100,
+      "selected_epoch_one_based": 97,
+      "native_ap_percent": 24.559,
+      "native_ap50_percent": 40.672999999999995,
+      "results_csv": "results/training_logs/dsf_refinement/seed2/results.csv",
+      "original_results_csv_sha256": "31e2098a2a52d9d3f2f7f59204f36491b6ba622189058c387e6361ce9ae471ae",
+      "published_results_csv_sha256": "33ca14831cc4c54fac3f2354d1c79f0724906018a2818d073fa1a3a4a591af6e",
+      "weight": "weights/dsf_refinement/seed2.pt",
+      "original_checkpoint_sha256": "99f431a80f74381f47b39846bf7aadfe99f15140d3cf97cb517669a9a5a883a1",
+      "published_checkpoint_sha256": "76b3dd49a643b9dfc3d575f2ef06f68bd63bfe4cf405f94615a2496469ab71ce"
+    }
+  ],
+  "aggregates": {
+    "p2_baseline": {
+      "name": "YOLO26-P2 baseline",
+      "fusion": "No",
+      "post_fusion_refinement": "No",
+      "native_ap_percent": {
+        "mean": 23.485666666666667,
+        "sample_sd": 0.17054129509691637,
+        "values": [
+          23.49,
+          23.654,
+          23.313
+        ]
+      },
+      "native_ap50_percent": {
+        "mean": 38.897999999999996,
+        "sample_sd": 0.2910171816233543,
+        "values": [
+          38.699,
+          39.232,
+          38.763
+        ]
+      }
+    },
+    "dsf_fusion_only": {
+      "name": "DSF without post-fusion refinement",
+      "fusion": "Gated",
+      "post_fusion_refinement": "No",
+      "native_ap_percent": {
+        "mean": 24.211,
+        "sample_sd": 0.30401973620144973,
+        "values": [
+          24.512999999999998,
+          23.905,
+          24.215
+        ]
+      },
+      "native_ap50_percent": {
+        "mean": 40.15333333333333,
+        "sample_sd": 0.40169806239678724,
+        "values": [
+          40.568,
+          39.766,
+          40.126
+        ]
+      }
+    },
+    "p2_refinement_only": {
+      "name": "P2 refinement only",
+      "fusion": "No",
+      "post_fusion_refinement": "Yes",
+      "native_ap_percent": {
+        "mean": 23.767333333333333,
+        "sample_sd": 0.16869301506978124,
+        "values": [
+          23.916,
+          23.584,
+          23.802
+        ]
+      },
+      "native_ap50_percent": {
+        "mean": 39.037333333333336,
+        "sample_sd": 0.28493742002996497,
+        "values": [
+          39.308,
+          38.74,
+          39.064
+        ]
+      }
+    },
+    "fixed_sum_refinement": {
+      "name": "Fixed-sum fusion + refinement",
+      "fusion": "Fixed sum",
+      "post_fusion_refinement": "Yes",
+      "native_ap_percent": {
+        "mean": 24.389333333333333,
+        "sample_sd": 0.33722593810875934,
+        "values": [
+          24.434,
+          24.032,
+          24.701999999999998
+        ]
+      },
+      "native_ap50_percent": {
+        "mean": 40.62733333333333,
+        "sample_sd": 0.3004768432564021,
+        "values": [
+          40.553,
+          40.371,
+          40.958
+        ]
+      }
+    },
+    "dsf_refinement": {
+      "name": "DSF + refinement",
+      "fusion": "Gated",
+      "post_fusion_refinement": "Yes",
+      "native_ap_percent": {
+        "mean": 24.542333333333335,
+        "sample_sd": 0.1278175783424702,
+        "values": [
+          24.407,
+          24.661,
+          24.559
+        ]
+      },
+      "native_ap50_percent": {
+        "mean": 40.78,
+        "sample_sd": 0.15121838512562277,
+        "values": [
+          40.714,
+          40.953,
+          40.672999999999995
+        ]
+      }
+    }
+  },
+  "paired_contrasts": {
+    "fusion_without_refinement": {
+      "lhs": "dsf_fusion_only",
+      "rhs": "p2_baseline",
+      "native_ap_pp": {
+        "mean": 0.7253333333333339,
+        "sample_sd": 0.41521600804079417,
+        "values": [
+          1.0229999999999997,
+          0.2510000000000012,
+          0.902000000000001
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 1.2553333333333327,
+        "sample_sd": 0.6739809591771372,
+        "values": [
+          1.8689999999999998,
+          0.5339999999999989,
+          1.3629999999999995
+        ]
+      }
+    },
+    "refinement_without_fusion": {
+      "lhs": "p2_refinement_only",
+      "rhs": "p2_baseline",
+      "native_ap_pp": {
+        "mean": 0.28166666666666745,
+        "sample_sd": 0.30617696408014416,
+        "values": [
+          0.42600000000000193,
+          -0.07000000000000028,
+          0.48900000000000077
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 0.13933333333333545,
+        "sample_sd": 0.5680249407669814,
+        "values": [
+          0.6090000000000018,
+          -0.49199999999999733,
+          0.30100000000000193
+        ]
+      }
+    },
+    "fusion_with_refinement_fixed": {
+      "lhs": "dsf_refinement",
+      "rhs": "p2_refinement_only",
+      "native_ap_pp": {
+        "mean": 0.7750000000000009,
+        "sample_sd": 0.2934143827422245,
+        "values": [
+          0.49099999999999966,
+          1.0770000000000017,
+          0.7570000000000014
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 1.7426666666666648,
+        "sample_sd": 0.41977652784944386,
+        "values": [
+          1.4059999999999988,
+          2.213000000000001,
+          1.6089999999999947
+        ]
+      }
+    },
+    "refinement_with_fusion_fixed": {
+      "lhs": "dsf_refinement",
+      "rhs": "dsf_fusion_only",
+      "native_ap_pp": {
+        "mean": 0.3313333333333344,
+        "sample_sd": 0.43113957523443913,
+        "values": [
+          -0.1059999999999981,
+          0.7560000000000002,
+          0.3440000000000012
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 0.6266666666666675,
+        "sample_sd": 0.5250526957680874,
+        "values": [
+          0.1460000000000008,
+          1.1870000000000047,
+          0.546999999999997
+        ]
+      }
+    },
+    "gated_minus_fixed_sum": {
+      "lhs": "dsf_refinement",
+      "rhs": "fixed_sum_refinement",
+      "native_ap_pp": {
+        "mean": 0.15300000000000105,
+        "sample_sd": 0.4162883615956612,
+        "values": [
+          -0.027000000000001023,
+          0.6290000000000013,
+          -0.14299999999999713
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 0.15266666666666615,
+        "sample_sd": 0.43356006888704046,
+        "values": [
+          0.16100000000000136,
+          0.5820000000000007,
+          -0.2850000000000037
+        ]
+      }
+    },
+    "combined_minus_baseline": {
+      "lhs": "dsf_refinement",
+      "rhs": "p2_baseline",
+      "native_ap_pp": {
+        "mean": 1.0566666666666684,
+        "sample_sd": 0.1700303894406334,
+        "values": [
+          0.9170000000000016,
+          1.0070000000000014,
+          1.2460000000000022
+        ]
+      },
+      "native_ap50_pp": {
+        "mean": 1.8820000000000003,
+        "sample_sd": 0.14898657657654732,
+        "values": [
+          2.0150000000000006,
+          1.7210000000000036,
+          1.9099999999999966
+        ]
+      }
+    }
+  },
+  "supplementary_coco_ap_s_reported": false,
+  "latency_reported": false
+}

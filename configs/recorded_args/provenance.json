@@ -161,6 +161,78 @@
       "recorded_optimizer": "MuSGD",
       "batch": 6,
       "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_fusion_only",
+      "seed": 0,
+      "original_args_sha256": "997150870d00a2013c7c27ae226a6e14b446deb6fdd093e8a46944e7cd1fed82",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_fusion_only",
+      "seed": 1,
+      "original_args_sha256": "20fcc87def964a32f8955857cf3d705bc6d5bd2c99967832575cd7b89ab49e22",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "dsf_fusion_only",
+      "seed": 2,
+      "original_args_sha256": "dc9b4a69b6e37a91266e239b76e778226014cc61f1833935fe5fc9f1f738ff3b",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_refinement_only",
+      "seed": 0,
+      "original_args_sha256": "c6a5577c9d54a5556c7565af8a3bcee075ae8af4197140996460bd9c4ccdd5e1",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_refinement_only",
+      "seed": 1,
+      "original_args_sha256": "d73248d589a38e7100a05ff0b5a517dbb476495722ee6c139513e3108f178165",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "p2_refinement_only",
+      "seed": 2,
+      "original_args_sha256": "8e3ce2fc12488671ab8e16acb18fb25d1ed0e5933ae683d45958d793c4635b55",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "fixed_sum_refinement",
+      "seed": 0,
+      "original_args_sha256": "27b5a1ed2ecb95e7bf106c374dddeadc99f65f90faf7999cd75244137a105ac7",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "fixed_sum_refinement",
+      "seed": 1,
+      "original_args_sha256": "9d2093ec17087abf6c5ab775171196ecf1ba4e7b3ce846c839ce313b8092a3a3",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
+    },
+    {
+      "model": "fixed_sum_refinement",
+      "seed": 2,
+      "original_args_sha256": "95c73a3c05f43e5946b5d960a4456339b343d57fbf7e36042474bdb2a39ff929",
+      "recorded_optimizer": "MuSGD",
+      "batch": 6,
+      "warmup_bias_lr": 0.0
     }
   ],
   "note": "Original paths sanitized. Fresh training cannot reproduce historical interrupted-state chronology from stripped inference checkpoints.",

@@ -15,7 +15,7 @@ def main():
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    data=json.loads((ROOT/"results/summary/table2_precision_cost_statistics.json").read_text(encoding="utf-8"))
+    data=json.loads((ROOT/"results/summary/ablation_accuracy_cost_statistics.json").read_text(encoding="utf-8"))
     plt.rcParams.update({"font.size":8,"pdf.fonttype":42,"svg.fonttype":"none","axes.spines.top":False,"axes.spines.right":False})
     fig,ax=plt.subplots(figsize=(7,4.2))
     colors=["#65717E","#6786A6","#9B794D","#458B8B","#8877A5","#24598A"]
