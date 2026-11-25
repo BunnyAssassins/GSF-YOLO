@@ -1,0 +1,348 @@
+{
+  "files": [
+    {
+      "split": "validation",
+      "model": "p2_baseline",
+      "seed": 0,
+      "path": "assets/predictions/val_p2_baseline_seed0.json.gz",
+      "uncompressed_sha256": "4619e9939e6a3a14463a960c505378b46d8b3e1a54e7c659d42ad8edcb202315",
+      "sha256": "755fadecbf6cbf172a1fb546ea6dbd80804e1dc0597ff00b663d326201167ca4",
+      "bytes": 6294818,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_p2_baseline_seed0.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "validation",
+      "model": "p2_baseline",
+      "seed": 1,
+      "path": "assets/predictions/val_p2_baseline_seed1.json.gz",
+      "uncompressed_sha256": "e33c6e13001d5b3002945f8dca8f5d7ca64167702a25979b262a524f4dcf190b",
+      "sha256": "eab7bd2add8c851e442a66565a1c1888a007c6415013793c207628af149c63f1",
+      "bytes": 6286144,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_p2_baseline_seed1.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "validation",
+      "model": "p2_baseline",
+      "seed": 2,
+      "path": "assets/predictions/val_p2_baseline_seed2.json.gz",
+      "uncompressed_sha256": "8847c283db4826cc03ad7baa21070d912d01a2c490ba00af24abe24d0bb56670",
+      "sha256": "4323ff3faae1b7a534bb91bdc8d6b9d1f0b8da71e2e06ad25c6bdce0b450151a",
+      "bytes": 6295469,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_p2_baseline_seed2.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "validation",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "path": "assets/predictions/val_gsf_yolo_seed0.json.gz",
+      "uncompressed_sha256": "113ac865e407c262a82ad9602ca050f4c78b4d9dcc6cc2efd01b21bc0fca3130",
+      "sha256": "765fa74ea7a632e05ffe52f2920527c01b9968623ac8694474c0535618d7f59d",
+      "bytes": 6161062,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_gsf_yolo_seed0.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "validation",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "path": "assets/predictions/val_gsf_yolo_seed1.json.gz",
+      "uncompressed_sha256": "5a44007bdb78161ccd5a93c893186edf0479c1ff84a97b7597b42065fe313d35",
+      "sha256": "73ac6ac34016ac7deb4a0ab49de278ec1d509182a302bc531807816d5cbf49a5",
+      "bytes": 6187425,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_gsf_yolo_seed1.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "validation",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "path": "assets/predictions/val_gsf_yolo_seed2.json.gz",
+      "uncompressed_sha256": "09191feca87832843b1f82d5a9030efe8dbada3fba91552953abb0ecaa0e137f",
+      "sha256": "292e969108c37046264c5a1f6ca018f4dfc9be03710aacc5d22b00197050a2d8",
+      "bytes": 6196317,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/val_gsf_yolo_seed2.json.gz",
+      "uses": [
+        "tab:gsf_stratified",
+        "tab:m6family:AP_S",
+        "tab:external:AP_S"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "p2_baseline",
+      "seed": 0,
+      "path": "assets/predictions/testdev_p2_baseline_seed0.json.gz",
+      "uncompressed_sha256": "53c984a95e146aa72ff6f4a80e9419827d2d4d729d7a541e7510faf2c7c3b556",
+      "sha256": "6b822a3c0fe6f839c61f3404617053a2594bf2f044930ebde533be1f3be07fb1",
+      "bytes": 18125350,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_p2_baseline_seed0.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev_legacy:P2 baseline"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "p2_baseline",
+      "seed": 1,
+      "path": "assets/predictions/testdev_p2_baseline_seed1.json.gz",
+      "uncompressed_sha256": "857bc6f4a9584d8e454b3d10e89af64935a0343a2fe5e570c96202db11a8cd53",
+      "sha256": "000efe211327a16acb079d2bf4a61d6a1dbcd8e9197340577c63259903cee141",
+      "bytes": 17983161,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_p2_baseline_seed1.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev_legacy:P2 baseline"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "p2_baseline",
+      "seed": 2,
+      "path": "assets/predictions/testdev_p2_baseline_seed2.json.gz",
+      "uncompressed_sha256": "693d9b4dc464b8aeebc39a2a042b7779ddf5a990b2604c6af8d7b0d67208a59e",
+      "sha256": "69d9e4179b866c0da4c0b34904f0358e283c2dee853000a1e28c6ca84b5f7480",
+      "bytes": 17954722,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_p2_baseline_seed2.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev_legacy:P2 baseline"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "path": "assets/predictions/testdev_gsf_yolo_seed0.json.gz",
+      "uncompressed_sha256": "e20189acb108dc99b997cd313c984f2819fc4c14820343c905514b2ee8ef76a3",
+      "sha256": "9fe68b08d2a03fbcd1dd6fcd00590b379661847948db3c49c6cbec8e54847a18",
+      "bytes": 17610032,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed0.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev(b):native",
+        "tab:testdev_legacy:GSF-YOLO"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "path": "assets/predictions/testdev_gsf_yolo_seed1.json.gz",
+      "uncompressed_sha256": "6c3277b36cb82d924c2bc36c8d0913e444b0cff43fc78589c812389452259c7b",
+      "sha256": "35f30a16a57dfe426d503f048190d37b7a3fefaf64903c4e372fb7c7639332c4",
+      "bytes": 17769414,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed1.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev(b):native",
+        "tab:testdev_legacy:GSF-YOLO"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "path": "assets/predictions/testdev_gsf_yolo_seed2.json.gz",
+      "uncompressed_sha256": "6536d2d7cf0c9bdcbbf92b985637862b340f32437b3d122df64c2f4723bd8a5b",
+      "sha256": "633929be697064620a3bb4e62d8126b80768a0d6dd36d519164943fe5d5dd46e",
+      "bytes": 17678163,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed2.json.gz",
+      "uses": [
+        "tab:testdev(a)",
+        "tab:testdev(b):native",
+        "tab:testdev_legacy:GSF-YOLO"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "dsf_p2_widening",
+      "seed": 0,
+      "path": "assets/predictions/testdev_dsf_p2_widening_seed0.json.gz",
+      "uncompressed_sha256": "deff726b938330c7d012287041f4f9be9bf19d7da2f8436c38b42ac6d55244bc",
+      "sha256": "856e13da136bc3f9f25d93589c7b15367a0798a75ddd2e25ae0ddf1e5703c0e0",
+      "bytes": 17600195,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_dsf_p2_widening_seed0.json.gz",
+      "uses": [
+        "tab:testdev(a)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "condition": "valid_spatial_mean",
+      "path": "assets/predictions/testdev_gsf_yolo_seed0_valid_spatial_mean.json.gz",
+      "uncompressed_sha256": "161e31a953e83a270fdd3e984a6be564c7539f59372c851244c1427a26047de0",
+      "sha256": "3dd27ea50571c8815aac54d0c8745e04c5c7008e0c156467f594fb3d03544ed8",
+      "bytes": 18078171,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed0_valid_spatial_mean.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "condition": "valid_shuffle_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed0_valid_shuffle_0.json.gz",
+      "uncompressed_sha256": "5f094bf18f3875f8c18481828c73cc77d6695d91df0cfc33b05c2ee2a403add9",
+      "sha256": "60705ef9823671baed74bffe92257db714e830c2664069e5c0219b2feba797da",
+      "bytes": 18141115,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed0_valid_shuffle_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 0,
+      "condition": "valid_shuffle_l1_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed0_valid_shuffle_l1_0.json.gz",
+      "uncompressed_sha256": "c0f4bb9e5f973fd711be32a513bf28a4400aee5f30e70f77cdd54f8bc798590d",
+      "sha256": "a16bd5b8e5e0aba2652a72533f7b43d785b76ecbed93423990b5465cb7405862",
+      "bytes": 18156143,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed0_valid_shuffle_l1_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "dsf_p2_widening",
+      "seed": 1,
+      "path": "assets/predictions/testdev_dsf_p2_widening_seed1.json.gz",
+      "uncompressed_sha256": "779dc0ee89a3fdbd3258ffb875432a274964b208fa075566f3fa88b5148c6921",
+      "sha256": "f9867f85c1e326dde2c3faa5ebaad3d12e4419c87543692d57ea3c5e69581dfe",
+      "bytes": 17565290,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_dsf_p2_widening_seed1.json.gz",
+      "uses": [
+        "tab:testdev(a)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "condition": "valid_spatial_mean",
+      "path": "assets/predictions/testdev_gsf_yolo_seed1_valid_spatial_mean.json.gz",
+      "uncompressed_sha256": "474827c1453392c48c92399c0db5d39a1e6d86e20ff0f76bbaa30db056103e90",
+      "sha256": "d5509f865953981331da42210a4c6df1c544cbd72e4a22b84d9e02ac3b8c6fb4",
+      "bytes": 18593046,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed1_valid_spatial_mean.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "condition": "valid_shuffle_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed1_valid_shuffle_0.json.gz",
+      "uncompressed_sha256": "a77867ec181afec8a43bb2e173b3487d0183ecc4feef8a4ebfdc390b188c6886",
+      "sha256": "e53b7c376fad4cfadb723e867f1e7e5d6d489377d97e8700d0ee0d5067e6c77a",
+      "bytes": 18653375,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed1_valid_shuffle_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 1,
+      "condition": "valid_shuffle_l1_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed1_valid_shuffle_l1_0.json.gz",
+      "uncompressed_sha256": "94ac38f5e35626bdab4ebec08580fb336b9ebf9795bd90ecf6f8071d08bba817",
+      "sha256": "8b99003699567303c981722358a7747a02e2a341c0c8534e1a302a31367338ea",
+      "bytes": 18623256,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed1_valid_shuffle_l1_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "dsf_p2_widening",
+      "seed": 2,
+      "path": "assets/predictions/testdev_dsf_p2_widening_seed2.json.gz",
+      "uncompressed_sha256": "6969e9e386195b287cac4f49795151be1092663f15447a68a0cb1593c5c9f711",
+      "sha256": "322ab2d626fd51838014fe07287dc51bf97ac91b3dfc816bb9f88d6813a01ac3",
+      "bytes": 17637326,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_dsf_p2_widening_seed2.json.gz",
+      "uses": [
+        "tab:testdev(a)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "condition": "valid_spatial_mean",
+      "path": "assets/predictions/testdev_gsf_yolo_seed2_valid_spatial_mean.json.gz",
+      "uncompressed_sha256": "ab88315480c0f3cb8d44aa37bebe3c45c65a6ebb56d3fde1a5b4ed0691d6a4ef",
+      "sha256": "e15865db051e7ee3b24a931637cb3b19f564d07ef9c9b1015baa47356956e214",
+      "bytes": 18245717,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed2_valid_spatial_mean.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "condition": "valid_shuffle_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed2_valid_shuffle_0.json.gz",
+      "uncompressed_sha256": "e05b8efd0da9b82c8dad0d2d63628a61db9c1870618c8d12402e02da11251d8d",
+      "sha256": "3e6200cfb8caa5918ee8e6f9a56b1361be653f742eee2af1506c8d24af5ae1e6",
+      "bytes": 18282773,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed2_valid_shuffle_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    },
+    {
+      "split": "test-dev",
+      "model": "gsf_yolo",
+      "seed": 2,
+      "condition": "valid_shuffle_l1_0",
+      "path": "assets/predictions/testdev_gsf_yolo_seed2_valid_shuffle_l1_0.json.gz",
+      "uncompressed_sha256": "9434a2ce38247f7aead05f8c6f468c90a683c9698b75ed6c76fb6d0ed40a7617",
+      "sha256": "b078957fcc1c0c2ae5f6824556853dba9dae014a5b5e54f9e4327458650df0c2",
+      "bytes": 18245126,
+      "download_url": "https://github.com/BunnyAssassins/GSF-YOLO/releases/download/v1.0-paper/testdev_gsf_yolo_seed2_valid_shuffle_l1_0.json.gz",
+      "uses": [
+        "tab:testdev(b)"
+      ]
+    }
+  ],
+  "notes": "Gzip archives contain byte-for-byte original predictions; hashes of archived source checkpoints precede metadata sanitization. Download assets before prediction-based re-evaluation.",
+  "deduplication": "Native final-GSF intervention rows reuse the identical architecture prediction archive for the same seed."
+}

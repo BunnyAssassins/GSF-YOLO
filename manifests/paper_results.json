@@ -1,0 +1,197 @@
+{
+  "manuscript": "Gated Semantic Fusion and High-Resolution Capacity Allocation for UAV Small-Object Detection",
+  "release_tag": "v1.0-paper",
+  "scope": "Active main.tex inputs: sections01--06 and appendix_gate_interventions/appendix_testdev_supplement",
+  "source_labels_are_primary": true,
+  "results": [
+    {
+      "source_label": "fig:architecture / sec:dsf / sec:capacity",
+      "source_file": "sections/03_method.tex",
+      "source_line": 17,
+      "source_anchor": "the reference tensors carry widths",
+      "description": "Instantiated channel widths and DSF/refinement/head coupling",
+      "files": [
+        "results/summary/instantiated_channels.json",
+        "configs/models",
+        "manifests/checkpoints.csv"
+      ]
+    },
+    {
+      "source_label": "tab:m6family",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 33,
+      "source_anchor": "Ablation of DSF fusion and P2/P3 widening over training seeds 0--2",
+      "description": "Six configurations; native AP/AP50, supplementary AP_S, Params/GFLOPs/FPS",
+      "files": [
+        "results/summary/table2_precision_cost_statistics.json",
+        "results/summary/ablation_ap_s_latency_source.csv",
+        "results/timing/statistics.json"
+      ],
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "sec:attribution",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 46,
+      "source_anchor": "Each change was computed within seeds 0, 1 and 2",
+      "description": "Paired native-AP differences for fusion/P2/P3 widening and final versus widening-only",
+      "files": [
+        "results/summary/table2_precision_cost_statistics.json"
+      ],
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "fig:ablation_ap_s_latency",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 58,
+      "source_anchor": "Validation small-object AP and prediction-call latency for the six configurations",
+      "description": "Three-seed AP_S/latency mean and sample SD",
+      "files": [
+        "results/summary/ablation_ap_s_latency_statistics.json",
+        "results/timing/raw"
+      ],
+      "command": "python analysis/plot_accuracy_latency.py --output reproduced/accuracy_latency"
+    },
+    {
+      "source_label": "tab:interventions",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 74,
+      "source_anchor": "Frozen-weight gate interventions on DSF + refinement checkpoints",
+      "description": "Six conditions, seeds 0/1; AP_S/small recall/FP/BgFP",
+      "files": [
+        "results/summary/table5_seed01_statistics.json",
+        "results/regional/seed0/interventions.json",
+        "results/regional/seed1/interventions.json"
+      ],
+      "inference_entry": "analysis/gate_interventions.py",
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "fig:gate_analysis",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 93,
+      "source_anchor": "an average of 2,789.5 small-object GT instances were gained and 1,174.5 were lost",
+      "description": "Confidence .25 small transitions; recall at matched FP budgets; frozen AP_S; gate/injection ROI contrasts",
+      "files": [
+        "results/gate_figure",
+        "results/regional",
+        "results/summary/gate_injection_statistics.json"
+      ],
+      "command": "python analysis/plot_gate_summary.py --output reproduced/gate_summary"
+    },
+    {
+      "source_label": "tab:gsf_stratified",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 108,
+      "source_anchor": "Stratified validation of the final GSF-YOLO configuration and YOLO26-P2",
+      "description": "Overall AP, size AP_S/AP_M/AP_L, density AP/AP_S and ten class AP values, seeds0--2",
+      "files": [
+        "results/summary/gsf_stratified_statistics.json",
+        "results/summary/gsf_stratified_results.csv",
+        "results/stratified",
+        "results/validation/coco300.json"
+      ],
+      "included_rows_file": "evidence/gsf_stratified_rows.tex",
+      "overall_row_anchor": "All targets & AP & 548 & 38,759",
+      "command": "python analysis/stratified_eval.py --from-saved --output reproduced/stratified.json"
+    },
+    {
+      "source_label": "tab:external",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 127,
+      "source_anchor": "Accuracy and computational cost on VisDrone validation",
+      "description": "Seven actual models; native AP/AP50, supplementary AP_S, Params/GFLOPs/pipeline latency",
+      "files": [
+        "results/summary/external_comparison_statistics.json",
+        "results/summary/table5_unified_timing_statistics.json",
+        "results/summary/unified_gpu_timing_source.csv",
+        "results/training_logs",
+        "manifests/checkpoints.csv"
+      ],
+      "latency_source": "results/timing/statistics.json",
+      "display_decimal_places": 1,
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "tab:testdev(a)",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 154,
+      "source_anchor": "Architecture comparison and frozen gate interventions on VisDrone test-dev",
+      "description": "Three-model AP/AP50/AP_S and paired additional-P3 gain, seeds0--2",
+      "files": [
+        "results/summary/final_model_testdev_statistics.json",
+        "results/summary/final_model_testdev_source.csv",
+        "results/testdev/dsf_p2_widening.json",
+        "manifests/predictions.json"
+      ],
+      "display_decimal_places": 2,
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "tab:testdev(b)",
+      "source_file": "sections/04_experiments.tex",
+      "source_line": 166,
+      "source_anchor": "Frozen GSF-YOLO gate interventions",
+      "description": "Native/valid mean/shuffle/L1-matched AP/AP50/AP_S and paired deltas, seeds0--2",
+      "files": [
+        "results/testdev/final_gate.json",
+        "results/testdev/gate_checks",
+        "manifests/predictions.json"
+      ],
+      "inference_entry": "analysis/gate_interventions.py",
+      "display_decimal_places": 2,
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "app:gate_interventions / eq:gate_l1_matching",
+      "source_file": "sections/appendix_gate_interventions.tex",
+      "source_line": 8,
+      "source_anchor": "Full-canvas shuffles permute all",
+      "description": "Valid/full-canvas algorithm definitions; constant controls, permutation and residual L1 matching",
+      "files": [
+        "analysis/gate_interventions.py"
+      ],
+      "inference_entry": "analysis/gate_interventions.py"
+    },
+    {
+      "source_label": "eq:regional_injection_statistics / tab:gate_pair_counts / fig:gate_injection_ratio",
+      "source_file": "sections/appendix_gate_interventions.tex",
+      "source_line": 24,
+      "source_anchor": "mean gate value",
+      "description": "Nine size-by-metric ROI contrasts; shared pairs and two-seed2000-draw image-bootstrap",
+      "files": [
+        "results/summary/gate_injection_statistics.json",
+        "results/summary/gate_injection_summary.csv",
+        "results/summary/gate_injection_image_pairs.csv",
+        "results/regional"
+      ],
+      "command": "python analysis/regional_injection.py --output reproduced/regional_injection.json"
+    },
+    {
+      "source_label": "tab:testdev_legacy / app:testdev_supplement",
+      "source_file": "sections/appendix_testdev_supplement.tex",
+      "source_line": 13,
+      "source_anchor": "Reference models and frozen DSF + refinement controls",
+      "description": "Baseline/GSF references plus four DSF+refinement conditions; AP/AP50/AP_S/small recall/FP/BgFP",
+      "files": [
+        "results/testdev/dsf_refinement_supplement.json",
+        "results/summary/final_model_testdev_statistics.json"
+      ],
+      "diagnostic_entry": "analysis/threshold_diagnostics.py",
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    },
+    {
+      "source_label": "app:testdev_supplement",
+      "source_file": "sections/appendix_testdev_supplement.tex",
+      "source_line": 8,
+      "source_anchor": "small-object recall increases",
+      "description": "GSF-minus-baseline small recall/FP/BgFP paired seed changes and per-seed small-recall bootstrap intervals",
+      "files": [
+        "results/summary/final_model_testdev_statistics.json"
+      ],
+      "command": "python analysis/reproduce_tables.py --output reproduced/tables"
+    }
+  ],
+  "prediction_deduplication": "Native final-GSF gate rows reuse identical architecture assets;24 unique archives",
+  "archived_source_hashes": "Original experiment checkpoint hashes map to metadata-sanitized release weights in checkpoints.csv"
+}
