@@ -194,19 +194,19 @@ The checkpoints comprise the six three-seed ablation configurations and five
 single-seed external detectors. Final-GSF native-gate predictions also serve
 as the corresponding final-model architecture predictions.
 
-The repository is currently private. Use an account with repository access
-to download Release assets, and place them at the destinations recorded in
+Download the Release assets directly to the destinations recorded in
 [checkpoints.csv](manifests/checkpoints.csv) and
-[predictions.json](manifests/predictions.json). Once the files are in place,
-verify their published SHA256 values with:
+[predictions.json](manifests/predictions.json), and verify their published
+SHA256 values with:
 
 ```bash
 python scripts/download_assets.py weights
 python scripts/download_assets.py predictions
 ```
 
-These commands verify existing local files; automatic downloads use the
-Release download URLs and require accessible assets. Filters include
+These commands first verify existing local files and reuse files with matching
+SHA256 values. Missing files are downloaded from the Release URLs and verified
+before being placed at their destinations. Filters include
 `--models`, `--seeds` and `--dry-run`. Published checkpoints retain the original
 inference tensors and remove private serialization metadata. See
 [SOURCE_AND_PRIVACY.md](docs/SOURCE_AND_PRIVACY.md).
